@@ -10,6 +10,10 @@ import { stateAbbreviation } from './states.js?v=10';
 
 export function renderStats(data) {
     setText('collection-date', (data.updated_at || '').replace('T', ' ').slice(0, 16) || 'unknown');
+    setText('about-meta',
+        `${data.count} candidates · synced ${(data.updated_at || '').replace('T', ' ').slice(0, 16)} · ` +
+        `${(data.raw_bytes || 0).toLocaleString()} bytes raw`);
+    setText('about-sha', `SHA-256 ${data.raw_sha256 || '–'}`);
 }
 
 /**

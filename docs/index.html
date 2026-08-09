@@ -7,7 +7,7 @@
     <meta name="description" content="Progressive 2026 candidates across the US looking for volunteers — compiled by Lime Accordion. Auto-synced from the source spreadsheet.">
     <meta name="color-scheme" content="light dark">
 
-    <link href="css/styles.css?v=13" rel="stylesheet">
+    <link href="css/styles.css?v=14" rel="stylesheet">
 </head>
 <body>
     <header class="site-header">
@@ -21,6 +21,7 @@
                 </span>
             </div>
             <nav class="header-links">
+                <button id="about-toggle" class="link-btn" aria-expanded="false">About</button>
                 <a href="https://docs.google.com/spreadsheets/d/e/2PACX-1vQyQUWTOqZ6iqYMXd-GpkXivMRIgGCnkL58y-oLrX53e8M68zdQo5xO1P8LEMd06mpOVxshd0F9aC24/pubhtml" target="_blank" rel="noopener noreferrer">Source spreadsheet</a>
                 <a href="https://forms.gle/tXMN3UFVkWsh5TTCA" target="_blank" rel="noopener noreferrer">Add your campaign</a>
             </nav>
@@ -34,6 +35,62 @@
             spreadsheet — listing here is not an endorsement; please research candidates before
             getting involved.
         </p>
+
+        <section id="about-panel" class="about-panel hidden" aria-label="About this directory">
+            <h2>About this directory</h2>
+            <p>
+                A searchable directory of progressive 2026 candidates who are looking for
+                volunteers, compiled from the public
+                <a href="https://docs.google.com/spreadsheets/d/e/2PACX-1vQyQUWTOqZ6iqYMXd-GpkXivMRIgGCnkL58y-oLrX53e8M68zdQo5xO1P8LEMd06mpOVxshd0F9aC24/pubhtml" target="_blank" rel="noopener noreferrer">Campaign Volunteer
+                Directory spreadsheet</a> — a crowdsourced list maintained by volunteers. The data is
+                re-synced automatically from that spreadsheet every 12 hours.
+            </p>
+
+            <div class="about-grid">
+                <div class="about-block">
+                    <div class="about-title">The source data is preserved exactly as entered</div>
+                    <p>
+                        Every sync stores the spreadsheet's raw content <strong>byte-for-byte as
+                        downloaded</strong> — nothing is edited, cleaned, or rewritten. You can
+                        download the exact file below and verify it with its SHA-256 checksum. The
+                        searchable version on this site is derived from it, never the other way round.
+                    </p>
+                </div>
+                <div class="about-block">
+                    <div class="about-title">Issue chips are the candidates' own words</div>
+                    <p>
+                        The issue categories you can filter by are extracted
+                        <strong>deterministically</strong> from the stance texts themselves — no
+                        invented labels, no editorializing. If the spreadsheet ever carries an
+                        "Issues:" column, its values are used verbatim. Everything is recomputed
+                        automatically on every sync.
+                    </p>
+                </div>
+                <div class="about-block">
+                    <div class="about-title">Independent and open</div>
+                    <p>
+                        This site is an independent project — not affiliated with, sponsored by, or
+                        endorsed by Lime Accordion or any candidate. The entire pipeline (sync,
+                        validation, site) is open source and reviewable in the
+                        <a href="https://github.com/campaign-volunteer-directory/campaign-volunteer-directory" target="_blank" rel="noopener noreferrer">GitHub repository</a>.
+                    </p>
+                </div>
+                <div class="about-block">
+                    <div class="about-title">Not an endorsement</div>
+                    <p>
+                        A listing here is <strong>not an endorsement</strong> of any candidate or
+                        their positions. The directory is simply a collection of campaigns that need
+                        help. Please research candidates before getting involved.
+                    </p>
+                </div>
+            </div>
+
+            <div class="about-provenance">
+                <span id="about-meta"></span>
+                <a id="about-raw-link" href="data/source.csv" download>Download raw source data</a>
+                <span class="about-sha" id="about-sha"></span>
+            </div>
+        </section>
 
         <div class="layout">
             <aside class="filters" aria-label="Filters">
@@ -101,6 +158,6 @@
         </div>
     </footer>
 
-    <script type="module" src="js/main.js?v=13"></script>
+    <script type="module" src="js/main.js?v=14"></script>
 </body>
 </html>

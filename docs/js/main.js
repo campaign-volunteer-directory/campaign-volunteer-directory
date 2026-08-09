@@ -1,7 +1,7 @@
-import { debounce } from './utils.js?v=13';
-import { parseQuery, splitQuery, buildSearchIndex, searchRanked } from './search.js?v=13';
-import { FilterState, matchesFacets } from './filters.js?v=13';
-import { stateAbbreviation } from './states.js?v=13';
+import { debounce } from './utils.js?v=14';
+import { parseQuery, splitQuery, buildSearchIndex, searchRanked } from './search.js?v=14';
+import { FilterState, matchesFacets } from './filters.js?v=14';
+import { stateAbbreviation } from './states.js?v=14';
 import {
     renderStats,
     renderSummary,
@@ -13,10 +13,10 @@ import {
     renderActiveFilters,
     renderCards,
     buildCsv,
-} from './render.js?v=13';
+} from './render.js?v=14';
 
 const SEARCH_DEBOUNCE_MS = 120;
-const APP_VERSION = 13;
+const APP_VERSION = 14;
 const KIND_LABELS = { state: 'State', topic: 'Issue', candidate: 'Candidate' };
 
 let candidates = [];
@@ -411,6 +411,13 @@ function wireUtilityButtons() {
         const opening = panel.classList.contains('hidden');
         panel.classList.toggle('hidden', !opening);
         document.getElementById('tips-toggle').setAttribute('aria-expanded', String(opening));
+    });
+
+    document.getElementById('about-toggle').addEventListener('click', () => {
+        const panel = document.getElementById('about-panel');
+        const opening = panel.classList.contains('hidden');
+        panel.classList.toggle('hidden', !opening);
+        document.getElementById('about-toggle').setAttribute('aria-expanded', String(opening));
     });
 
     document.getElementById('filter-download').addEventListener('click', downloadFiltered);

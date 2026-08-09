@@ -13,6 +13,7 @@ never publishes a broken or emptied index.
 """
 
 import csv
+import hashlib
 import io
 import json
 import sys
@@ -87,10 +88,10 @@ def normalize_level(raw: str) -> str:
     return raw
 
 
-def fetch_csv() -> str:
+def fetch_csv() -> bytes:
     req = urllib.request.Request(SOURCE_URL, headers={"User-Agent": "Mozilla/5.0"})
     with urllib.request.urlopen(req, timeout=60) as resp:
-        return resp.read().decode("utf-8-sig")
+        return resp.read()
 
 
 def parse_rows(raw: str):
@@ -182,10 +183,17 @@ def validate(records, prev_count):
 
 def main():
     try:
-        raw = fetch_csv()
+        raw_bytes = fetch_csv()
     except Exception as e:
         print(f"ERROR: failed to fetch sheet: {e}", file=sys.stderr)
         return 1
+
+    # Preserve the source exactly as downloaded: byte-for-byte archive for
+    # provenance, plus a checksum so visitors can verify nothing was altered.
+    raw = raw_bytes.decode("utf-8-sig")
+    raw_sha256 = hashlib.sha256(raw_bytes).hexdigest()
+    DATA_DIR.mkdir(exist_ok=True)
+    (DATA_DIR / "source.csv").write_bytes(raw_bytes)
 
     records = parse_rows(raw)
 
@@ -229,6 +237,9 @@ def main():
         "by_level": dict(by_level),
         "issues": issues,
         "candidates": records,
+        "raw_csv": "source.csv",
+        "raw_sha256": raw_sha256,
+        "raw_bytes": len(raw_bytes),
     }
     if prev_updated_at is not None:
         new_payload = dict(payload)
