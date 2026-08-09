@@ -12,7 +12,11 @@ who need help — research candidates before getting involved.
 - `docs/` — GitHub Pages site (browse/filter the directory)
 - `docs/data/` — generated JSON index of candidates (auto-synced)
 - `scripts/build_index.py` — fetches the published source spreadsheet, validates
-  and normalizes the data, writes `docs/data/candidates.json`
+  and normalizes the data, writes `docs/data/candidates.json`.
+
+Issue categories come from the spreadsheet: if the sheet has an "Issues:"
+column, its values are used verbatim (candidates self-tag). Without that
+column, topics are keyword-tagged from the stances text as a fallback.
 - `.github/workflows/sync.yml` — twice-daily sync + validation + publish to Pages
 
 ## Updating

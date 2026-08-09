@@ -55,7 +55,12 @@ STATE_MAP = {
 
 LEVELS = {"Local", "State", "Federal"}
 
+# Recognized issue-category columns in the sheet. When present, their values
+# are used verbatim as the candidate's topics (no invented terms).
+ISSUE_COLUMNS = {"issues", "issue", "topics", "tags", "stances tags"}
+
 # Issue topics auto-tagged from the stances text, in priority order.
+# FALLBACK ONLY — used when the spreadsheet has no "Issues:" column.
 # Patterns are plain substrings (lowercase); prefix with "^" to use a regex.
 TOPICS = [
     ("Healthcare", ["healthcare", "health care", "medicare", "medicaid", "single-payer", "single payer", "insulin", "medical", "insurance", "doctors", "hospitals"]),
@@ -76,7 +81,7 @@ TOPICS = [
     ("Term limits", ["term limits", "term limit"]),
     ("Mental health", ["mental health", "mental-health"]),
 ]
-import re as _re
+import re
 
 
 def tag_topics(stances: str) -> list[str]:
@@ -88,7 +93,7 @@ def tag_topics(stances: str) -> list[str]:
             continue
         for pat in patterns:
             if pat.startswith("^"):
-                if _re.search(pat.lstrip("^"), text, _re.IGNORECASE):
+                if re.search(pat.lstrip("^"), text, re.IGNORECASE):
                     found.append(label)
                     break
             elif pat in text:
@@ -138,9 +143,20 @@ def parse_rows(raw: str):
             break
     if header_idx is None:
         raise ValueError("Could not locate the candidate header row in the sheet")
+
+    # Issue categories come from the sheet itself when an "Issues:" column
+    # exists (candidates self-tag; no invented terms). Without one, fall back
+    # to keyword-tagged topics derived from the stances text.
+    header = [c.strip() for c in rows[header_idx]]
+    issue_col = None
+    for i, name in enumerate(header):
+        if name.lower().rstrip(":") in ISSUE_COLUMNS:
+            issue_col = i
+            break
+
     records = []
     for row in rows[header_idx + 1:]:
-        cells = (row + [""] * 9)[:9]
+        cells = (row + [""] * max(10, len(header)))[: max(10, len(header))]
         rec = {
             "name": cells[0].strip(),
             "state": normalize_state(cells[1]),
@@ -153,9 +169,22 @@ def parse_rows(raw: str):
             "volunteer": cells[8].strip(),
         }
         if rec["name"]:
-            rec["topics"] = tag_topics(rec["stances"])
+            if issue_col is not None:
+                rec["topics"] = split_issues(cells[issue_col])
+            else:
+                rec["topics"] = tag_topics(rec["stances"])
             records.append(rec)
     return records
+
+
+def split_issues(raw: str) -> list[str]:
+    """Split a spreadsheet "Issues:" cell into verbatim topic terms."""
+    seen: list[str] = []
+    for part in re.split(r"[;,/•·|]+|\n", raw or ""):
+        term = part.strip().strip("*")
+        if term and term.lower() not in [s.lower() for s in seen]:
+            seen.append(term)
+    return seen
 
 
 def validate(records, prev_count):
