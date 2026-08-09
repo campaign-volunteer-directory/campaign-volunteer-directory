@@ -9,33 +9,55 @@ import { stateAbbreviation } from './states.js?v=10';
  */
 
 export function renderStats(data) {
-    const byLevel = data.by_level || {};
-    setText('stat-total', data.count);
-    setText('stat-total-sub', `of ${data.count}`);
-    setText('stat-states', data.states.length);
-    setText('stat-states-sub', `of ${data.states.length}`);
-    setText('stat-federal', byLevel.Federal || 0);
-    setText('stat-federal-sub', `of ${byLevel.Federal || 0}`);
-    setText('stat-state', byLevel.State || 0);
-    setText('stat-state-sub', `of ${byLevel.State || 0}`);
-    setText('stat-local', byLevel.Local || 0);
-    setText('stat-local-sub', `of ${byLevel.Local || 0}`);
     setText('collection-date', (data.updated_at || '').replace('T', ' ').slice(0, 16) || 'unknown');
 }
 
-/** Refresh the stat tiles from the currently matched entries. */
-export function renderStatsFor(entries) {
-    const byLevel = { Federal: 0, State: 0, Local: 0 };
-    const states = new Set();
-    for (const { candidate } of entries) {
-        byLevel[candidate.govt_level] = (byLevel[candidate.govt_level] || 0) + 1;
-        states.add(candidate.state);
-    }
-    setText('stat-total', entries.length);
-    setText('stat-states', states.size);
-    setText('stat-federal', byLevel.Federal);
-    setText('stat-state', byLevel.State);
-    setText('stat-local', byLevel.Local);
+/**
+ * The live summary bar: current counts with their values, plus clickable
+ * level pills showing each level's share of the current view.
+ */
+export function renderSummary(entriesCount, statesCount, totals, levelCounts, levelFilter) {
+    const pills = ['Federal', 'State', 'Local'].map((level) => {
+        const active = levelFilter === level ? ' active' : '';
+        const count = levelCounts[level] || 0;
+        return `<button class="level-pill${active}" data-level="${level}">${level} <b>${count}</b></button>`;
+    }).join('');
+
+    return `
+        <div class="summary-line">
+            <b>${entriesCount}</b> of ${totals.candidates} candidates ·
+            <b>${statesCount}</b> of ${totals.states} states
+        </div>
+        <div class="summary-levels">${pills}</div>`;
+}
+
+/**
+ * The "in this view" breakdown: the actual state and issue values present in
+ * the current result set, as clickable chips (click to add/remove that
+ * filter). Top values only, "+N more" keeps the panel compact.
+ */
+export function renderBreakdown(statesInView, topicsInView, filters, TOP_N = 12) {
+    if (!statesInView.length && !topicsInView.length) return '';
+
+    const stateChips = chipsFor(statesInView, 'state', filters.states, TOP_N);
+    const topicChips = chipsFor(topicsInView, 'topic', filters.topicsInclude, TOP_N);
+    if (!stateChips && !topicChips) return '';
+
+    return `
+        <div class="breakdown-label">In this view</div>
+        ${stateChips ? `<div class="breakdown-row">${stateChips}</div>` : ''}
+        ${topicChips ? `<div class="breakdown-row">${topicChips}</div>` : ''}`;
+}
+
+function chipsFor(values, kind, activeSet, topN) {
+    if (!values.length) return '';
+    const chips = values.slice(0, topN).map(([label, count]) => {
+        const active = activeSet.has(label) ? ' active' : '';
+        return `<button class="chip${active}" data-breakdown="${kind}" data-value="${escapeHtml(label)}">${escapeHtml(label)} <span class="chip-count">${count}</span></button>`;
+    }).join('');
+    const rest = values.length - topN;
+    const more = rest > 0 ? `<span class="chips-more">+${rest} more</span>` : '';
+    return chips + more;
 }
 
 export function renderResultsLine(matchCount, total) {

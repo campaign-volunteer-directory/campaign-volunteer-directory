@@ -1,10 +1,11 @@
-import { debounce } from './utils.js?v=10';
-import { parseQuery, splitQuery, buildSearchIndex, searchRanked } from './search.js?v=10';
-import { FilterState, matchesFacets } from './filters.js?v=10';
-import { stateAbbreviation } from './states.js?v=10';
+import { debounce } from './utils.js?v=11';
+import { parseQuery, splitQuery, buildSearchIndex, searchRanked } from './search.js?v=11';
+import { FilterState, matchesFacets } from './filters.js?v=11';
+import { stateAbbreviation } from './states.js?v=11';
 import {
     renderStats,
-    renderStatsFor,
+    renderSummary,
+    renderBreakdown,
     renderStateOptions,
     renderTopicChips,
     renderSuggestions,
@@ -12,10 +13,10 @@ import {
     renderActiveFilters,
     renderCards,
     buildCsv,
-} from './render.js?v=10';
+} from './render.js?v=11';
 
 const SEARCH_DEBOUNCE_MS = 120;
-const APP_VERSION = 10;
+const APP_VERSION = 11;
 const KIND_LABELS = { state: 'State', topic: 'Issue', candidate: 'Candidate' };
 
 let candidates = [];
@@ -97,10 +98,32 @@ function apply() {
     download.disabled = entries.length === 0;
     download.title = entries.length ? 'Download the filtered list as CSV' : 'Nothing to download';
 
-    renderStatsFor(entries);
+    renderView(entries, query);
+    filters.writeToUrl();
+}
+
+function renderView(entries, query) {
+    const levelCounts = { Federal: 0, State: 0, Local: 0 };
+    const statesInView = {};
+    const topicsInView = {};
+    for (const { candidate } of entries) {
+        levelCounts[candidate.govt_level] = (levelCounts[candidate.govt_level] || 0) + 1;
+        statesInView[candidate.state] = (statesInView[candidate.state] || 0) + 1;
+        for (const topic of candidate.topics || []) {
+            topicsInView[topic] = (topicsInView[topic] || 0) + 1;
+        }
+    }
+    const sortedStates = Object.entries(statesInView).sort((a, b) => b[1] - a[1]);
+    const sortedTopics = Object.entries(topicsInView).sort((a, b) => b[1] - a[1]);
+
+    document.getElementById('view-summary').innerHTML = renderSummary(
+        entries.length, sortedStates.length,
+        { candidates: candidates.length, states: stateCounts.length },
+        levelCounts, filters.level);
+    document.getElementById('breakdown').innerHTML = renderBreakdown(
+        sortedStates, sortedTopics, filters);
     document.getElementById('cards').innerHTML =
         renderCards(entries, query.include.map((term) => term.text), emptyMessage());
-    filters.writeToUrl();
 }
 
 // ── Suggestions (live autocomplete) ──────────────────────────────────────
@@ -441,6 +464,34 @@ function wireCardExpansion() {
     });
 }
 
+// ── View summary + breakdown ─────────────────────────────────────────────
+
+function wireViewControls() {
+    document.getElementById('view-summary').addEventListener('click', (event) => {
+        const pill = event.target.closest('.level-pill');
+        if (!pill) return;
+        filters.level = filters.level === pill.dataset.level ? '' : pill.dataset.level;
+        syncLevelButtons();
+        apply();
+    });
+
+    document.getElementById('breakdown').addEventListener('click', (event) => {
+        const chip = event.target.closest('.chip');
+        if (!chip) return;
+        const value = chip.dataset.value;
+        if (chip.dataset.breakdown === 'state') {
+            if (filters.states.has(value)) filters.states.delete(value);
+            else filters.states.add(value);
+            syncStateCheckboxes();
+            syncStateTrigger();
+        } else if (chip.dataset.breakdown === 'topic') {
+            toggleInclude(value);
+            syncChips();
+        }
+        apply();
+    });
+}
+
 // ── Boot ─────────────────────────────────────────────────────────────────
 
 async function loadData() {
@@ -479,6 +530,7 @@ async function boot() {
         wireStatePicker();
         wireActiveFilters();
         wireUtilityButtons();
+        wireViewControls();
         wireCardExpansion();
         syncChips();
         syncLevelButtons();
