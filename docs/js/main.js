@@ -1,7 +1,7 @@
-import { debounce } from './utils.js?v=15';
-import { parseQuery, splitQuery, buildSearchIndex, searchRanked } from './search.js?v=15';
-import { FilterState, matchesFacets } from './filters.js?v=15';
-import { stateAbbreviation } from './states.js?v=15';
+import { debounce } from './utils.js?v=16';
+import { parseQuery, splitQuery, buildSearchIndex, searchRanked } from './search.js?v=16';
+import { FilterState, matchesFacets } from './filters.js?v=16';
+import { stateAbbreviation } from './states.js?v=16';
 import {
     renderStats,
     renderSummary,
@@ -13,10 +13,10 @@ import {
     renderActiveFilters,
     renderCards,
     buildCsv,
-} from './render.js?v=15';
+} from './render.js?v=16';
 
 const SEARCH_DEBOUNCE_MS = 120;
-const APP_VERSION = 15;
+const APP_VERSION = 16;
 const KIND_LABELS = { state: 'State', topic: 'Issue', candidate: 'Candidate' };
 
 let candidates = [];
