@@ -14,6 +14,7 @@ Every label in the vocabulary is a phrase that appears in the spreadsheet.
 
 import re
 
+import nltk
 import yake
 
 # Stopword-ish tokens that carry no meaning on their own.
@@ -43,15 +44,35 @@ PHRASE_END_VERBS = {
 # Verb-led phrases that ARE meaningful chips (their noun is the issue).
 ALLOWED_VERB_LED = {"abolish ice", "impeach trump", "free palestine"}
 
+# Nouns that are never issue labels ("people", "state", "system").
+GENERIC_NOUNS = {
+    "people", "state", "city", "system", "systems", "funding", "programs",
+    "services", "community", "communities", "growth", "policy", "power",
+    "families", "jobs", "job", "workers", "class", "quality", "safety",
+    "energy", "utility", "solutions", "development", "access", "support",
+    "reform", "increase", "make", "pay", "fight", "fund", "end", "invest",
+    "tie", "impeach", "protect", "work", "workers", "money", "school",
+    "schools", "education", "tax", "taxes", "rights", "costs", "cost",
+    "local", "national", "federal", "government", "statewide", "main",
+    "data", "corporations", "corporate", "strong", "free", "day", "focused",
+    "economic", "level", "living", "congressional", "leadership", "reuse",
+    "response", "capacity", "luxury", "spending", "planning", "figures",
+    "subsidies", "dollars", "policies", "incentives", "resources",
+    "investment", "finance", "transparency", "build", "expand", "ban",
+    "cap", "legalize", "increase", "improve", "protect", "support",
+    "environments", "neighborhoods", "wealth", "spending", "programs",
+}
+
 TERM_PATTERN = re.compile(r"^[a-z0-9][a-z0-9'&.,\- ]*[a-z0-9]$")
 
 
 def extract_vocabulary(stance_texts, top=40):
     """Return a cleaned, frequency-ordered list of canonical issue terms.
 
-    Only multi-word phrases become chips: they are the faithful units of
-    meaning people wrote ("abolish ice", "universal healthcare"). Bare
-    single tokens ("protect", "end", "fund") are not issues.
+    Multi-word phrases are the primary chips — the faithful units of meaning
+    people wrote ("abolish ice", "universal healthcare"). Strong single
+    tokens (nouns only, POS-tagged — never verbs like "protect") round out
+    the vocabulary ("corruption", "affordability", "infrastructure").
     """
     corpus = " ".join(stance_texts)
     extractor = yake.KeywordExtractor(
@@ -61,11 +82,62 @@ def extract_vocabulary(stance_texts, top=40):
     raw_terms = [term for term, _ in extractor.extract_keywords(corpus)]
 
     cleaned = [normalize_term(t) for t in raw_terms]
-    cleaned = [t for t in cleaned if t and " " in t]
-    counts = count_terms(cleaned, stance_texts)
-    deduped = canonicalize(cleaned, counts)
+    cleaned = [t for t in cleaned if t]
 
-    return sorted(deduped, key=lambda t: -counts.get(t, 0))[:top]
+    phrases = [t for t in cleaned if " " in t]
+    phrase_counts = count_terms(phrases, stance_texts)
+    deduped_phrases = canonicalize(phrases, phrase_counts)
+
+    singles = noun_singles(cleaned, stance_texts)
+    singles = [t for t in singles if not any(t in phrase for phrase in deduped_phrases)]
+
+    combined = deduped_phrases + singles
+    counts = count_terms(combined, stance_texts)
+    return sorted(combined, key=lambda t: -counts.get(t, 0))[:top]
+
+
+def noun_singles(cleaned_terms, stance_texts):
+    """Single-token chips that are used as nouns in the actual stances
+    (contextual POS tagging, not isolated-word guesses) and frequent enough
+    to mean something."""
+    singles = {t for t in cleaned_terms if " " not in t}
+    if not singles:
+        return []
+    counts = count_terms(singles, stance_texts)
+    frequent = [t for t in singles if counts.get(t, 0) >= 5]
+    if not frequent:
+        return []
+    noun_ratio = contextual_noun_ratios(frequent, stance_texts)
+    nouns = [t for t in frequent
+             if noun_ratio.get(t, 0) >= 0.8 and t not in GENERIC_NOUNS]
+    return dedupe_plurals(nouns, counts)
+
+
+def _ensure_nltk_resources():
+    """Download nltk tagger + tokenizer data once (no-op when present)."""
+    for resource, name in [
+        ("taggers/averaged_perceptron_tagger_eng", "averaged_perceptron_tagger_eng"),
+        ("tokenizers/punkt_tab/english", "punkt_tab"),
+    ]:
+        try:
+            nltk.data.find(resource)
+        except LookupError:
+            nltk.download(name, quiet=True)
+
+
+def contextual_noun_ratios(tokens, stance_texts):
+    """Share of each token's occurrences tagged as a noun across the corpus."""
+    _ensure_nltk_resources()
+    counts = {}
+    noun_counts = {}
+    for text in stance_texts:
+        for sentence in nltk.sent_tokenize(text):
+            for word, tag in nltk.pos_tag(nltk.word_tokenize(sentence)):
+                key = word.lower()
+                counts[key] = counts.get(key, 0) + 1
+                if tag.startswith("NN"):
+                    noun_counts[key] = noun_counts.get(key, 0) + 1
+    return {t: noun_counts.get(t, 0) / counts.get(t, 1) for t in tokens}
 
 
 def normalize_term(term):
@@ -107,6 +179,17 @@ def canonicalize(terms, counts):
     return order
 
 
+def dedupe_plurals(nouns, counts):
+    """Keep the more frequent form of a singular/plural pair (wage/wages)."""
+    by_stem = {}
+    for noun in nouns:
+        stem = singular(noun)
+        prev = by_stem.get(stem)
+        if prev is None or counts.get(noun, 0) > counts.get(prev, 0):
+            by_stem[stem] = noun
+    return sorted(by_stem.values(), key=lambda t: -counts.get(t, 0))
+
+
 def overlaps(a, b):
     """True when two multi-word phrases share most of their tokens.
     Single tokens never absorb phrases ("ice" does not absorb "abolish ice")."""
@@ -121,25 +204,26 @@ def overlaps(a, b):
 def assign_topics(records, vocabulary):
     """Set record['topics'] from the vocabulary terms present in stances.
 
-    A phrase tag applies when the phrase appears verbatim OR when its core
-    token (the last noun, singularized) appears — so "healthcare" in the
-    stances earns the "universal healthcare" tag, since that phrase is what
-    the spreadsheet actually says. The core token is derived from the phrase
-    itself; nothing is invented.
+    A phrase tag applies when the phrase appears verbatim OR when any of its
+    significant tokens appears — so "rent freeze" earns the "rent control"
+    tag, since that phrase is what the spreadsheet actually says. All
+    matching is derived from the phrase itself; nothing is invented.
     """
-    cores = {phrase: singular(core_token(phrase)) for phrase in vocabulary}
+    match_terms = {}
+    for phrase in vocabulary:
+        if " " in phrase:
+            tokens = [singular(t) for t in phrase.split()
+                      if len(t) >= 4 and t not in GENERIC_NOUNS]
+            match_terms[phrase] = [phrase] + tokens
+        else:
+            match_terms[phrase] = [phrase, singular(phrase)]
     for record in records:
         text = record["stances"].lower()
         tags = []
-        for phrase in vocabulary:
-            if phrase in text or singular(core_token(phrase)) in text:
+        for phrase, terms in match_terms.items():
+            if any(term in text for term in terms):
                 tags.append(phrase)
         record["topics"] = tags
-
-
-def core_token(phrase):
-    """The last word of the phrase, e.g. 'healthcare' in 'universal healthcare'."""
-    return phrase.split()[-1]
 
 
 def singular(token):

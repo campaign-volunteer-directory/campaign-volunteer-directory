@@ -1,0 +1,12 @@
+[project]
+name = "campaign-volunteer-directory"
+version = "0.1.0"
+description = "Auto-sync pipeline for the Campaign Volunteer Directory site"
+requires-python = ">=3.11"
+dependencies = [
+    "yake>=0.7.1",
+    "nltk>=3.9",
+]
+
+[tool.uv]
+package = false

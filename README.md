@@ -29,11 +29,11 @@ invented labels:
 - If the sheet has an `Issues:` column, its values are used verbatim
   (candidates self-tag).
 - Otherwise, the vocabulary is extracted deterministically from the stance
-  texts (`scripts/vocabulary.py`, yake keyphrase extraction) and each
-  candidate is matched against it. No hand-written keyword lists.
-- Optional: if a `FIREWORKS_API_KEY` secret is set, an LLM pass
-  (`scripts/llm_topics.py`) tags the residual candidates, constrained to the
-  same vocabulary — it may only pick terms that already exist in the data.
+  texts (`scripts/vocabulary.py`, yake keyphrase extraction + nltk
+  part-of-speech filtering) and each candidate is matched against it. No
+  hand-written keyword lists, no LLM.
+
+Run locally with `uv run --frozen python scripts/build_index.py`.
 
 ## Local build
 ```bash

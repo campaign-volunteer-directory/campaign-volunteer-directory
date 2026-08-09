@@ -25,13 +25,10 @@ jobs:
     steps:
       - uses: actions/checkout@v4
 
-      - name: Install dependencies
-        run: pip install --quiet yake
+      - uses: astral-sh/setup-uv@v5
 
       - name: Fetch and validate sheet data
-        env:
-          FIREWORKS_API_KEY: ${{ secrets.FIREWORKS_API_KEY }}
-        run: python3 scripts/build_index.py
+        run: uv run --frozen python scripts/build_index.py
 
       - name: Commit changes if any
         run: bash .github/gha_scripts/commit_changes.sh

@@ -18,7 +18,6 @@ import json
 import sys
 import urllib.request
 from vocabulary import extract_vocabulary, assign_topics
-from llm_topics import refine_with_llm
 from collections import Counter
 from datetime import datetime, timezone
 from pathlib import Path
@@ -135,7 +134,6 @@ def parse_rows(raw: str):
             records.append(rec)
     if issue_col is None:
         assign_from_vocabulary(records)
-        refine_with_llm(records, vocabulary)
     return records
 
 
