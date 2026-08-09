@@ -1,4 +1,4 @@
-import { escapeHtml, escapeRegex } from './utils.js?v=7';
+import { escapeHtml, escapeRegex } from './utils.js?v=8';
 
 /**
  * Highlight query terms in text with <mark>, escaping all HTML.

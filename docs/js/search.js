@@ -17,8 +17,8 @@
  * maps keep the code readable and queries sub-millisecond.
  */
 
-import { levenshtein } from './utils.js?v=7';
-import { stateAbbreviation } from './states.js?v=7';
+import { levenshtein } from './utils.js?v=8';
+import { stateAbbreviation } from './states.js?v=8';
 
 export const FIELD_WEIGHTS = {
     name: 5,
