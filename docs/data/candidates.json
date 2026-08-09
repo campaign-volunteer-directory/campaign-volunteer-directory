@@ -1,8 +1,8 @@
 {
- "source": "Campaign Volunteer Directory by Lime Accordion",
+ "source": "Public Campaign Volunteer Directory spreadsheet (independent project)",
  "source_url": "https://linktr.ee/limeaccordion",
  "sheet_url": "https://docs.google.com/spreadsheets/d/e/2PACX-1vQyQUWTOqZ6iqYMXd-GpkXivMRIgGCnkL58y-oLrX53e8M68zdQo5xO1P8LEMd06mpOVxshd0F9aC24/pubhtml",
- "updated_at": "2026-08-09T12:24:43Z",
+ "updated_at": "2026-08-09T12:41:59Z",
  "count": 145,
  "states": [
   "Alabama",
@@ -74,8 +74,8 @@
    "info": "LilianaforHuntsville.com",
    "volunteer": "https://actionnetwork.org/groups/liliana-peinder-for-huntsville-city-council",
    "topics": [
-    "Education & Childcare",
-    "Transit & Infrastructure"
+    "medicaid expansion",
+    "fair tax"
    ]
   },
   {
@@ -89,8 +89,7 @@
    "info": "Www.vote4roberthunter.com",
    "volunteer": "Got to the link and sign up. https://docs.google.com/forms/u/1/d/e/1FAIpQLSegWg8c08ywBm2U_owhQxvkf6VOe_uuArAKM4fqL_eE3dIezw/viewform?usp=send_form",
    "topics": [
-    "Healthcare",
-    "Housing"
+    "medicaid expansion"
    ]
   },
   {
@@ -104,9 +103,7 @@
    "info": "https://drwillboyd.com",
    "volunteer": "willboyd4alabama@gmail.com - https://drwillboyd.com/join-us",
    "topics": [
-    "Healthcare",
-    "Education & Childcare",
-    "Democracy & voting"
+    "universal healthcare"
    ]
   },
   {
@@ -120,7 +117,7 @@
    "info": "Tombegichforalaska.com",
    "volunteer": "https://docs.google.com/forms/d/e/1FAIpQLSejZPEJD7sTtxVBTD5zLuK0TkLayeQexfe-ODpZ3tjRBQlcIA/viewform",
    "topics": [
-    "Education & Childcare"
+    "everyday costs"
    ]
   },
   {
@@ -134,11 +131,9 @@
    "info": "https://www.petrovAK4us.org",
    "volunteer": "https://www.petrovAK4us.org",
    "topics": [
-    "Education & Childcare",
-    "Climate & Environment",
-    "Immigration & ICE",
-    "Transit & Infrastructure",
-    "Impeach Trump"
+    "donald trump",
+    "abolish ice",
+    "national politics"
    ]
   },
   {
@@ -152,8 +147,9 @@
    "info": "MelForArkansas.com",
    "volunteer": "https://docs.google.com/forms/d/e/1FAIpQLSfTVZNJNnDf_-1iBB3jlJNX2xIg7Px4TcrJvOfmCIA6gn1yxg/viewform",
    "topics": [
-    "Housing",
-    "Transit & Infrastructure"
+    "affordable housing",
+    "abolish ice",
+    "criminal justice"
    ]
   },
   {
@@ -167,9 +163,10 @@
    "info": "https://www.kyleforarizona.com/",
    "volunteer": "https://www.kyleforarizona.com/join-us",
    "topics": [
-    "Healthcare",
-    "Housing",
-    "Education & Childcare"
+    "universal healthcare",
+    "affordable housing",
+    "everyday costs",
+    "local government"
    ]
   },
   {
@@ -183,9 +180,8 @@
    "info": "x.com/kaplan4az\nwww.kaplanAZ4us.org",
    "volunteer": "x.com/kaplan4az",
    "topics": [
-    "Housing",
-    "Workers & Wages",
-    "Democracy & voting"
+    "abolish ice",
+    "term limits"
    ]
   },
   {
@@ -199,8 +195,8 @@
    "info": "marc@marcgrahamforaz.com",
    "volunteer": "Please email me at marc@marcgrahamforaz.com",
    "topics": [
-    "Education & Childcare",
-    "Democracy & voting"
+    "school voucher",
+    "fair tax"
    ]
   },
   {
@@ -214,11 +210,9 @@
    "info": "Secure water resources & drought solutions, expand access to affordable healthcare,\nhttps://www.delgadoforaz6.com",
    "volunteer": "https://www.delgadoforaz6.com",
    "topics": [
-    "Healthcare",
-    "Housing",
-    "Climate & Environment",
-    "Tax the rich",
-    "Democracy & voting"
+    "universal healthcare",
+    "clean water",
+    "fair tax"
    ]
   },
   {
@@ -232,7 +226,7 @@
    "info": "www.sarahbacon.com",
    "volunteer": "www.sarahbacon.com/volunteer",
    "topics": [
-    "Money out of politics"
+    "everyday costs"
    ]
   },
   {
@@ -246,11 +240,9 @@
    "info": "https://www.joellavaforcongress.com",
    "volunteer": "https://www.joellavaforcongress.com/volunteer",
    "topics": [
-    "Healthcare",
-    "Housing",
-    "Public safety & guns",
-    "Impeach Trump",
-    "Democracy & voting"
+    "universal healthcare",
+    "affordable housing",
+    "donald trump"
    ]
   },
   {
@@ -264,12 +256,12 @@
    "info": "https://mariannehumanityfirst.com",
    "volunteer": "https://www.mariannehumanityfirst.com/contact",
    "topics": [
-    "Healthcare",
-    "Housing",
-    "Climate & Environment",
-    "Immigration & ICE",
-    "Palestine / Israel",
-    "Democracy & voting"
+    "universal healthcare",
+    "affordable housing",
+    "abolish ice",
+    "pac money",
+    "fair tax",
+    "criminal justice"
    ]
   },
   {
@@ -283,9 +275,7 @@
    "info": "Estherforcongress.org",
    "volunteer": "Estherforcongress.org/volunteer",
    "topics": [
-    "Money out of politics",
-    "Impeach Trump",
-    "Term limits"
+    "term limits"
    ]
   },
   {
@@ -299,10 +289,8 @@
    "info": "Www.votejaron.com",
    "volunteer": "https://votejaron.com/volunteer/",
    "topics": [
-    "Healthcare",
-    "Housing",
-    "Education & Childcare",
-    "Climate & Environment"
+    "universal healthcare",
+    "affordable housing"
    ]
   },
   {
@@ -316,8 +304,8 @@
    "info": "https://www.votemasuda.com/",
    "volunteer": "https://actionnetwork.org/forms/volunteer-for-masuda-for-congress?source=direct_link&",
    "topics": [
-    "Housing",
-    "Immigration & ICE"
+    "affordable housing",
+    "everyday costs"
    ]
   },
   {
@@ -331,10 +319,9 @@
    "info": "Instagram alvarez4nm12",
    "volunteer": "https://www.alvarezNM4us.org/volunteer",
    "topics": [
-    "Healthcare",
-    "Housing",
-    "Climate & Environment",
-    "Transit & Infrastructure"
+    "universal healthcare",
+    "abolish ice",
+    "clean water"
    ]
   },
   {
@@ -348,10 +335,9 @@
    "info": "insta https://www.instagram.com/soto4la14 and https://www.sotoCA4us.org",
    "volunteer": "insta https://www.instagram.com/soto4la14 and https://www.sotoCA4us.org",
    "topics": [
-    "Housing",
-    "Climate & Environment",
-    "Immigration & ICE",
-    "Transit & Infrastructure"
+    "affordable housing",
+    "abolish ice",
+    "affordability requirements"
    ]
   },
   {
@@ -365,9 +351,9 @@
    "info": "Carjuzaaforcongress.org",
    "volunteer": "Email: info@carjuzaaforcongress.org",
    "topics": [
-    "Healthcare",
-    "Housing",
-    "Money out of politics"
+    "universal healthcare",
+    "affordable housing",
+    "local government"
    ]
   },
   {
@@ -380,9 +366,7 @@
    "stances": "1. Get people housed, keep people housed \n2. Fund our Neighborhoods \n3. Honest leaderships that follows through \n4. Meet the moment on civil rights",
    "info": "www.Faizahforla.com",
    "volunteer": "Email info@faizahforla.com, or signup on https://luma.com/faizahforla",
-   "topics": [
-    "Housing"
-   ]
+   "topics": []
   },
   {
    "name": "Jessica LaGosh",
@@ -395,8 +379,10 @@
    "info": "www.jessicalagoshforgovernor.com",
    "volunteer": "https://www.jessicalagoshforgovernor.com/#Join%20the%20Movement",
    "topics": [
-    "Healthcare",
-    "Housing"
+    "universal healthcare",
+    "abolish ice",
+    "rent control",
+    "criminal justice"
    ]
   },
   {
@@ -410,8 +396,7 @@
    "info": "jasonbyors.com",
    "volunteer": "jasonbyors.com/volunteer",
    "topics": [
-    "Healthcare",
-    "Housing"
+    "universal healthcare"
    ]
   },
   {
@@ -424,9 +409,7 @@
    "stances": "End corruption-benefits for the people-more subsidies to the peopel (instead of more cuts)",
    "info": "https://www.villegasforcongress.com/  https://www.drjasmeetbains.com/",
    "volunteer": "https://www.drjasmeetbains.com/",
-   "topics": [
-    "Money out of politics"
-   ]
+   "topics": []
   },
   {
    "name": "Randy Villegas & Jasmeet Bains",
@@ -438,9 +421,7 @@
    "stances": "End corruption-benefits for the people-more subsidies to the peopel (instead of more cuts)",
    "info": "https://www.villegasforcongress.com/  https://www.drjasmeetbains.com/",
    "volunteer": "https://www.drjasmeetbains.com/",
-   "topics": [
-    "Money out of politics"
-   ]
+   "topics": []
   },
   {
    "name": "Hunter Garcia Miranda",
@@ -453,9 +434,8 @@
    "info": "huntermiranda2026.com",
    "volunteer": "https://huntermiranda2026.com/Volunteer/",
    "topics": [
-    "Money out of politics",
-    "Palestine / Israel",
-    "Veterans"
+    "pac money",
+    "national politics"
    ]
   },
   {
@@ -468,10 +448,7 @@
    "stances": "Protect Democracy, Stronger Public Schools, Fight Surveillance State",
    "info": "Vic4hd47.com",
    "volunteer": "On website is best place",
-   "topics": [
-    "Education & Childcare",
-    "Democracy & voting"
-   ]
+   "topics": []
   },
   {
    "name": "Noah Klein",
@@ -484,11 +461,11 @@
    "info": "Instagram: https://www.instagram.com/klein4co19\nTwitter (X): https://x.com/klein4co19",
    "volunteer": "Dm me on X",
    "topics": [
-    "Healthcare",
-    "Education & Childcare",
-    "Climate & Environment",
-    "Workers & Wages",
-    "Transit & Infrastructure"
+    "universal healthcare",
+    "data centers",
+    "term limits",
+    "medicaid expansion",
+    "everyday costs"
    ]
   },
   {
@@ -502,7 +479,7 @@
    "info": "https://x.com/velasquez4den9",
    "volunteer": "https://x.com/velasquez4den9",
    "topics": [
-    "Transit & Infrastructure"
+    "data centers"
    ]
   },
   {
@@ -516,9 +493,9 @@
    "info": "https://www.romeroCO4us.org",
    "volunteer": "https://www.romeroCO4us.org/volunteer",
    "topics": [
-    "Healthcare",
-    "Workers & Wages",
-    "Immigration & ICE"
+    "universal healthcare",
+    "abolish ice",
+    "everyday costs"
    ]
   },
   {
@@ -532,9 +509,8 @@
    "info": "Www.riceforct.com",
    "volunteer": "Volunteers@riceforct.com",
    "topics": [
-    "Healthcare",
-    "Immigration & ICE",
-    "Palestine / Israel"
+    "abolish ice",
+    "free palestine"
    ]
   },
   {
@@ -547,10 +523,7 @@
    "stances": "$25/minimum wage tied to inflation, formerly undocumented Black woman fighting to protect immigrants and for immigration reform,",
    "info": "www.ruthfortuneforcongress.com",
    "volunteer": "https://www.ruthfortuneforcongress.com/#volunteer",
-   "topics": [
-    "Workers & Wages",
-    "Immigration & ICE"
-   ]
+   "topics": []
   },
   {
    "name": "Joseph Perez-Caputo",
@@ -563,12 +536,9 @@
    "info": "https://allmylinks.com/joseph-perez-caputo",
    "volunteer": "JPCforCT04@gmail.com",
    "topics": [
-    "Healthcare",
-    "Housing",
-    "Money out of politics",
-    "Immigration & ICE",
-    "Palestine / Israel",
-    "Impeach Trump"
+    "universal healthcare",
+    "abolish ice",
+    "free palestine"
    ]
   },
   {
@@ -581,9 +551,7 @@
    "stances": "1. Responsible Land Use & Development 2. Strong Community Engagement 3. Affordability",
    "info": "Kiraforcouncil.com",
    "volunteer": "https://www.kiraforcouncil.com/get-involved",
-   "topics": [
-    "Housing"
-   ]
+   "topics": []
   },
   {
    "name": "Dylana Galery",
@@ -595,10 +563,7 @@
    "stances": "•\tSmart, well-planned growth\n\t•\tTransparent leadership & accountability\n\t•\tAffordable utilities & stronger infrastructure",
    "info": "dylanagalery.com",
    "volunteer": "https://form.jotform.com/260633207767056",
-   "topics": [
-    "Housing",
-    "Transit & Infrastructure"
-   ]
+   "topics": []
   },
   {
    "name": "Yen Bailey",
@@ -611,9 +576,11 @@
    "info": "Www.YenBaileyforCongress.com",
    "volunteer": "https://yenbaileyforcongress.com/get-involved/",
    "topics": [
-    "Healthcare",
-    "Housing",
-    "Money out of politics"
+    "universal healthcare",
+    "affordable housing",
+    "abolish ice",
+    "pac money",
+    "national politics"
    ]
   },
   {
@@ -627,8 +594,7 @@
    "info": "V4CCSB.ORG",
    "volunteer": "https://www.v4ccsb.org/contact",
    "topics": [
-    "Education & Childcare",
-    "Climate & Environment"
+    "fair tax"
    ]
   },
   {
@@ -641,12 +607,7 @@
    "stances": "• Fix the insurance and affordability crises\n• Crack down on corruption\n• Protect the Everglades/environment and stop reckless overdevelopment",
    "info": "EhrforCongress.us",
    "volunteer": "https://ehrforcongress.us/ volunteer form is right at the top of the page or for a direct human interaction, Velma Hernandez at velma@ehrforcongress.us",
-   "topics": [
-    "Healthcare",
-    "Housing",
-    "Climate & Environment",
-    "Money out of politics"
-   ]
+   "topics": []
   },
   {
    "name": "Marialana Kinter",
@@ -659,9 +620,9 @@
    "info": "KinterForCongress.com",
    "volunteer": "https://www.kinterforcongress.com/volunteer",
    "topics": [
-    "Money out of politics",
-    "Workers & Wages",
-    "Veterans"
+    "pac money",
+    "everyday costs",
+    "national politics"
    ]
   },
   {
@@ -675,9 +636,7 @@
    "info": "x.com/johnsonThaDon5",
    "volunteer": "x.com/johnsonThaDon5",
    "topics": [
-    "Housing",
-    "Public safety & guns",
-    "Transit & Infrastructure"
+    "abolish ice"
    ]
   },
   {
@@ -691,7 +650,8 @@
    "info": "Www.elfredadesvignes.com",
    "volunteer": "contact us@elfredadesvignes.com",
    "topics": [
-    "Housing"
+    "affordable housing",
+    "rent control"
    ]
   },
   {
@@ -704,10 +664,7 @@
    "stances": "1- Georgia families are paying for utility decisions they didn’t make rate structures should reward conservation, not punish it. \n2- I’m pushing for binding timelines on transitioning to renewables so it’s not just long-term promises with no enforcement. \n3- And I’m focused on transparency  if regulators meet with utility executives, the public should know when, why, and what was discussed.",
    "info": "https://www.okaforGA4us.org",
    "volunteer": "https://www.okaforGA4us.org/volunteer",
-   "topics": [
-    "Climate & Environment",
-    "Transit & Infrastructure"
-   ]
+   "topics": []
   },
   {
    "name": "Phedra PT Thomas",
@@ -732,11 +689,8 @@
    "info": "https://www.instagram.com/castillo4id16",
    "volunteer": "dm me https://www.instagram.com/castillo4id16",
    "topics": [
-    "Healthcare",
-    "Education & Childcare",
-    "Climate & Environment",
-    "Reproductive rights",
-    "Transit & Infrastructure"
+    "universal healthcare",
+    "clean water"
    ]
   },
   {
@@ -750,8 +704,7 @@
    "info": "ValerieWadeforIdaho.com",
    "volunteer": "Please send us an e-mail: ValerieWadeforIdaho@gmail.com",
    "topics": [
-    "Healthcare",
-    "Education & Childcare"
+    "medicaid expansion"
    ]
   },
   {
@@ -765,8 +718,8 @@
    "info": "https://www.patelIL4us.org",
    "volunteer": "https://www.patelIL4us.org",
    "topics": [
-    "Housing",
-    "Impeach Trump"
+    "donald trump",
+    "local government"
    ]
   },
   {
@@ -780,9 +733,9 @@
    "info": "Www.lindsaygramlich.com",
    "volunteer": "https://www.lindsaygramlich.com/get-involved",
    "topics": [
-    "Healthcare",
-    "Housing",
-    "Education & Childcare"
+    "universal healthcare",
+    "affordable housing",
+    "everyday costs"
    ]
   },
   {
@@ -796,9 +749,7 @@
    "info": "https://tabithazeiglerforcongress.com/",
    "volunteer": "info@tabithazeiglerforcongress.com",
    "topics": [
-    "Climate & Environment",
-    "Money out of politics",
-    "Public safety & guns"
+    "data centers"
    ]
   },
   {
@@ -812,7 +763,8 @@
    "info": "www.rachealforindiana.com",
    "volunteer": "https://www.rachealforindiana.com/#Volunteer",
    "topics": [
-    "Education & Childcare"
+    "abolish ice",
+    "fair tax"
    ]
   },
   {
@@ -826,10 +778,8 @@
    "info": "https://hoosierstoelectnatestout.com/",
    "volunteer": "https://forms.gle/fLZL9uko4a3VSfZt8",
    "topics": [
-    "Healthcare",
-    "Housing",
-    "Education & Childcare",
-    "Money out of politics"
+    "pac money",
+    "national politics"
    ]
   },
   {
@@ -843,7 +793,9 @@
    "info": "Stephaniejoyocum.com",
    "volunteer": "Stephaniejoyocum.com/volunteer",
    "topics": [
-    "Education & Childcare"
+    "abolish ice",
+    "pac money",
+    "national politics"
    ]
   },
   {
@@ -856,11 +808,7 @@
    "stances": "1. Fully Fund Public Schools 2. Affordable Childcare 3. Raise the Wage",
    "info": "votevictoriamartz.org",
    "volunteer": "https://votevictoriamartz.org/contact-2/",
-   "topics": [
-    "Housing",
-    "Education & Childcare",
-    "Workers & Wages"
-   ]
+   "topics": []
   },
   {
    "name": "Julie McGill",
@@ -873,7 +821,9 @@
    "info": "www.mcgillforindiana.com \nFacebook.com/mcgillforindiana",
    "volunteer": "https://mcgillforindiana.com/volunteer",
    "topics": [
-    "Healthcare"
+    "universal healthcare",
+    "abolish ice",
+    "local government"
    ]
   },
   {
@@ -887,8 +837,8 @@
    "info": "leilaforiowa.com",
    "volunteer": "leilaforiowa.com/volunteer  OR email team@leilaforiowa.com",
    "topics": [
-    "Education & Childcare",
-    "Climate & Environment"
+    "clean water",
+    "school voucher"
    ]
   },
   {
@@ -902,8 +852,8 @@
    "info": "leilaforiowa.com",
    "volunteer": "https://docs.google.com/forms/d/e/1FAIpQLSebBzricpl5rFScrXZblVaXLg9Iqjaim5nnfpZRvhGH1SG0-Q/viewform\n\nOR email team@leilaforiowa.com",
    "topics": [
-    "Education & Childcare",
-    "Climate & Environment"
+    "clean water",
+    "school voucher"
    ]
   },
   {
@@ -917,9 +867,8 @@
    "info": "SarahPreu2026.com",
    "volunteer": "https://www.sarahpreu2026.com/#volunteer",
    "topics": [
-    "Healthcare",
-    "Immigration & ICE",
-    "Palestine / Israel"
+    "universal healthcare",
+    "abolish ice"
    ]
   },
   {
@@ -933,8 +882,7 @@
    "info": "https://www.anneforkansas.com/",
    "volunteer": "https://anneforkansas.nationbuilder.com/volunteer",
    "topics": [
-    "Healthcare",
-    "Money out of politics"
+    "citizens united"
    ]
   },
   {
@@ -948,10 +896,8 @@
    "info": "https://www.pierceKS4us.info X: https://x.com/pierce4ks6",
    "volunteer": "https://www.pierceKS4us.info X: https://x.com/pierce4ks6",
    "topics": [
-    "Healthcare",
-    "Education & Childcare",
-    "Workers & Wages",
-    "Impeach Trump"
+    "donald trump",
+    "medicaid expansion"
    ]
   },
   {
@@ -965,9 +911,8 @@
    "info": "Www.williamcompton.com",
    "volunteer": "You can email the campaign at williamcompton4ky@gmail.com or scroll to the bottom of home page on website and fill the information out.",
    "topics": [
-    "Healthcare",
-    "Education & Childcare",
-    "Money out of politics"
+    "pac money",
+    "national politics"
    ]
   },
   {
@@ -981,8 +926,7 @@
    "info": "https://www.whitakerky4us.org/",
    "volunteer": "https://www.whitakerky4us.org/volunteer",
    "topics": [
-    "Education & Childcare",
-    "Public safety & guns"
+    "pac money"
    ]
   },
   {
@@ -996,9 +940,8 @@
    "info": "Twitter (X): https://x.com/fields4nolaB\nWebsite: https://www.fieldsLA4us.info",
    "volunteer": "Twitter (X): https://x.com/fields4nolaB\nWebsite: https://www.fieldsLA4us.info",
    "topics": [
-    "Housing",
-    "Transit & Infrastructure",
-    "Impeach Trump"
+    "donald trump",
+    "pac money"
    ]
   },
   {
@@ -1012,9 +955,10 @@
    "info": "loudforcongress.com",
    "volunteer": "https://docs.google.com/forms/d/e/1FAIpQLScVykkX0VEjXT8-xCepWFLbYVcqMShtPFnyXCB3zDf-K13z3A/viewform",
    "topics": [
-    "Healthcare",
-    "Housing",
-    "Money out of politics"
+    "universal healthcare",
+    "affordable housing",
+    "pac money",
+    "national politics"
    ]
   },
   {
@@ -1027,10 +971,7 @@
    "stances": "Rural economies are being treated like afterthoughts. Invest in local agriculture processing and keep jobs in-state. Let’s expand  telehealth infrastructure because long drives for basic care are not sustainable up here also fix the damn roads every winter its the same thing",
    "info": "https://www.mcleodme4us.info/",
    "volunteer": "https://www.mcleodme4us.info/join",
-   "topics": [
-    "Workers & Wages",
-    "Transit & Infrastructure"
-   ]
+   "topics": []
   },
   {
    "name": "Imani Okafor",
@@ -1043,8 +984,7 @@
    "info": "https://www.okaformd4us.org/",
    "volunteer": "https://www.okaformd4us.org/volunteer",
    "topics": [
-    "Healthcare",
-    "Education & Childcare"
+    "everyday costs"
    ]
   },
   {
@@ -1058,12 +998,9 @@
    "info": "harrymd5.com",
    "volunteer": "https://www.harrymd5.com/contact",
    "topics": [
-    "Healthcare",
-    "Housing",
-    "Education & Childcare",
-    "Climate & Environment",
-    "Money out of politics",
-    "Transit & Infrastructure"
+    "universal healthcare",
+    "affordable housing",
+    "pac money"
    ]
   },
   {
@@ -1077,9 +1014,8 @@
    "info": "https://www.rahmanMD4us.org",
    "volunteer": "https://www.rahmanMD4us.org/volunteer",
    "topics": [
-    "Education & Childcare",
-    "Transit & Infrastructure",
-    "Impeach Trump"
+    "donald trump",
+    "abolish ice"
    ]
   },
   {
@@ -1093,13 +1029,11 @@
    "info": "LeighaForCongress.com",
    "volunteer": "https://leighaforcongress.com/volunteer",
    "topics": [
-    "Healthcare",
-    "Money out of politics",
-    "Immigration & ICE",
-    "Transit & Infrastructure",
-    "Democracy & voting",
-    "Term limits",
-    "Mental health"
+    "universal healthcare",
+    "abolish ice",
+    "pac money",
+    "term limits",
+    "national politics"
    ]
   },
   {
@@ -1113,10 +1047,9 @@
    "info": "Randiformd.com",
    "volunteer": "https://randiformd.com/volunteer",
    "topics": [
-    "Healthcare",
-    "Housing",
-    "Education & Childcare",
-    "Workers & Wages"
+    "universal healthcare",
+    "affordable housing",
+    "everyday costs"
    ]
   },
   {
@@ -1142,7 +1075,9 @@
    "info": "Jakeyajohnson.com",
    "volunteer": "https://actionnetwork.org/forms/ready-to-get-your-hands-dirty?source=direct_link&",
    "topics": [
-    "Money out of politics"
+    "pac money",
+    "local government",
+    "national politics"
    ]
   },
   {
@@ -1156,10 +1091,7 @@
    "info": "www.MariahLancaster.com",
    "volunteer": "Email Volunteer@MariahLancaster.com",
    "topics": [
-    "Healthcare",
-    "Education & Childcare",
-    "Climate & Environment",
-    "Money out of politics"
+    "universal healthcare"
    ]
   },
   {
@@ -1173,9 +1105,9 @@
    "info": "www.craigswallowforcongreess.com",
    "volunteer": "Volunteer@craigswallowforcongress.com & https://survey123.arcgis.com/share/a26469f7d02548df82e6d3f4e3ea484a?portalUrl=https://jkvilhaug.maps.arcgis.com",
    "topics": [
-    "Healthcare",
-    "Money out of politics",
-    "Term limits"
+    "stock trading",
+    "citizens united",
+    "term limits"
    ]
   },
   {
@@ -1188,10 +1120,7 @@
    "stances": "Economic Opportunity, Affordability, Regional Collaboration",
    "info": "www.andrewfitch.org",
    "volunteer": "https://www.andrewfitch.org/volunteer",
-   "topics": [
-    "Housing",
-    "Workers & Wages"
-   ]
+   "topics": []
   },
   {
    "name": "Kofi Mensah Esq.",
@@ -1203,11 +1132,7 @@
    "stances": "Fix the transit system so it actually runs on time and people can rely on it for work and school and cap the insane  rent increases annually and create a right to counsel for tenants facing eviction, stop the importation of wolves into ASPEN!!!!",
    "info": "https://x.com/mensah4ma7",
    "volunteer": "https://www.mensahma4us.org/volunteer",
-   "topics": [
-    "Housing",
-    "Education & Childcare",
-    "Transit & Infrastructure"
-   ]
+   "topics": []
   },
   {
    "name": "Samantha O’Neill",
@@ -1220,8 +1145,9 @@
    "info": "https://www.oneillMA4us.org",
    "volunteer": "https://www.oneillMA4us.org/get-involved",
    "topics": [
-    "Housing",
-    "Transit & Infrastructure"
+    "affordable housing",
+    "abolish ice",
+    "fair tax"
    ]
   },
   {
@@ -1234,11 +1160,7 @@
    "stances": "Improving judicial equity to steer MA away from mass incarceration. Emphasis of progressive values (racial equity, antirecidivism, rehabilitation, trans/immigrant/abortion/labor rights) in the courts. Appointing diverse judges from a wide range of backgrounds (particularly from underrepresented groups).",
    "info": "Jordanforgood.com",
    "volunteer": "https://www.jordanforgood.com/get-involved",
-   "topics": [
-    "Workers & Wages",
-    "Immigration & ICE",
-    "Reproductive rights"
-   ]
+   "topics": []
   },
   {
    "name": "Avery Thompson",
@@ -1251,9 +1173,7 @@
    "info": "https://www.averythompson45.com",
    "volunteer": "https://www.averythompson45.com/volunteer",
    "topics": [
-    "Education & Childcare",
-    "Climate & Environment",
-    "Workers & Wages"
+    "everyday costs"
    ]
   },
   {
@@ -1267,7 +1187,7 @@
    "info": "https://www.mahmoudMI4us.info",
    "volunteer": "https://www.mahmoudMI4us.info/get-involved",
    "topics": [
-    "Veterans"
+    "fair tax"
    ]
   },
   {
@@ -1281,12 +1201,9 @@
    "info": "https://katrinamanetta.com/",
    "volunteer": "https://www.mobilize.us/katrinamanetta/event/892052/",
    "topics": [
-    "Housing",
-    "Education & Childcare",
-    "Money out of politics",
-    "Workers & Wages",
-    "Tax the rich",
-    "Democracy & voting"
+    "pac money",
+    "everyday costs",
+    "national politics"
    ]
   },
   {
@@ -1300,7 +1217,7 @@
    "info": "www.joannawhaley.com",
    "volunteer": "www.joannawhaley.com/volunteer",
    "topics": [
-    "Healthcare"
+    "universal healthcare"
    ]
   },
   {
@@ -1314,13 +1231,14 @@
    "info": "chrisgilmerhill.com",
    "volunteer": "chrisgilmerhill.com/volunteer",
    "topics": [
-    "Healthcare",
-    "Housing",
-    "Education & Childcare",
-    "Climate & Environment",
-    "Money out of politics",
-    "Transit & Infrastructure",
-    "Tax the rich"
+    "universal healthcare",
+    "affordable housing",
+    "abolish ice",
+    "clean water",
+    "data centers",
+    "pac money",
+    "fair tax",
+    "national politics"
    ]
   },
   {
@@ -1334,9 +1252,7 @@
    "info": "Home | Doug Chapin for Congress https://share.google/ucyNKzF0ewg2uiKBb",
    "volunteer": "Home | Doug Chapin for Congress https://share.google/ucyNKzF0ewg2uiKBb",
    "topics": [
-    "Money out of politics",
-    "Palestine / Israel",
-    "Democracy & voting"
+    "pac money"
    ]
   },
   {
@@ -1350,10 +1266,9 @@
    "info": "instagram.com/goldstein61b",
    "volunteer": "instagram.com/goldstein61b",
    "topics": [
-    "Healthcare",
-    "Housing",
-    "Climate & Environment",
-    "Transit & Infrastructure"
+    "universal healthcare",
+    "affordable housing",
+    "everyday costs"
    ]
   },
   {
@@ -1367,9 +1282,7 @@
    "info": "Jeffreyhulumiiiforcongress.com",
    "volunteer": "https://www.jeffreyhulumiiiforcongress.com/join/#volunteer",
    "topics": [
-    "Housing",
-    "Workers & Wages",
-    "Veterans"
+    "local government"
    ]
   },
   {
@@ -1383,7 +1296,7 @@
    "info": "none yet",
    "volunteer": "txt me",
    "topics": [
-    "Public safety & guns"
+    "fair tax"
    ]
   },
   {
@@ -1397,10 +1310,8 @@
    "info": "Jordanjherrera.com",
    "volunteer": "Go to my campaign website and click on the volunteer icon.",
    "topics": [
-    "Healthcare",
-    "Education & Childcare",
-    "Workers & Wages",
-    "Veterans"
+    "universal healthcare",
+    "local government"
    ]
   },
   {
@@ -1413,9 +1324,7 @@
    "stances": "1. Hold govt accountable 2. Make America affordable 3. Protect the vulnerable",
    "info": "www.alaniformt.com",
    "volunteer": "Info@alanibankheadforsenate.com",
-   "topics": [
-    "Housing"
-   ]
+   "topics": []
   },
   {
    "name": "Elijah Patrick Winters",
@@ -1428,9 +1337,10 @@
    "info": "https://www.wintersMT4us.org",
    "volunteer": "https://www.wintersMT4us.org/volunteer",
    "topics": [
-    "Healthcare",
-    "Housing",
-    "Impeach Trump"
+    "universal healthcare",
+    "affordable housing",
+    "donald trump",
+    "fair tax"
    ]
   },
   {
@@ -1444,10 +1354,8 @@
    "info": "Smithformontana.com",
    "volunteer": "Smithfirmontana.com/get-involved",
    "topics": [
-    "Healthcare",
-    "Housing",
-    "Education & Childcare",
-    "Mental health"
+    "universal healthcare",
+    "fair tax"
    ]
   },
   {
@@ -1461,8 +1369,7 @@
    "info": "https://www.instagram.com/ortega4nv3",
    "volunteer": "https://www.orteganv4us.org/volunteer",
    "topics": [
-    "Climate & Environment",
-    "Transit & Infrastructure"
+    "clean water"
    ]
   },
   {
@@ -1476,9 +1383,8 @@
    "info": "Facebook: https://www.facebook.com/ortega4nv3\nWebsite: https://www.ortegaNV4us.org",
    "volunteer": "https://www.orteganv4us.org/volunteer",
    "topics": [
-    "Climate & Environment",
-    "Immigration & ICE",
-    "Transit & Infrastructure"
+    "abolish ice",
+    "clean water"
    ]
   },
   {
@@ -1492,8 +1398,10 @@
    "info": "Website: https://www.salgadoNV4us.info\nTwitter (X): https://x.com/salgado4reno",
    "volunteer": "https://www.salgadoNV4us.info/volunteer",
    "topics": [
-    "Housing",
-    "Climate & Environment"
+    "affordable housing",
+    "clean water",
+    "national politics",
+    "affordability requirements"
    ]
   },
   {
@@ -1507,10 +1415,9 @@
    "info": "JoyForNV.com",
    "volunteer": "https://www.joyfornv.com/volunteer",
    "topics": [
-    "Healthcare",
-    "Workers & Wages",
-    "Tax the rich",
-    "Impeach Trump"
+    "universal healthcare",
+    "donald trump",
+    "fair tax"
    ]
   },
   {
@@ -1523,10 +1430,7 @@
    "stances": "main: Increase teacher pay & retention\n2 Smaller class sizes\n3 More mental health resources for students",
    "info": "no website yet",
    "volunteer": "n/a",
-   "topics": [
-    "Education & Childcare",
-    "Mental health"
-   ]
+   "topics": []
   },
   {
    "name": "Heath Howard",
@@ -1539,8 +1443,9 @@
    "info": "heathhowardnh.com",
    "volunteer": "heathhowardnh.com/volunteer",
    "topics": [
-    "Money out of politics",
-    "Palestine / Israel"
+    "pac money",
+    "free palestine",
+    "national politics"
    ]
   },
   {
@@ -1554,9 +1459,8 @@
    "info": "HopeForRahway.com",
    "volunteer": "https://hopeforrahway.com/#contact",
    "topics": [
-    "Climate & Environment",
-    "Public safety & guns",
-    "Mental health"
+    "abolish ice",
+    "clean water"
    ]
   },
   {
@@ -1570,8 +1474,7 @@
    "info": "Peace4shore.com",
    "volunteer": "https://www.peace4shore.com/volunteer",
    "topics": [
-    "Healthcare",
-    "Money out of politics"
+    "universal healthcare"
    ]
   },
   {
@@ -1585,10 +1488,10 @@
    "info": "Www.johnshsuforcongress.com",
    "volunteer": "https://docs.google.com/forms/d/e/1FAIpQLScOJibwE883T6XB6C2mbwxiaPusWRLGc_UfX7dmK83k1fBA-w/viewform",
    "topics": [
-    "Healthcare",
-    "Money out of politics",
-    "Workers & Wages",
-    "Immigration & ICE"
+    "universal healthcare",
+    "abolish ice",
+    "stock trading",
+    "citizens united"
    ]
   },
   {
@@ -1602,10 +1505,10 @@
    "info": "https://www.johnhsuforcongress.com/",
    "volunteer": "https://www.mobilize.us/johnhsuforcongress/event/925914/?fbclid=PAVERFWARkul1leHRuA2FlbQIxMABzcnRjBmFwcF9pZA8xMjQwMjQ1NzQyODc0MTQAAafd54Zt0kwHKPf8FQGPkVGeArH9isV5RCPEB0SiGDQU5Tvor1x3EZiMJcN9_g_aem_dIvAgHv0ti0xwjYd56JudQ",
    "topics": [
-    "Healthcare",
-    "Money out of politics",
-    "Workers & Wages",
-    "Immigration & ICE"
+    "universal healthcare",
+    "abolish ice",
+    "stock trading",
+    "citizens united"
    ]
   },
   {
@@ -1619,9 +1522,9 @@
    "info": "https://www.kimNJ27.info\nI love your videos btw",
    "volunteer": "https://www.kimNJ27.info",
    "topics": [
-    "Housing",
-    "Education & Childcare",
-    "Reproductive rights"
+    "affordable housing",
+    "fair tax",
+    "everyday costs"
    ]
   },
   {
@@ -1635,8 +1538,7 @@
    "info": "https://queenforqueens.com",
    "volunteer": "contact@queenforqueens.com",
    "topics": [
-    "Housing",
-    "Education & Childcare"
+    "affordable housing"
    ]
   },
   {
@@ -1650,8 +1552,8 @@
    "info": "https://lukasforcongress.com/",
    "volunteer": "https://lukasforcongress.com/volunteer-form/",
    "topics": [
-    "Healthcare",
-    "Housing"
+    "universal healthcare",
+    "affordable housing"
    ]
   },
   {
@@ -1665,10 +1567,7 @@
    "info": "gladysfloresfornewyork.com",
    "volunteer": "email:  gladysfloresassembly133@gmail.com  \nFacebook:   https://www.facebook.com/profile.php?id=61570724732343",
    "topics": [
-    "Housing",
-    "Education & Childcare",
-    "Climate & Environment",
-    "Reproductive rights"
+    "clean water"
    ]
   },
   {
@@ -1682,7 +1581,9 @@
    "info": "https://www.liuNY4us.org",
    "volunteer": "https://www.liuNY4us.org/volunteer",
    "topics": [
-    "Housing"
+    "affordable housing",
+    "abolish ice",
+    "fair tax"
    ]
   },
   {
@@ -1695,10 +1596,7 @@
    "stances": "Four day work week, workplace unionization, rent freeze.",
    "info": "JoshuaBristol.com",
    "volunteer": "https://joshuabristol.com/#volunteer",
-   "topics": [
-    "Housing",
-    "Workers & Wages"
-   ]
+   "topics": []
   },
   {
    "name": "Ashley Bell",
@@ -1711,10 +1609,9 @@
    "info": "Ashleybellforcongress.com",
    "volunteer": "Volunteer4AB.com",
    "topics": [
-    "Healthcare",
-    "Housing",
-    "Money out of politics",
-    "Immigration & ICE"
+    "abolish ice",
+    "pac money",
+    "national politics"
    ]
   },
   {
@@ -1728,8 +1625,9 @@
    "info": "https://www.priyadesaiNC21.com",
    "volunteer": "https://www.priyadesaiNC21.com",
    "topics": [
-    "Healthcare",
-    "Education & Childcare"
+    "universal healthcare",
+    "abolish ice",
+    "criminal justice"
    ]
   },
   {
@@ -1743,10 +1641,8 @@
    "info": "kimberlyhardyforcongress.com",
    "volunteer": "https://www.kimberlyhardyforcongress.com/getinvolved",
    "topics": [
-    "Healthcare",
-    "Education & Childcare",
-    "Workers & Wages",
-    "Tax the rich"
+    "universal healthcare",
+    "fair tax"
    ]
   },
   {
@@ -1760,9 +1656,7 @@
    "info": "Voteparknc.com",
    "volunteer": "Email votepark.nc@gmail.com",
    "topics": [
-    "Education & Childcare",
-    "Climate & Environment",
-    "Transit & Infrastructure"
+    "clean water"
    ]
   },
   {
@@ -1776,10 +1670,10 @@
    "info": "Website: https://www.haddadOH11.info",
    "volunteer": "https://www.haddadOH11.info/actblue",
    "topics": [
-    "Healthcare",
-    "Money out of politics",
-    "Workers & Wages",
-    "Impeach Trump"
+    "universal healthcare",
+    "donald trump",
+    "stock trading",
+    "everyday costs"
    ]
   },
   {
@@ -1792,12 +1686,7 @@
    "stances": "Make the economy affordable, strengthen our safety nets, end MAGA chaos and corruption",
    "info": "donforohio.com",
    "volunteer": "https://donforohio.com/volunteer",
-   "topics": [
-    "Housing",
-    "Money out of politics",
-    "Public safety & guns",
-    "Impeach Trump"
-   ]
+   "topics": []
   },
   {
    "name": "N’Kiyla ‘Jasmine’ Thomas",
@@ -1810,8 +1699,8 @@
    "info": "https://www.jasmineforok.com/",
    "volunteer": "https://docs.google.com/forms/d/e/1FAIpQLSdjVzQbl9cRB1fNsO061PtfJW9aU2FQTDbn6Sdl1GaIpIbM7g/viewform?pli=1",
    "topics": [
-    "Healthcare",
-    "Education & Childcare"
+    "universal healthcare",
+    "abolish ice"
    ]
   },
   {
@@ -1825,8 +1714,8 @@
    "info": "Pixleyforcongress.com",
    "volunteer": "Info@pixleyforcongress.com",
    "topics": [
-    "Healthcare",
-    "Tax the rich"
+    "universal healthcare",
+    "fair tax"
    ]
   },
   {
@@ -1840,8 +1729,7 @@
    "info": "jsalfororegon.com",
    "volunteer": "email: tellmemore@jsalfororegon.com",
    "topics": [
-    "Workers & Wages",
-    "Tax the rich"
+    "abolish ice"
    ]
   },
   {
@@ -1855,9 +1743,8 @@
    "info": "Electvirginiastapleton.com",
    "volunteer": "vik@electvirginiastapleton.com or https://docs.google.com/forms/d/e/1FAIpQLSedhprqCFXXVbXD8qkmHS1tvh0UBI9FV46mZ4N81KzUD4RwIw/viewform?pli=1&authuser=0",
    "topics": [
-    "Healthcare",
-    "Housing",
-    "Education & Childcare"
+    "universal healthcare",
+    "affordable housing"
    ]
   },
   {
@@ -1871,10 +1758,10 @@
    "info": "https://bjfororegon.wixsite.com/bjfororegon",
    "volunteer": "Email jones4oregon@gmail.com to be connected with the volunteer coordinator or sign up through the volunteer link in my linktree https://linktr.ee/JonesForOregon",
    "topics": [
-    "Healthcare",
-    "Housing",
-    "Education & Childcare",
-    "Immigration & ICE"
+    "universal healthcare",
+    "affordable housing",
+    "abolish ice",
+    "pac money"
    ]
   },
   {
@@ -1888,9 +1775,7 @@
    "info": "https://www.chenOR4us.org",
    "volunteer": "https://www.chenOR4us.org/volunteer",
    "topics": [
-    "Housing",
-    "Climate & Environment",
-    "Public safety & guns"
+    "affordable housing"
    ]
   },
   {
@@ -1904,9 +1789,7 @@
    "info": "https://www.chenor4us.org/",
    "volunteer": "https://www.chenor4us.org/volunteer",
    "topics": [
-    "Housing",
-    "Climate & Environment",
-    "Public safety & guns"
+    "affordable housing"
    ]
   },
   {
@@ -1920,8 +1803,7 @@
    "info": "https://www.carter4phl.com",
    "volunteer": "https://www.carter4phl.com/join-us",
    "topics": [
-    "Housing",
-    "Workers & Wages"
+    "affordable housing"
    ]
   },
   {
@@ -1935,10 +1817,8 @@
    "info": "jess4pa.com",
    "volunteer": "Info@jess4pa.com",
    "topics": [
-    "Healthcare",
-    "Housing",
-    "Education & Childcare",
-    "Workers & Wages"
+    "universal healthcare",
+    "everyday costs"
    ]
   },
   {
@@ -1951,11 +1831,7 @@
    "stances": "1. Our precious Democracy, 2. Reproductive Freedom, 3. Affordability",
    "info": "www.bethfarnhamforcongress.com",
    "volunteer": "https://bethfarnhamforcongress.com/welcome-volunteers/",
-   "topics": [
-    "Housing",
-    "Reproductive rights",
-    "Democracy & voting"
-   ]
+   "topics": []
   },
   {
    "name": "Dante Russo",
@@ -1968,8 +1844,8 @@
    "info": "https://www.russoRI4us.info",
    "volunteer": "https://www.russoRI4us.info/get-involved",
    "topics": [
-    "Transit & Infrastructure",
-    "Impeach Trump"
+    "everyday costs",
+    "local government"
    ]
   },
   {
@@ -1982,9 +1858,21 @@
    "stances": "1. Public funds for public schools\n2. Infrastructure for sustainable growth \n3. Equality for all SC",
    "info": "Www.vaforsc.com",
    "volunteer": "Email Virginia at mcleanforsc@gmail.com or sign up for newsletter at the bottom of website homepage",
+   "topics": []
+  },
+  {
+   "name": "Matt Fulmer",
+   "state": "South Carolina",
+   "govt_level": "Federal",
+   "position": "SC 01 - (US House)",
+   "party": "Democrat",
+   "district": "SC01 is basically the southern Half of SC’s coastline. We have all of Berkeley County and all of Beaufort County, with a strip of coastline that connects them. We also have some of the Summerville area of Dorchester. Our Charleston County area’s include: Mt. Pleasant. Isle of Palms. Sullivan’s Island. James Island. Johns Island. McClellanville. Awendaw. Seabrook. Kiawah. Edisto.",
+   "stances": "1. Universal Healthcare 2. Fair-Share Tax Reform 3. Campaign Finance Reform",
+   "info": "https://www.fulmerforcongress.com/",
+   "volunteer": "https://www.fulmerforcongress.com/volunteer",
    "topics": [
-    "Education & Childcare",
-    "Transit & Infrastructure"
+    "universal healthcare",
+    "fair tax"
    ]
   },
   {
@@ -1998,25 +1886,8 @@
    "info": "https://www.fulmerforcongress.com/",
    "volunteer": "https://www.fulmerforcongress.com/volunteer",
    "topics": [
-    "Healthcare",
-    "Money out of politics",
-    "Tax the rich"
-   ]
-  },
-  {
-   "name": "Matt Fulmer",
-   "state": "South Carolina",
-   "govt_level": "Federal",
-   "position": "SC 01 - (US House)",
-   "party": "Democrat",
-   "district": "SC01 is basically the southern Half of SC’s coastline. We have all of Berkeley County and all of Beaufort County, with a strip of coastline that connects them. We also have some of the Summerville area of Dorchester. Our Charleston County area’s include: Mt. Pleasant. Isle of Palms. Sullivan’s Island. James Island. Johns Island. McClellanville. Awendaw. Seabrook. Kiawah. Edisto.",
-   "stances": "1. Universal Healthcare 2. Fair-Share Tax Reform 3. Campaign Finance Reform",
-   "info": "https://www.fulmerforcongress.com/",
-   "volunteer": "https://www.fulmerforcongress.com/volunteer",
-   "topics": [
-    "Healthcare",
-    "Money out of politics",
-    "Tax the rich"
+    "universal healthcare",
+    "fair tax"
    ]
   },
   {
@@ -2029,7 +1900,9 @@
    "stances": "Limitations on AI, Expanding Minority Protections, and Protecting Small Businesses",
    "info": "franklandwatts.org",
    "volunteer": "https://franklandwatts.org/get-involved",
-   "topics": []
+   "topics": [
+    "term limits"
+   ]
   },
   {
    "name": "Candace Schutt",
@@ -2042,10 +1915,8 @@
    "info": "Candaceforall.com",
    "volunteer": "Candaceforall.com or email womengetschuttdone@gmail.com",
    "topics": [
-    "Healthcare",
-    "Housing",
-    "Reproductive rights",
-    "Transit & Infrastructure"
+    "universal healthcare",
+    "affordable housing"
    ]
   },
   {
@@ -2059,7 +1930,7 @@
    "info": "Junilynch.com\n\nfacebook.com/juniforSCstatehousedistrict1",
    "volunteer": "Email our campaign team at junidistrict1@gmail.con",
    "topics": [
-    "Workers & Wages"
+    "local government"
    ]
   },
   {
@@ -2072,10 +1943,7 @@
    "stances": "1- Stop underfunding public schools in fast-growing districts—update funding formulas to match real enrollment and need\n2- Expand broadband access like it’s basic infrastructure, not a luxury (rural + urban gaps both matter here)\n3- Maternal health outcomes in South Carolina are unacceptable—targeted funding, data transparency, and accountability",
    "info": "https://www.instagram.com/bryant4sc79\nWebsite: https://www.bryantSC4us.org",
    "volunteer": "https://www.bryantSC4us.org/volunteer",
-   "topics": [
-    "Education & Childcare",
-    "Transit & Infrastructure"
-   ]
+   "topics": []
   },
   {
    "name": "Mike Croley",
@@ -2088,8 +1956,8 @@
    "info": "Croleyforcongress.com",
    "volunteer": "https://croleyforcongress.com/sign-up-to-volunteer/",
    "topics": [
-    "Healthcare",
-    "Tax the rich"
+    "universal healthcare",
+    "fair tax"
    ]
   },
   {
@@ -2103,7 +1971,7 @@
    "info": "Cadenceforschoolboard.com",
    "volunteer": "https://docs.google.com/forms/d/e/1FAIpQLSeOjBAgAxMbwDFMxDo5oyZ0Y5JDxNTYe1cQqckK566p_bjXjg/viewform",
    "topics": [
-    "Education & Childcare"
+    "school voucher"
    ]
   },
   {
@@ -2116,11 +1984,7 @@
    "stances": "Affordability Accessibility and Accountability, also to hell with AIPAC",
    "info": "CroleyforCongress.com",
    "volunteer": "https://croleyforcongress.com/sign-up-to-volunteer/",
-   "topics": [
-    "Housing",
-    "Money out of politics",
-    "Palestine / Israel"
-   ]
+   "topics": []
   },
   {
    "name": "Marquita Bradshaw",
@@ -2133,12 +1997,7 @@
    "info": "www.MarquitaBradshaw.com",
    "volunteer": "https://www.marquitabradshaw.com/volunteer",
    "topics": [
-    "Education & Childcare",
-    "Climate & Environment",
-    "Workers & Wages",
-    "Transit & Infrastructure",
-    "Tax the rich",
-    "Veterans"
+    "clean water"
    ]
   },
   {
@@ -2152,9 +2011,9 @@
    "info": "Chelseyhockettforcongress.com",
    "volunteer": "Chelseyhockettforcongress@gmail.com or https://docs.google.com/forms/d/e/1FAIpQLSepmSSbpuBdaZiziESAonC79guBaFW56PRS3_kx5YI6ekPeTw/viewform",
    "topics": [
-    "Money out of politics",
-    "Workers & Wages",
-    "Tax the rich"
+    "pac money",
+    "fair tax",
+    "national politics"
    ]
   },
   {
@@ -2168,9 +2027,7 @@
    "info": "www.moralesTX4.com",
    "volunteer": "www.moralesTX4.com",
    "topics": [
-    "Housing",
-    "Workers & Wages",
-    "Transit & Infrastructure"
+    "rent control"
    ]
   },
   {
@@ -2184,10 +2041,7 @@
    "info": "https://www.hartut2.info/",
    "volunteer": "see above",
    "topics": [
-    "Education & Childcare",
-    "Climate & Environment",
-    "Workers & Wages",
-    "Transit & Infrastructure"
+    "data centers"
    ]
   },
   {
@@ -2201,9 +2055,9 @@
    "info": "https://www.mendozaUT4us.info",
    "volunteer": "https://www.mendozaUT4us.info/get-involved",
    "topics": [
-    "Climate & Environment",
-    "Transit & Infrastructure",
-    "Impeach Trump"
+    "donald trump",
+    "clean water",
+    "medicaid expansion"
    ]
   },
   {
@@ -2217,9 +2071,7 @@
    "info": "Salaamforva.com",
    "volunteer": "Salaamforva.com/act",
    "topics": [
-    "Healthcare",
-    "Money out of politics",
-    "Tax the rich"
+    "fair tax"
    ]
   },
   {
@@ -2233,9 +2085,9 @@
    "info": "ErickaKopp.com",
    "volunteer": "Website volunteer tab",
    "topics": [
-    "Healthcare",
-    "Tax the rich",
-    "Impeach Trump"
+    "universal healthcare",
+    "donald trump",
+    "fair tax"
    ]
   },
   {
@@ -2249,9 +2101,7 @@
    "info": "https://www.instagram.com/nguyen4va82",
    "volunteer": "https://www.nguyenva4us.org/volunteer",
    "topics": [
-    "Housing",
-    "Education & Childcare",
-    "Transit & Infrastructure"
+    "rent control"
    ]
   },
   {
@@ -2265,9 +2115,7 @@
    "info": "https://www.nguyenVA4us.info/get-involved",
    "volunteer": "https://www.nguyenVA4us.info/get-involved",
    "topics": [
-    "Housing",
-    "Transit & Infrastructure",
-    "Impeach Trump"
+    "affordable housing"
    ]
   },
   {
@@ -2281,9 +2129,7 @@
    "info": "jasonforcongress2026.com",
    "volunteer": "Email: jasonforcongress26@gmail.com",
    "topics": [
-    "Housing",
-    "Immigration & ICE",
-    "Veterans"
+    "abolish ice"
    ]
   },
   {
@@ -2297,9 +2143,8 @@
    "info": "www.brenthennrich.com",
    "volunteer": "volunteer@brenthennrich.com is our volunteer coordinators direct email. Can sign up at www.brenthennrich.com/volunteer",
    "topics": [
-    "Healthcare",
-    "Education & Childcare",
-    "Tax the rich"
+    "universal healthcare",
+    "fair tax"
    ]
   },
   {
@@ -2313,10 +2158,7 @@
    "info": "https://www.parkWA37.org\ninstagram @ethanpark43",
    "volunteer": "https://www.parkWA37.org/get-involved",
    "topics": [
-    "Housing",
-    "Climate & Environment",
-    "Workers & Wages",
-    "Transit & Infrastructure"
+    "affordable housing"
    ]
   },
   {
@@ -2329,7 +2171,9 @@
    "stances": "1. More problem-solving, less political theater 2. Principled Leadership 3. Accountability",
    "info": "www.conroy4congress.com",
    "volunteer": "https://conroy4congress.com/volunteer/",
-   "topics": []
+   "topics": [
+    "national politics"
+   ]
   },
   {
    "name": "Brianna O’Neal",
@@ -2342,7 +2186,7 @@
    "info": "https://www.onealWI4us.org\nTwitter (X): https://x.com/oneal4wi16",
    "volunteer": "https://www.onealwi4us.org/get-involved",
    "topics": [
-    "Reproductive rights"
+    "abolish ice"
    ]
   }
  ]

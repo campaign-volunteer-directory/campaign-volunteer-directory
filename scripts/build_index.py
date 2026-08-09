@@ -17,10 +17,13 @@ import io
 import json
 import sys
 import urllib.request
+from vocabulary import extract_vocabulary, assign_topics
+from llm_topics import refine_with_llm
 from collections import Counter
 from datetime import datetime, timezone
 from pathlib import Path
 
+vocabulary = []
 ROOT = Path(__file__).resolve().parent.parent
 DATA_DIR = ROOT / "docs" / "data"
 
@@ -58,48 +61,6 @@ LEVELS = {"Local", "State", "Federal"}
 # Recognized issue-category columns in the sheet. When present, their values
 # are used verbatim as the candidate's topics (no invented terms).
 ISSUE_COLUMNS = {"issues", "issue", "topics", "tags", "stances tags"}
-
-# Issue topics auto-tagged from the stances text, in priority order.
-# FALLBACK ONLY — used when the spreadsheet has no "Issues:" column.
-# Patterns are plain substrings (lowercase); prefix with "^" to use a regex.
-TOPICS = [
-    ("Healthcare", ["healthcare", "health care", "medicare", "medicaid", "single-payer", "single payer", "insulin", "medical", "insurance", "doctors", "hospitals"]),
-    ("Housing", ["housing", "housed", "rent", "tenant", "zoning", "homeless", "eviction", "affordab", "mortgage"]),
-    ("Education & Childcare", ["school", "education", "teacher", "student", "voucher", "childcare", "child care", "pre-k", "preschool", "college", "tuition"]),
-    ("Climate & Environment", ["climate", "environment", "clean energy", "renewab", "solar", "wildfire", "everglades", "water", "air quality", "carbon"]),
-    ("Money out of politics", ["money out of politics", "money in politics", "corruption", "pac money", "campaign finance", "citizens united", "stock trading", "aipac", "bribery", "corporate money", "anti-establishment"]),
-    ("Workers & Wages", ["worker", "labor", "labour", "union", "wage", "jobs", "employment", "working class", "gig", "paycheck", "^\\bjob\\b", "working families"]),
-    ("Immigration & ICE", ["immigration", "immigrant", "sanctuary", "deport", "^\\bice\\b"]),
-    ("Reproductive rights", ["reproductive", "abortion", "women's rights", "women\u2019s rights", "pro-choice", "pro choice", "pregnancy"]),
-    ("Public safety & guns", ["gun", "police", "public safety", "violence", "crime", "^\\bsafety\\b", "gun violence", "gun control", "gun safety"]),
-    ("Transit & Infrastructure", ["transit", "transportation", "broadband", "infrastructure", "roads", "rail", "^\\bbus\\b", "highway", "airport"]),
-    ("Tax the rich", ["tax the rich", "wealth tax", "billionaire", "tax wealth", "fair-share", "fair share tax", "tax billionaires"]),
-    ("Palestine / Israel", ["palestine", "gaza", "genocide", "israel", "aipac", "arms embargo", "occupied", "intifada"]),
-    ("Impeach Trump", ["impeach", "trump", "gestapo", "authoritarian", "maga"]),
-    ("Democracy & voting", ["voting rights", "democracy", "election", "voting", "gerrymander", "voter", "ranked choice", "democracy"]),
-    ("Veterans", ["veteran", "military", "armed forces", "national guard", "^\\bwars?\\b", "war crimes", "forever wars"]),
-    ("Term limits", ["term limits", "term limit"]),
-    ("Mental health", ["mental health", "mental-health"]),
-]
-import re
-
-
-def tag_topics(stances: str) -> list[str]:
-    """Return the topics whose keywords appear in the stances text."""
-    text = (stances or "").lower()
-    found: list[str] = []
-    for label, patterns in TOPICS:
-        if label in found:
-            continue
-        for pat in patterns:
-            if pat.startswith("^"):
-                if re.search(pat.lstrip("^"), text, re.IGNORECASE):
-                    found.append(label)
-                    break
-            elif pat in text:
-                found.append(label)
-                break
-    return found
 
 
 def normalize_state(raw: str) -> str:
@@ -171,10 +132,20 @@ def parse_rows(raw: str):
         if rec["name"]:
             if issue_col is not None:
                 rec["topics"] = split_issues(cells[issue_col])
-            else:
-                rec["topics"] = tag_topics(rec["stances"])
             records.append(rec)
+    if issue_col is None:
+        assign_from_vocabulary(records)
+        refine_with_llm(records, vocabulary)
     return records
+
+
+def assign_from_vocabulary(records):
+    """Deterministic fallback: chips are phrases extracted from the stances
+    themselves (never invented labels)."""
+    global vocabulary
+    stance_texts = [r["stances"] for r in records if r["stances"]]
+    vocabulary = extract_vocabulary(stance_texts)
+    assign_topics(records, vocabulary)
 
 
 def split_issues(raw: str) -> list[str]:
@@ -250,7 +221,7 @@ def main():
         except Exception:
             prev_updated_at = None
     payload = {
-        "source": "Campaign Volunteer Directory by Lime Accordion",
+        "source": "Public Campaign Volunteer Directory spreadsheet (independent project)",
         "source_url": "https://linktr.ee/limeaccordion",
         "sheet_url": SOURCE_URL.split("?")[0].replace("/pub", "/pubhtml"),
         # replaced with a commit-time stamp by the workflow on real data changes
