@@ -10,9 +10,9 @@ who need help — research candidates before getting involved.
 
 ## Structure
 - `docs/` — GitHub Pages site (browse/filter the directory)
-- `data/` — generated JSON index of candidates (auto-synced)
+- `docs/data/` — generated JSON index of candidates (auto-synced)
 - `scripts/build_index.py` — fetches the published source spreadsheet, validates
-  and normalizes the data, writes `data/candidates.json`
+  and normalizes the data, writes `docs/data/candidates.json`
 - `.github/workflows/sync.yml` — twice-daily sync + validation + publish to Pages
 
 ## Updating
@@ -22,7 +22,7 @@ Candidates can add themselves via the sign-up form on
 
 ## Local build
 ```bash
-python3 scripts/build_index.py   # fetch + validate + write data/candidates.json
+python3 scripts/build_index.py   # fetch + validate + write docs/data/candidates.json
 ```
 
 ## Contributing

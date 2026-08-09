@@ -1,12 +1,12 @@
 #!/usr/bin/env python3
-"""Build data/candidates.json from the published Campaign Volunteer Directory sheet.
+"""Build docs/data/candidates.json from the published Campaign Volunteer Directory sheet.
 
 Fetches the CSV export of the Google Sheet (published to web), normalizes
 states, validates required fields, detects problems (duplicates, missing
 data, abrupt row-count changes) and writes:
 
-  data/candidates.json  - full normalized dataset + summary stats
-  data/sync-meta.json   - sync metadata (fetched_at, previous count, issues)
+  docs/data/candidates.json  - full normalized dataset + summary stats
+  docs/data/sync-meta.json   - sync metadata (previous count, issues)
 
 The workflow fails the run if the data fails hard validation, so GitHub Pages
 never publishes a broken or emptied index.
@@ -21,7 +21,7 @@ from collections import Counter
 from pathlib import Path
 
 ROOT = Path(__file__).resolve().parent.parent
-DATA_DIR = ROOT / "data"
+DATA_DIR = ROOT / "docs" / "data"
 
 SOURCE_URL = (
     "https://docs.google.com/spreadsheets/d/e/"
