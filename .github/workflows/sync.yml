@@ -1,0 +1,41 @@
+name: Sync and Publish Volunteer Directory
+
+on:
+  schedule:
+    # off the top of the hour: exact 00:00/12:00 UTC is GitHub's most
+    # congested cron slot and fired late for other repos
+    - cron: '23 3,15 * * *'
+  workflow_dispatch:
+  push:
+    paths:
+      - '.github/workflows/sync.yml'
+
+permissions:
+  contents: write
+  pages: write
+  id-token: write
+
+concurrency:
+  group: pages
+  cancel-in-progress: true
+
+jobs:
+  sync-and-deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Fetch and validate sheet data
+        run: python3 scripts/build_index.py
+
+      - name: Commit changes if any
+        run: bash .github/gha_scripts/commit_changes.sh
+
+      - name: Upload Pages artifact
+        uses: actions/upload-pages-artifact@v3
+        with:
+          path: docs
+
+      - name: Deploy to GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v4

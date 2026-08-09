@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Campaign Volunteer Directory</title>
+    <meta name="description" content="Progressive 2026 candidates across the US looking for volunteers — compiled by Lime Accordion. Auto-synced from the source spreadsheet.">
+    <meta name="color-scheme" content="light dark">
+
+    <!-- DataTables CSS -->
+    <link href="https://cdn.datatables.net/1.13.7/css/jquery.dataTables.min.css" rel="stylesheet">
+    <link href="https://cdn.datatables.net/searchpanes/2.2.0/css/searchPanes.dataTables.min.css" rel="stylesheet">
+    <link href="https://cdn.datatables.net/select/1.7.0/css/select.dataTables.min.css" rel="stylesheet">
+    <link href="https://cdn.datatables.net/responsive/2.5.0/css/responsive.dataTables.min.css" rel="stylesheet">
+
+    <link href="css/styles.css" rel="stylesheet">
+</head>
+<body>
+    <header class="site-header">
+        <div class="wrap header-row">
+            <div>
+                <h1>Campaign Volunteer Directory</h1>
+                <p class="site-sub">
+                    Progressive 2026 candidates who need volunteers · compiled by
+                    <a href="https://linktr.ee/limeaccordion" target="_blank" rel="noopener noreferrer">Lime Accordion</a> ·
+                    updated <span id="collection-date">–</span>
+                </p>
+            </div>
+            <nav class="header-links">
+                <a href="https://linktr.ee/limeaccordion" target="_blank" rel="noopener noreferrer">Lime Accordion</a>
+                <a href="https://forms.gle/tXMN3UFVkWsh5TTCA" target="_blank" rel="noopener noreferrer">Add your campaign</a>
+                <a href="https://docs.google.com/spreadsheets/d/e/2PACX-1vQyQUWTOqZ6iqYMXd-GpkXivMRIgGCnkL58y-oLrX53e8M68zdQo5xO1P8LEMd06mpOVxshd0F9aC24/pubhtml" target="_blank" rel="noopener noreferrer">Source spreadsheet</a>
+            </nav>
+        </div>
+    </header>
+
+    <main class="wrap">
+        <p class="disclaimer">
+            This is <strong>not an endorsement</strong> of any candidate. It is a collection of campaigns
+            who need help — please research candidates before getting involved.
+        </p>
+
+        <section class="stats-row" aria-label="Directory stats">
+            <div class="stat-tile">
+                <div class="stat-label">Candidates</div>
+                <div class="stat-value" id="stat-total">–</div>
+            </div>
+            <div class="stat-tile">
+                <div class="stat-label">States</div>
+                <div class="stat-value" id="stat-states">–</div>
+            </div>
+            <div class="stat-tile">
+                <div class="stat-label">Federal</div>
+                <div class="stat-value" id="stat-federal">–</div>
+            </div>
+            <div class="stat-tile">
+                <div class="stat-label">State</div>
+                <div class="stat-value" id="stat-state">–</div>
+            </div>
+            <div class="stat-tile">
+                <div class="stat-label">Local</div>
+                <div class="stat-value" id="stat-local">–</div>
+            </div>
+        </section>
+
+        <section class="table-section">
+            <table id="directory-table" class="display nowrap" style="width:100%">
+                <thead>
+                    <tr>
+                        <th>Name</th>
+                        <th>State</th>
+                        <th>Level</th>
+                        <th>Position</th>
+                        <th>Party</th>
+                        <th>District / Location</th>
+                        <th>Stances</th>
+                        <th>Info</th>
+                        <th>Volunteer</th>
+                    </tr>
+                </thead>
+                <tbody></tbody>
+            </table>
+        </section>
+    </main>
+
+    <footer class="site-footer">
+        <div class="wrap">
+            Built to support <a href="https://linktr.ee/limeaccordion" target="_blank" rel="noopener noreferrer">Lime Accordion's</a>
+            volunteer directory · data auto-synced from the source spreadsheet
+        </div>
+    </footer>
+
+    <script src="https://code.jquery.com/jquery-3.7.0.js"></script>
+    <script src="https://cdn.datatables.net/1.13.7/js/jquery.dataTables.min.js"></script>
+    <script src="https://cdn.datatables.net/searchpanes/2.2.0/js/dataTables.searchPanes.min.js"></script>
+    <script src="https://cdn.datatables.net/select/1.7.0/js/dataTables.select.min.js"></script>
+    <script src="https://cdn.datatables.net/responsive/2.5.0/js/dataTables.responsive.min.js"></script>
+    <script src="js/app.js"></script>
+</body>
+</html>
