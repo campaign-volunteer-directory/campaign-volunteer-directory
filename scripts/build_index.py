@@ -166,17 +166,35 @@ def main():
     by_level = Counter(r["govt_level"] for r in records)
 
     DATA_DIR.mkdir(exist_ok=True)
+    # Reuse the previous timestamp when the dataset is unchanged, so a
+    # timestamp-only diff can't leave "TBD" on the live site or churn commits.
+    prev_updated_at = None
+    prev_path = DATA_DIR / "candidates.json"
+    if prev_path.exists():
+        try:
+            prev_payload = json.loads(prev_path.read_text())
+            prev_payload.pop("updated_at", None)
+            prev_updated_at = prev_payload
+        except Exception:
+            prev_updated_at = None
     payload = {
         "source": "Campaign Volunteer Directory by Lime Accordion",
         "source_url": "https://linktr.ee/limeaccordion",
         "sheet_url": SOURCE_URL.split("?")[0].replace("/pub", "/pubhtml"),
-        "updated_at": "TBD",  # replaced with commit-time stamp by workflow
+        # replaced with a commit-time stamp by the workflow on real data changes
+        "updated_at": "TBD",
         "count": len(records),
         "states": states,
         "by_level": dict(by_level),
         "issues": issues,
         "candidates": records,
     }
+    if prev_updated_at is not None:
+        new_payload = dict(payload)
+        new_payload.pop("updated_at", None)
+        if new_payload == prev_updated_at:
+            old = json.loads(prev_path.read_text())
+            payload["updated_at"] = old.get("updated_at", "TBD")
     (DATA_DIR / "candidates.json").write_text(
         json.dumps(payload, indent=1, ensure_ascii=False)
     )
