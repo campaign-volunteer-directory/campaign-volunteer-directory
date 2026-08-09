@@ -1,7 +1,7 @@
-import { debounce } from './utils.js?v=8';
-import { parseQuery, splitQuery, buildSearchIndex, searchRanked } from './search.js?v=8';
-import { FilterState, matchesFacets } from './filters.js?v=8';
-import { stateAbbreviation } from './states.js?v=8';
+import { debounce } from './utils.js?v=9';
+import { parseQuery, splitQuery, buildSearchIndex, searchRanked } from './search.js?v=9';
+import { FilterState, matchesFacets } from './filters.js?v=9';
+import { stateAbbreviation } from './states.js?v=9';
 import {
     renderStats,
     renderStatsFor,
@@ -12,10 +12,10 @@ import {
     renderActiveFilters,
     renderCards,
     buildCsv,
-} from './render.js?v=8';
+} from './render.js?v=9';
 
 const SEARCH_DEBOUNCE_MS = 120;
-const APP_VERSION = 8;
+const APP_VERSION = 9;
 const KIND_LABELS = { state: 'State', topic: 'Issue', candidate: 'Candidate' };
 
 let candidates = [];
@@ -56,7 +56,13 @@ function matchedEntries(options) {
 }
 
 function emptyMessage() {
-    if (filters.q) return `No candidates match "${filters.q}". Try fewer or different words.`;
+    if (filters.q) {
+        const terms = filters.q.trim().split(/\s+/).filter((t) => t && !t.startsWith('-'));
+        if (terms.length === 1 && terms[0].length < 4 && !terms[0].endsWith('*')) {
+            return 'Keep typing — results appear as you finish the word.';
+        }
+        return `No candidates match "${filters.q}". Try fewer or different words.`;
+    }
     if (filters.isActive) return 'No candidates match these filters.';
     return 'No candidates found.';
 }

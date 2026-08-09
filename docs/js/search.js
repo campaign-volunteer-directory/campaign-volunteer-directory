@@ -17,8 +17,8 @@
  * maps keep the code readable and queries sub-millisecond.
  */
 
-import { levenshtein } from './utils.js?v=8';
-import { stateAbbreviation } from './states.js?v=8';
+import { levenshtein } from './utils.js?v=9';
+import { stateAbbreviation } from './states.js?v=9';
 
 export const FIELD_WEIGHTS = {
     name: 5,
@@ -112,7 +112,10 @@ function tokenizeField(text) {
 
 /**
  * Rank the index entries matching the query.
- * Returns [{candidate, score}] sorted by score desc, then name asc.
+ * Returns [{candidate, score, exact}] sorted by:
+ *   1. entries with an exact token match for any term first (so "VA" ranks
+ *      Virginia over "valley", and "war" ranks "war" over "ward"),
+ *   2. then score desc, then name asc.
  * With no query terms, every entry passes with score 0 (name order).
  * Pass { fuzzy: true } for the did-you-mean fallback pass.
  */
@@ -120,13 +123,18 @@ export function searchRanked(index, query, options = {}) {
     const scored = [];
     for (const entry of index) {
         if (matchesExclusion(entry, query)) continue;
-        const score = scoreEntry(entry, query, options);
-        if (score !== null) {
-            scored.push({ candidate: entry.candidate, score });
+        const result = scoreEntry(entry, query, options);
+        if (result !== null) {
+            scored.push({
+                candidate: entry.candidate,
+                score: result.score,
+                exact: result.exact,
+            });
         }
     }
     scored.sort((a, b) =>
-        b.score - a.score || a.candidate.name.localeCompare(b.candidate.name));
+        (b.exact - a.exact) || (b.score - a.score) ||
+        a.candidate.name.localeCompare(b.candidate.name));
     return scored;
 }
 
@@ -138,19 +146,22 @@ function matchesExclusion(entry, query) {
 }
 
 function scoreEntry(entry, query, options) {
-    if (!query.include.length && !query.phrases.length) return 0;
+    if (!query.include.length && !query.phrases.length) return { score: 0, exact: false };
     let total = 0;
+    let exact = false;
     for (const term of query.include) {
         const fieldScore = bestFieldScore(entry, term, options);
         if (fieldScore === null) return null; // AND semantics: all terms must match
-        total += fieldScore;
+        total += fieldScore.score;
+        exact = exact || fieldScore.exact;
     }
     for (const phrase of query.phrases) {
         const phraseScore = bestPhraseScore(entry, phrase);
         if (phraseScore === null) return null;
-        total += phraseScore;
+        total += phraseScore.score;
+        exact = true; // phrases are consecutive exact tokens
     }
-    return total;
+    return { score: total, exact };
 }
 
 function bestFieldScore(entry, term, options = { substring: true, fuzzy: false }) {
@@ -159,7 +170,9 @@ function bestFieldScore(entry, term, options = { substring: true, fuzzy: false }
         const hit = matchTokens(tokens, term, options);
         if (hit) {
             const score = FIELD_WEIGHTS[field] * hit.count * hit.kind;
-            if (best === null || score > best) best = score;
+            if (best === null || score > best.score) {
+                best = { score, exact: hit.kind === MATCH_EXACT };
+            }
         }
     }
     return best;
@@ -171,7 +184,9 @@ function bestPhraseScore(entry, phrase) {
         const hit = matchPhrase(tokens, phrase);
         if (hit) {
             const score = FIELD_WEIGHTS[field] * hit.count * MATCH_EXACT;
-            if (best === null || score > best) best = score;
+            if (best === null || score > best.score) {
+                best = { score, exact: true };
+            }
         }
     }
     return best;
@@ -191,9 +206,10 @@ function matchTokensWith(tokens, term, kind) {
     let count = 0;
     let bestKind = null;
     for (const token of tokens.tokens) {
-        if (tokenKindMatches(token, term, kind)) {
+        const matchedKind = tokenKindMatches(token, term, kind);
+        if (matchedKind) {
             count += tokens.counts.get(token);
-            bestKind = kind;
+            bestKind = Math.max(bestKind || 0, matchedKind);
         }
     }
     return bestKind ? { count, kind: bestKind } : null;
@@ -202,12 +218,7 @@ function matchTokensWith(tokens, term, kind) {
 function tokenKindMatches(token, term, kind) {
     if (kind === MATCH_PREFIX) {
         if (!token.startsWith(term.text)) return false;
-        if (token === term.text) return MATCH_EXACT;
-        // Implicit prefix matching only for meaningful term lengths, so
-        // short terms like "war" don't flood results with "ward", and "VA"
-        // doesn't match "valley". Use "war*" for explicit prefix.
-        if (!term.prefix && term.text.length < 4) return false;
-        return MATCH_PREFIX;
+        return token === term.text ? MATCH_EXACT : MATCH_PREFIX;
     }
     if (kind === MATCH_SUBSTRING) {
         return token.includes(term.text);

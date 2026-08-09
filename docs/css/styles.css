@@ -128,7 +128,20 @@ a:hover { text-decoration: underline; }
 
 .filter-row { display: flex; align-items: center; gap: 10px; flex-wrap: wrap; }
 
-.search-wrap { position: relative; flex: 1; min-width: 240px; }
+.search-wrap { position: relative; flex: 1 1 100%; min-width: 240px; }
+
+.filter-search {
+    width: 100%;
+    background: var(--panel-2);
+    border: 1px solid var(--panel-border);
+    border-radius: 8px;
+    color: var(--text);
+    padding: 11px 14px;
+    font-size: 14.5px;
+    outline: none;
+}
+
+.filter-search::placeholder { color: var(--muted); }
 
 .suggestions {
     position: absolute;
