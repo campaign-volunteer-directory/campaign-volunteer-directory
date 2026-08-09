@@ -160,6 +160,11 @@ a:hover { text-decoration: underline; }
 .filters {
     position: sticky;
     top: 6px;
+    max-height: calc(100vh - 12px);
+    overflow-y: auto;
+    overscroll-behavior: contain;
+    scrollbar-width: thin;
+    scrollbar-color: var(--panel-border) transparent;
     z-index: 20;
     background: var(--panel);
     border: 1px solid var(--panel-border);
