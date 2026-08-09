@@ -1,7 +1,7 @@
-import { debounce } from './utils.js?v=11';
-import { parseQuery, splitQuery, buildSearchIndex, searchRanked } from './search.js?v=11';
-import { FilterState, matchesFacets } from './filters.js?v=11';
-import { stateAbbreviation } from './states.js?v=11';
+import { debounce } from './utils.js?v=12';
+import { parseQuery, splitQuery, buildSearchIndex, searchRanked } from './search.js?v=12';
+import { FilterState, matchesFacets } from './filters.js?v=12';
+import { stateAbbreviation } from './states.js?v=12';
 import {
     renderStats,
     renderSummary,
@@ -13,10 +13,10 @@ import {
     renderActiveFilters,
     renderCards,
     buildCsv,
-} from './render.js?v=11';
+} from './render.js?v=12';
 
 const SEARCH_DEBOUNCE_MS = 120;
-const APP_VERSION = 11;
+const APP_VERSION = 12;
 const KIND_LABELS = { state: 'State', topic: 'Issue', candidate: 'Candidate' };
 
 let candidates = [];
@@ -304,24 +304,6 @@ function syncChips() {
     });
 }
 
-// ── Level pills ──────────────────────────────────────────────────────────
-
-function wireLevelPills() {
-    document.getElementById('filter-level').addEventListener('click', (event) => {
-        const button = event.target.closest('.pill');
-        if (!button) return;
-        filters.level = button.dataset.level;
-        syncLevelButtons();
-        apply();
-    });
-}
-
-function syncLevelButtons() {
-    document.querySelectorAll('#filter-level .pill').forEach((button) => {
-        button.classList.toggle('active', button.dataset.level === filters.level);
-    });
-}
-
 // ── State picker (name or abbreviation search) ───────────────────────────
 
 function wireStatePicker() {
@@ -394,7 +376,6 @@ function wireActiveFilters() {
         if (!pill) return;
         removeOneFilter(pill.dataset);
         document.getElementById('filter-q').value = filters.q;
-        syncLevelButtons();
         syncChips();
         syncStateCheckboxes();
         syncStateTrigger();
@@ -419,7 +400,6 @@ function wireUtilityButtons() {
     document.getElementById('filter-clear').addEventListener('click', () => {
         filters.clear();
         document.getElementById('filter-q').value = '';
-        syncLevelButtons();
         syncChips();
         syncStateCheckboxes();
         syncStateTrigger();
@@ -471,7 +451,6 @@ function wireViewControls() {
         const pill = event.target.closest('.level-pill');
         if (!pill) return;
         filters.level = filters.level === pill.dataset.level ? '' : pill.dataset.level;
-        syncLevelButtons();
         apply();
     });
 
@@ -507,7 +486,7 @@ async function boot() {
     // element IDs → crash). If a required element is missing, bounce once to
     // a versioned URL to force a fresh HTML fetch. writeToUrl() then strips
     // the marker on the first filter change.
-    if (!document.getElementById('stat-total-sub') && !location.search.includes('v=')) {
+    if (!document.getElementById('view-summary') && !location.search.includes('v=')) {
         location.replace(`${location.pathname}?v=${APP_VERSION}`);
         return;
     }
@@ -526,14 +505,12 @@ async function boot() {
         wireQueryBox();
         wireGlobalShortcuts();
         wireTopicChips();
-        wireLevelPills();
         wireStatePicker();
         wireActiveFilters();
         wireUtilityButtons();
         wireViewControls();
         wireCardExpansion();
         syncChips();
-        syncLevelButtons();
         syncStateCheckboxes();
         syncStateTrigger();
         apply();
