@@ -1,44 +1,143 @@
-import { escapeHtml, firstUrl, firstEmail } from './utils.js?v=4';
-import { highlightTerms } from './highlight.js?v=4';
+import { escapeHtml, firstUrl, firstEmail } from './utils.js?v=6';
+import { highlightTerms } from './highlight.js?v=6';
+import { stateAbbreviation } from './states.js?v=6';
 
 /**
- * Pure render helpers: every function maps data to HTML strings.
- * No DOM access, no event wiring — keep rendering testable and predictable.
+ * Pure render helpers: every function maps data to HTML strings (or, for
+ * buildCsv, a CSV document). No DOM access, no event wiring — keep rendering
+ * testable and predictable.
  */
 
 export function renderStats(data) {
     const byLevel = data.by_level || {};
     setText('stat-total', data.count);
+    setText('stat-total-sub', `of ${data.count}`);
     setText('stat-states', data.states.length);
+    setText('stat-states-sub', `of ${data.states.length}`);
     setText('stat-federal', byLevel.Federal || 0);
+    setText('stat-federal-sub', `of ${byLevel.Federal || 0}`);
     setText('stat-state', byLevel.State || 0);
+    setText('stat-state-sub', `of ${byLevel.State || 0}`);
     setText('stat-local', byLevel.Local || 0);
+    setText('stat-local-sub', `of ${byLevel.Local || 0}`);
     setText('collection-date', (data.updated_at || '').replace('T', ' ').slice(0, 16) || 'unknown');
 }
 
-export function renderStateOptions(states) {
-    return states
-        .map((state) => `<option value="${escapeHtml(state)}">${escapeHtml(state)}</option>`)
-        .join('');
-}
-
-export function renderTopicChips(topicsWithCounts) {
-    return topicsWithCounts
-        .map(([topic, count]) =>
-            `<button class="chip" data-topic="${escapeHtml(topic)}">` +
-            `${escapeHtml(topic)} <span class="chip-count">${count}</span></button>`)
-        .join('');
+/** Refresh the stat tiles from the currently matched entries. */
+export function renderStatsFor(entries) {
+    const byLevel = { Federal: 0, State: 0, Local: 0 };
+    const states = new Set();
+    for (const { candidate } of entries) {
+        byLevel[candidate.govt_level] = (byLevel[candidate.govt_level] || 0) + 1;
+        states.add(candidate.state);
+    }
+    setText('stat-total', entries.length);
+    setText('stat-states', states.size);
+    setText('stat-federal', byLevel.Federal);
+    setText('stat-state', byLevel.State);
+    setText('stat-local', byLevel.Local);
 }
 
 export function renderResultsLine(matchCount, total) {
     return `${matchCount} of ${total} candidates`;
 }
 
-export function renderCards(entries, terms) {
+export function renderStateOptions(statesWithCounts) {
+    return statesWithCounts
+        .map(([state, count]) => `
+            <label class="state-option">
+                <input type="checkbox" value="${escapeHtml(state)}">
+                <span>${escapeHtml(state)}</span>
+                <span class="state-option-abbr">${escapeHtml(stateAbbreviation(state))}</span>
+                <span class="state-option-count">${count}</span>
+            </label>`)
+        .join('');
+}
+
+export function renderTopicChips(topicsWithCounts) {
+    return topicsWithCounts
+        .map(([topic, count]) => `
+            <button class="chip" data-topic="${escapeHtml(topic)}" title="Click to include · Shift-click to exclude">
+                ${escapeHtml(topic)} <span class="chip-count">${count}</span>
+            </button>`)
+        .join('');
+}
+
+export function renderSuggestions(items) {
+    return items
+        .map((item) => `
+            <button class="suggestion ${item.kind}" data-action="${item.kind}" data-value="${escapeHtml(item.value)}" role="option">
+                <span class="suggestion-label">${escapeHtml(item.label)}</span>
+                <span class="suggestion-sub">${escapeHtml(item.sub)}</span>
+            </button>`)
+        .join('');
+}
+
+export function renderCards(entries, terms, emptyMessage) {
     if (!entries.length) {
-        return '<div class="empty-state">No candidates match these filters.</div>';
+        return `<div class="empty-state">${escapeHtml(emptyMessage)}</div>`;
     }
     return entries.map((entry) => cardMarkup(entry, terms)).join('');
+}
+
+/**
+ * The removable "active filter" pills: query terms (+/-), topics (+/-),
+ * states and level. Each pill carries data-removes attributes the main
+ * module uses to undo that single filter.
+ */
+export function renderActiveFilters(filters, rawQueryTerms) {
+    const pills = [];
+
+    for (const raw of rawQueryTerms) {
+        const negated = raw.startsWith('-');
+        pills.push(filterPill({
+            label: raw,
+            cls: negated ? 'filter-pill exclude' : 'filter-pill',
+            removes: { query: raw },
+        }));
+    }
+    for (const topic of filters.topicsInclude) {
+        pills.push(filterPill({ label: `+${topic}`, cls: 'filter-pill', removes: { topicInclude: topic } }));
+    }
+    for (const topic of filters.topicsExclude) {
+        pills.push(filterPill({ label: `−${topic}`, cls: 'filter-pill exclude', removes: { topicExclude: topic } }));
+    }
+    for (const state of filters.states) {
+        pills.push(filterPill({
+            label: `${state} (${stateAbbreviation(state)})`,
+            cls: 'filter-pill',
+            removes: { state },
+        }));
+    }
+    if (filters.level) {
+        pills.push(filterPill({ label: filters.level, cls: 'filter-pill', removes: { level: true } }));
+    }
+    return pills.join('');
+}
+
+function filterPill({ label, cls, removes }) {
+    const attrs = Object.entries(removes)
+        .map(([key, value]) => `data-removes-${key}="${escapeHtml(String(value))}"`)
+        .join(' ');
+    return `<button class="${cls}" ${attrs} title="Remove this filter">${escapeHtml(label)} <span class="pill-x">×</span></button>`;
+}
+
+export function buildCsv(entries) {
+    const header = [
+        'Name', 'State', 'Level', 'Position', 'Party',
+        'District / Location', 'Topics', 'Stances', 'Info', 'Volunteer',
+    ];
+    const rows = entries.map(({ candidate: c }) => [
+        c.name, c.state, c.govt_level, c.position, c.party,
+        c.district, (c.topics || []).join('; '), c.stances, c.info, c.volunteer,
+    ]);
+    const lines = [header, ...rows].map((row) => row.map(csvCell).join(','));
+    return '\uFEFF' + lines.join('\r\n'); // BOM so Excel opens UTF-8 correctly
+}
+
+function csvCell(value) {
+    const text = String(value == null ? '' : value);
+    return /[",\n\r]/.test(text) ? `"${text.replace(/"/g, '""')}"` : text;
 }
 
 function cardMarkup({ candidate: c }, terms) {
@@ -48,12 +147,14 @@ function cardMarkup({ candidate: c }, terms) {
         badge(c.state),
         c.party ? badge(c.party) : '',
     ].join('');
+    const stanceExcerpt = excerpt(c.stances, 150);
     return `
         <article class="card">
             <div class="card-head" role="button" aria-expanded="false">
                 <div class="card-main">
                     <div class="card-name">${highlightTerms(c.name, terms)}</div>
                     <div class="card-meta">${highlightTerms(c.position, terms)}</div>
+                    ${stanceExcerpt ? `<div class="card-stance">${highlightTerms(stanceExcerpt, terms)}</div>` : ''}
                     <div class="card-badges">${badges}</div>
                     ${tags ? `<div class="card-badges">${tags}</div>` : ''}
                 </div>
@@ -72,6 +173,16 @@ function cardMarkup({ candidate: c }, terms) {
                 </div>
             </div>
         </article>`;
+}
+
+/** First `max` characters of text, cut at a word boundary, with an ellipsis. */
+function excerpt(text, max) {
+    const source = String(text || '').replace(/\s+/g, ' ').trim();
+    if (!source) return '';
+    if (source.length <= max) return source;
+    const cut = source.slice(0, max);
+    const lastSpace = cut.lastIndexOf(' ');
+    return (lastSpace > max * 0.6 ? cut.slice(0, lastSpace) : cut) + '…';
 }
 
 function badge(text, extraClass = '') {
@@ -93,7 +204,10 @@ function actionButton(rawText, label, className = 'btn') {
 }
 
 function linkTarget(rawText) {
-    return firstUrl(rawText) || (firstEmail(rawText) ? `mailto:${firstEmail(rawText)}` : '');
+    const url = firstUrl(rawText);
+    if (url) return url;
+    const email = firstEmail(rawText);
+    return email ? `mailto:${email}` : '';
 }
 
 function linkify(text) {

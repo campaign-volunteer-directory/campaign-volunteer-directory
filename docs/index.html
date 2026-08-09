@@ -7,18 +7,18 @@
     <meta name="description" content="Progressive 2026 candidates across the US looking for volunteers — compiled by Lime Accordion. Auto-synced from the source spreadsheet.">
     <meta name="color-scheme" content="light dark">
 
-    <link href="css/styles.css?v=4" rel="stylesheet">
+    <link href="css/styles.css?v=6" rel="stylesheet">
 </head>
 <body>
     <header class="site-header">
         <div class="wrap header-row">
-            <div>
-                <h1>Campaign Volunteer Directory</h1>
-                <p class="site-sub">
-                    Progressive 2026 candidates who need volunteers · compiled by
-                    <a href="https://linktr.ee/limeaccordion" target="_blank" rel="noopener noreferrer">Lime Accordion</a> ·
+            <div class="brand">
+                <span class="brand-dot" aria-hidden="true"></span>
+                <span class="brand-title">Campaign Volunteer Directory</span>
+                <span class="brand-sub">
+                    by <a href="https://linktr.ee/limeaccordion" target="_blank" rel="noopener noreferrer">Lime Accordion</a> ·
                     updated <span id="collection-date">–</span>
-                </p>
+                </span>
             </div>
             <nav class="header-links">
                 <a href="https://linktr.ee/limeaccordion" target="_blank" rel="noopener noreferrer">Lime Accordion</a>
@@ -30,8 +30,7 @@
 
     <main class="wrap">
         <p class="disclaimer">
-            This is <strong>not an endorsement</strong> of any candidate. It is a collection of campaigns
-            who need help — please research candidates before getting involved.
+            <strong>Not an endorsement.</strong> A collection of campaigns that need help — please research candidates before getting involved.
         </p>
 
         <section class="stats-row" aria-label="Directory stats">
@@ -44,9 +43,28 @@
 
         <section class="filters" aria-label="Filters">
             <div class="filter-row filter-search-row">
-                <input type="search" id="filter-q" class="filter-search" placeholder="Search names, positions, stances, issues…" autocomplete="off">
+                <div class="search-wrap">
+                    <input type="search" id="filter-q" class="filter-search" placeholder="Search candidates — try: housing -california, VA, \"medicare for all\"" autocomplete="off" aria-label="Search">
+                    <div id="suggestions" class="suggestions hidden" role="listbox"></div>
+                </div>
+                <button id="tips-toggle" class="btn-icon" title="Search tips" aria-expanded="false">?</button>
+                <button id="filter-download" class="btn-ghost" title="Download the filtered list as CSV">⤓ CSV</button>
                 <div class="filter-results" id="filter-results">–</div>
                 <button id="filter-clear" class="btn-ghost hidden">Clear all</button>
+            </div>
+
+            <div id="tips-panel" class="tips-panel hidden">
+                <div class="tips-title">Search tips</div>
+                <ul class="tips-list">
+                    <li><code>housing healthcare</code> — candidates matching <strong>all</strong> words</li>
+                    <li><code>-ward</code> — <strong>exclude</strong> a word (e.g. <code>war -ward</code>)</li>
+                    <li><code>medic*</code> — matches word <strong>prefixes</strong> (medicare, Medicaid…)</li>
+                    <li><code>"medicare for all"</code> — match an <strong>exact phrase</strong></li>
+                    <li><code>VA</code> — state <strong>abbreviations</strong> work too (Virginia)</li>
+                    <li><strong>Issue chips</strong> — click to include, <strong>shift-click to exclude</strong></li>
+                    <li>Press <code>/</code> to focus search · <code>↑↓</code> for suggestions · <code>Esc</code> to clear</li>
+                    <li>Use the <strong>⤓ CSV</strong> button to download exactly what you're seeing</li>
+                </ul>
             </div>
 
             <div class="filter-row">
@@ -57,19 +75,25 @@
                     <button data-level="State" class="pill">State</button>
                     <button data-level="Local" class="pill">Local</button>
                 </div>
-            </div>
 
-            <div class="filter-row">
-                <span class="filter-label">State</span>
-                <select id="filter-state" class="select">
-                    <option value="">All states</option>
-                </select>
+                <span class="filter-label filter-label-gap">State</span>
+                <div class="state-picker" id="state-picker">
+                    <button id="state-trigger" class="select-trigger" aria-expanded="false">All states ▾</button>
+                    <div id="state-panel" class="state-panel hidden">
+                        <input id="state-search" class="state-search" type="search" placeholder="Search states (name or VA)…" autocomplete="off">
+                        <div id="state-options" class="state-options"></div>
+                        <button id="state-clear" class="btn-ghost">Clear selection</button>
+                    </div>
+                </div>
             </div>
 
             <div class="filter-row filter-topics">
                 <span class="filter-label">Issues</span>
                 <div id="filter-topics" class="chips"></div>
             </div>
+
+            <div id="fuzzy-note" class="fuzzy-note hidden"></div>
+            <div id="active-filters" class="active-filters"></div>
         </section>
 
         <section id="cards" class="cards" aria-label="Candidates"></section>
@@ -82,6 +106,6 @@
         </div>
     </footer>
 
-    <script type="module" src="js/main.js?v=4"></script>
+    <script type="module" src="js/main.js?v=6"></script>
 </body>
 </html>

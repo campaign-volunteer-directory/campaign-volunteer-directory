@@ -71,7 +71,7 @@ TOPICS = [
     ("Palestine / Israel", ["palestine", "gaza", "genocide", "israel", "aipac", "arms embargo", "occupied", "intifada"]),
     ("Impeach Trump", ["impeach", "trump", "gestapo", "authoritarian", "maga"]),
     ("Democracy & voting", ["voting rights", "democracy", "election", "voting", "gerrymander", "voter", "ranked choice", "democracy"]),
-    ("Veterans", ["veteran", "military", "armed forces", "national guard", "^\\bwar\\b", "war crimes"]),
+    ("Veterans", ["veteran", "military", "armed forces", "national guard", "^\\bwars?\\b", "war crimes", "forever wars"]),
     ("Term limits", ["term limits", "term limit"]),
     ("Mental health", ["mental health", "mental-health"]),
 ]
