@@ -178,7 +178,8 @@ function activateSuggestion(data) {
 function wireQueryBox() {
     const input = document.getElementById('filter-q');
 
-    input.addEventListener('input', debounce(() => {
+    input.addEventListener('input', debounce((event) => {
+        filters.q = event.target.value;
         apply();
         renderSuggestionsList();
     }, SEARCH_DEBOUNCE_MS));
