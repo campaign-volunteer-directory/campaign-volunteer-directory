@@ -1,7 +1,7 @@
-import { debounce } from './utils.js?v=6';
-import { parseQuery, splitQuery, buildSearchIndex, searchRanked } from './search.js?v=6';
-import { FilterState, matchesFacets } from './filters.js?v=6';
-import { stateAbbreviation } from './states.js?v=6';
+import { debounce } from './utils.js?v=7';
+import { parseQuery, splitQuery, buildSearchIndex, searchRanked } from './search.js?v=7';
+import { FilterState, matchesFacets } from './filters.js?v=7';
+import { stateAbbreviation } from './states.js?v=7';
 import {
     renderStats,
     renderStatsFor,
@@ -12,9 +12,10 @@ import {
     renderActiveFilters,
     renderCards,
     buildCsv,
-} from './render.js?v=6';
+} from './render.js?v=7';
 
 const SEARCH_DEBOUNCE_MS = 120;
+const APP_VERSION = 7;
 const KIND_LABELS = { state: 'State', topic: 'Issue', candidate: 'Candidate' };
 
 let candidates = [];
@@ -443,6 +444,16 @@ async function loadData() {
 }
 
 async function boot() {
+    // Stale-HTML guard: versioned assets are fetched fresh by the browser,
+    // but index.html itself can come from cache and mismatch the JS (missing
+    // element IDs → crash). If a required element is missing, bounce once to
+    // a versioned URL to force a fresh HTML fetch. writeToUrl() then strips
+    // the marker on the first filter change.
+    if (!document.getElementById('stat-total-sub') && !location.search.includes('v=')) {
+        location.replace(`${location.pathname}?v=${APP_VERSION}`);
+        return;
+    }
+
     try {
         const data = await loadData();
         candidates = data.candidates || [];

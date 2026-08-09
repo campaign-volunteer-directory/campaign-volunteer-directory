@@ -1,6 +1,6 @@
-import { escapeHtml, firstUrl, firstEmail } from './utils.js?v=6';
-import { highlightTerms } from './highlight.js?v=6';
-import { stateAbbreviation } from './states.js?v=6';
+import { escapeHtml, firstUrl, firstEmail } from './utils.js?v=7';
+import { highlightTerms } from './highlight.js?v=7';
+import { stateAbbreviation } from './states.js?v=7';
 
 /**
  * Pure render helpers: every function maps data to HTML strings (or, for
@@ -230,5 +230,6 @@ function linkify(text) {
 }
 
 function setText(id, value) {
-    document.getElementById(id).textContent = value;
+    const element = document.getElementById(id);
+    if (element) element.textContent = value;
 }
