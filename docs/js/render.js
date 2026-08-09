@@ -1,6 +1,6 @@
-import { escapeHtml, firstUrl, firstEmail } from './utils.js?v=9';
-import { highlightTerms } from './highlight.js?v=9';
-import { stateAbbreviation } from './states.js?v=9';
+import { escapeHtml, firstUrl, firstEmail } from './utils.js?v=10';
+import { highlightTerms } from './highlight.js?v=10';
+import { stateAbbreviation } from './states.js?v=10';
 
 /**
  * Pure render helpers: every function maps data to HTML strings (or, for
@@ -116,8 +116,13 @@ export function renderActiveFilters(filters, rawQueryTerms) {
 }
 
 function filterPill({ label, cls, removes }) {
+    // Dashed attribute names so dataset keys map back to camelCase cleanly:
+    // "topicInclude" -> data-removes-topic-include -> dataset.removesTopicInclude
     const attrs = Object.entries(removes)
-        .map(([key, value]) => `data-removes-${key}="${escapeHtml(String(value))}"`)
+        .map(([key, value]) => {
+            const dashed = key.replace(/[A-Z]/g, (c) => `-${c.toLowerCase()}`);
+            return `data-removes-${dashed}="${escapeHtml(String(value))}"`;
+        })
         .join(' ');
     return `<button class="${cls}" ${attrs} title="Remove this filter">${escapeHtml(label)} <span class="pill-x">×</span></button>`;
 }
