@@ -7,13 +7,7 @@
     <meta name="description" content="Progressive 2026 candidates across the US looking for volunteers — compiled by Lime Accordion. Auto-synced from the source spreadsheet.">
     <meta name="color-scheme" content="light dark">
 
-    <!-- DataTables CSS -->
-    <link href="https://cdn.datatables.net/1.13.7/css/jquery.dataTables.min.css" rel="stylesheet">
-    <link href="https://cdn.datatables.net/searchpanes/2.2.0/css/searchPanes.dataTables.min.css" rel="stylesheet">
-    <link href="https://cdn.datatables.net/select/1.7.0/css/select.dataTables.min.css" rel="stylesheet">
-    <link href="https://cdn.datatables.net/responsive/2.5.0/css/responsive.dataTables.min.css" rel="stylesheet">
-
-    <link href="css/styles.css?v=2" rel="stylesheet">
+    <link href="css/styles.css?v=4" rel="stylesheet">
 </head>
 <body>
     <header class="site-header">
@@ -41,47 +35,44 @@
         </p>
 
         <section class="stats-row" aria-label="Directory stats">
-            <div class="stat-tile">
-                <div class="stat-label">Candidates</div>
-                <div class="stat-value" id="stat-total">–</div>
+            <div class="stat-tile"><div class="stat-label">Candidates</div><div class="stat-value" id="stat-total">–</div></div>
+            <div class="stat-tile"><div class="stat-label">States</div><div class="stat-value" id="stat-states">–</div></div>
+            <div class="stat-tile"><div class="stat-label">Federal</div><div class="stat-value" id="stat-federal">–</div></div>
+            <div class="stat-tile"><div class="stat-label">State</div><div class="stat-value" id="stat-state">–</div></div>
+            <div class="stat-tile"><div class="stat-label">Local</div><div class="stat-value" id="stat-local">–</div></div>
+        </section>
+
+        <section class="filters" aria-label="Filters">
+            <div class="filter-row filter-search-row">
+                <input type="search" id="filter-q" class="filter-search" placeholder="Search names, positions, stances, issues…" autocomplete="off">
+                <div class="filter-results" id="filter-results">–</div>
+                <button id="filter-clear" class="btn-ghost hidden">Clear all</button>
             </div>
-            <div class="stat-tile">
-                <div class="stat-label">States</div>
-                <div class="stat-value" id="stat-states">–</div>
+
+            <div class="filter-row">
+                <span class="filter-label">Level</span>
+                <div class="btn-group" id="filter-level">
+                    <button data-level="" class="pill active">All</button>
+                    <button data-level="Federal" class="pill">Federal</button>
+                    <button data-level="State" class="pill">State</button>
+                    <button data-level="Local" class="pill">Local</button>
+                </div>
             </div>
-            <div class="stat-tile">
-                <div class="stat-label">Federal</div>
-                <div class="stat-value" id="stat-federal">–</div>
+
+            <div class="filter-row">
+                <span class="filter-label">State</span>
+                <select id="filter-state" class="select">
+                    <option value="">All states</option>
+                </select>
             </div>
-            <div class="stat-tile">
-                <div class="stat-label">State</div>
-                <div class="stat-value" id="stat-state">–</div>
-            </div>
-            <div class="stat-tile">
-                <div class="stat-label">Local</div>
-                <div class="stat-value" id="stat-local">–</div>
+
+            <div class="filter-row filter-topics">
+                <span class="filter-label">Issues</span>
+                <div id="filter-topics" class="chips"></div>
             </div>
         </section>
 
-        <section class="table-section">
-            <table id="directory-table" class="display" style="width:100%">
-                <thead>
-                    <tr>
-                        <th>Name</th>
-                        <th>State</th>
-                        <th>Level</th>
-                        <th>Position</th>
-                        <th>Stances</th>
-                        <th>Topics</th>
-                        <th>Party</th>
-                        <th>District / Location</th>
-                        <th>Info</th>
-                        <th>Volunteer</th>
-                    </tr>
-                </thead>
-                <tbody></tbody>
-            </table>
-        </section>
+        <section id="cards" class="cards" aria-label="Candidates"></section>
     </main>
 
     <footer class="site-footer">
@@ -91,11 +82,6 @@
         </div>
     </footer>
 
-    <script src="https://code.jquery.com/jquery-3.7.0.js"></script>
-    <script src="https://cdn.datatables.net/1.13.7/js/jquery.dataTables.min.js"></script>
-    <script src="https://cdn.datatables.net/searchpanes/2.2.0/js/dataTables.searchPanes.min.js"></script>
-    <script src="https://cdn.datatables.net/select/1.7.0/js/dataTables.select.min.js"></script>
-    <script src="https://cdn.datatables.net/responsive/2.5.0/js/dataTables.responsive.min.js"></script>
-    <script src="js/app.js?v=2"></script>
+    <script type="module" src="js/main.js?v=4"></script>
 </body>
 </html>
