@@ -1,7 +1,7 @@
-import { debounce } from './utils.js?v=12';
-import { parseQuery, splitQuery, buildSearchIndex, searchRanked } from './search.js?v=12';
-import { FilterState, matchesFacets } from './filters.js?v=12';
-import { stateAbbreviation } from './states.js?v=12';
+import { debounce } from './utils.js?v=13';
+import { parseQuery, splitQuery, buildSearchIndex, searchRanked } from './search.js?v=13';
+import { FilterState, matchesFacets } from './filters.js?v=13';
+import { stateAbbreviation } from './states.js?v=13';
 import {
     renderStats,
     renderSummary,
@@ -13,10 +13,10 @@ import {
     renderActiveFilters,
     renderCards,
     buildCsv,
-} from './render.js?v=12';
+} from './render.js?v=13';
 
 const SEARCH_DEBOUNCE_MS = 120;
-const APP_VERSION = 12;
+const APP_VERSION = 13;
 const KIND_LABELS = { state: 'State', topic: 'Issue', candidate: 'Candidate' };
 
 let candidates = [];
@@ -455,6 +455,13 @@ function wireViewControls() {
     });
 
     document.getElementById('breakdown').addEventListener('click', (event) => {
+        const more = event.target.closest('.chips-more');
+        if (more) {
+            const row = more.parentElement;
+            const expanded = row.classList.toggle('expanded');
+            more.textContent = expanded ? '− show less' : `+${more.dataset.count} more`;
+            return;
+        }
         const chip = event.target.closest('.chip');
         if (!chip) return;
         const value = chip.dataset.value;

@@ -400,7 +400,20 @@ a:hover { text-decoration: underline; }
 .chip:hover { color: var(--text); }
 .chip .chip-count { opacity: 0.55; font-weight: 400; }
 
-.chips-more { font-size: 11.5px; color: var(--muted); align-self: center; }
+.chips-more {
+    background: transparent;
+    border: 1px dashed var(--panel-border);
+    color: var(--muted);
+    border-radius: 999px;
+    padding: 4px 11px;
+    font-size: 12px;
+    cursor: pointer;
+}
+
+.chips-more:hover { color: var(--text); border-color: var(--muted); }
+
+.breakdown-row .chip-overflow { display: none; }
+.breakdown-row.expanded .chip-overflow { display: inline-block; }
 
 /* ── View summary + breakdown ──────────────────────────── */
 .view-summary {

@@ -51,13 +51,16 @@ export function renderBreakdown(statesInView, topicsInView, filters, TOP_N = 12)
 
 function chipsFor(values, kind, activeSet, topN) {
     if (!values.length) return '';
-    const chips = values.slice(0, topN).map(([label, count]) => {
+    const chips = values.map(([label, count], index) => {
+        const overflowClass = index >= topN ? ' chip-overflow' : '';
         const active = activeSet.has(label) ? ' active' : '';
-        return `<button class="chip${active}" data-breakdown="${kind}" data-value="${escapeHtml(label)}">${escapeHtml(label)} <span class="chip-count">${count}</span></button>`;
+        return `<button class="chip${active}${overflowClass}" data-breakdown="${kind}" data-value="${escapeHtml(label)}">${escapeHtml(label)} <span class="chip-count">${count}</span></button>`;
     }).join('');
     const rest = values.length - topN;
-    const more = rest > 0 ? `<span class="chips-more">+${rest} more</span>` : '';
-    return chips + more;
+    if (rest <= 0) return chips;
+    // Expandable "+N more": toggles .expanded on the row, revealing the
+    // overflow chips (hidden via CSS until then).
+    return chips + `<button class="chips-more" data-kind="${kind}" data-count="${rest}">+${rest} more</button>`;
 }
 
 export function renderResultsLine(matchCount, total) {
