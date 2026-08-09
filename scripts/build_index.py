@@ -18,6 +18,7 @@ import json
 import sys
 import urllib.request
 from collections import Counter
+from datetime import datetime, timezone
 from pathlib import Path
 
 ROOT = Path(__file__).resolve().parent.parent
@@ -234,9 +235,11 @@ def main():
     if prev_updated_at is not None:
         new_payload = dict(payload)
         new_payload.pop("updated_at", None)
-        if new_payload == prev_updated_at:
-            old = json.loads(prev_path.read_text())
-            payload["updated_at"] = old.get("updated_at", "TBD")
+        old_stamp = json.loads(prev_path.read_text()).get("updated_at", "")
+        if new_payload == prev_updated_at and old_stamp and old_stamp != "TBD":
+            payload["updated_at"] = old_stamp
+        else:
+            payload["updated_at"] = datetime.now(timezone.utc).strftime("%Y-%m-%dT%H:%M:%SZ")
     (DATA_DIR / "candidates.json").write_text(
         json.dumps(payload, indent=1, ensure_ascii=False)
     )
