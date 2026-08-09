@@ -120,8 +120,25 @@ table.dataTable tbody td {
     vertical-align: top;
 }
 
-table.dataTable tbody td.stance-cell { max-width: 420px; white-space: normal; }
+table.dataTable tbody td.stance-cell {
+    min-width: 320px;
+    max-width: 460px;
+    white-space: normal;
+}
 table.dataTable tbody td.district-cell { max-width: 220px; white-space: normal; }
+
+table.dataTable tbody td .topic {
+    display: inline-block;
+    margin: 1px 3px 1px 0;
+    padding: 1px 8px;
+    border: 1px solid var(--accent);
+    border-radius: 999px;
+    font-size: 11px;
+    color: var(--accent);
+    white-space: nowrap;
+}
+
+.dataTables_wrapper .dataTables_filter input { width: 320px; }
 
 .dataTables_wrapper .dataTables_filter input,
 .dataTables_wrapper .dataTables_length select {

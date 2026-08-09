@@ -2,7 +2,7 @@
  "source": "Campaign Volunteer Directory by Lime Accordion",
  "source_url": "https://linktr.ee/limeaccordion",
  "sheet_url": "https://docs.google.com/spreadsheets/d/e/2PACX-1vQyQUWTOqZ6iqYMXd-GpkXivMRIgGCnkL58y-oLrX53e8M68zdQo5xO1P8LEMd06mpOVxshd0F9aC24/pubhtml",
- "updated_at": "2026-08-09T11:30:00Z",
+ "updated_at": "TBD",
  "count": 145,
  "states": [
   "Alabama",
@@ -72,7 +72,11 @@
    "district": "Madison County - Huntsville City District 3, South Huntsville, Four Mile Post Road down to Ditto Landing",
    "stances": "Strong Education Partnerships- Connecting tax dollars to preparing our specialized future workforce. Smart Growth- building proactively instead of reactively, solutions for road congestion, sustainable development, new roadway arteries. Expansion in more investment in social-infrastructure- investing in people and the systems that keep Huntsville strong.",
    "info": "LilianaforHuntsville.com",
-   "volunteer": "https://actionnetwork.org/groups/liliana-peinder-for-huntsville-city-council"
+   "volunteer": "https://actionnetwork.org/groups/liliana-peinder-for-huntsville-city-council",
+   "topics": [
+    "Education & Childcare",
+    "Transit & Infrastructure"
+   ]
   },
   {
    "name": "Robert Hunter",
@@ -83,7 +87,11 @@
    "district": "Metro Etowah county in  Alabama, big cities are Gadsden, Rainbow city, and Attalla",
    "stances": "1 Cap the Rent \n2 Make electric power affordable \n3 Medicaid Expansion",
    "info": "Www.vote4roberthunter.com",
-   "volunteer": "Got to the link and sign up. https://docs.google.com/forms/u/1/d/e/1FAIpQLSegWg8c08ywBm2U_owhQxvkf6VOe_uuArAKM4fqL_eE3dIezw/viewform?usp=send_form"
+   "volunteer": "Got to the link and sign up. https://docs.google.com/forms/u/1/d/e/1FAIpQLSegWg8c08ywBm2U_owhQxvkf6VOe_uuArAKM4fqL_eE3dIezw/viewform?usp=send_form",
+   "topics": [
+    "Healthcare",
+    "Housing"
+   ]
   },
   {
    "name": "WILL BOYD FOR GOVERNOR",
@@ -94,7 +102,12 @@
    "district": "STATEWIDE",
    "stances": "FIGHTING FOR OUR VOTING RIGHTS. EDUCATION. HEALTHCARE. ECONOMICS.",
    "info": "https://drwillboyd.com",
-   "volunteer": "willboyd4alabama@gmail.com - https://drwillboyd.com/join-us"
+   "volunteer": "willboyd4alabama@gmail.com - https://drwillboyd.com/join-us",
+   "topics": [
+    "Healthcare",
+    "Education & Childcare",
+    "Democracy & voting"
+   ]
   },
   {
    "name": "Tom Begich",
@@ -105,7 +118,10 @@
    "district": "Alaska",
    "stances": "1. Lower Everyday Costs 2. Improve Education 3. Get our fair share for our resources",
    "info": "Tombegichforalaska.com",
-   "volunteer": "https://docs.google.com/forms/d/e/1FAIpQLSejZPEJD7sTtxVBTD5zLuK0TkLayeQexfe-ODpZ3tjRBQlcIA/viewform"
+   "volunteer": "https://docs.google.com/forms/d/e/1FAIpQLSejZPEJD7sTtxVBTD5zLuK0TkLayeQexfe-ODpZ3tjRBQlcIA/viewform",
+   "topics": [
+    "Education & Childcare"
+   ]
   },
   {
    "name": "Nina Petrov",
@@ -116,7 +132,14 @@
    "district": "Anchorage area, including midtown and surrounding neighborhoods in Anchorage Municipality",
    "stances": "fuck trump, fuck ice, fuck Stephen miller... 1 Alaska talks about resource wealth while basic services fluctuate year to year stabilize revenues so schools and infrastructure aren’t constantly on the chopping block. 2 We also need a serious long-term energy strategy that balances oil dependence with renewable investment instead of reacting to market swings. And I’m not ignoring national politics 3 I support stronger federal ethics enforcement and continued accountability efforts involving figures like Donald Trump.",
    "info": "https://www.petrovAK4us.org",
-   "volunteer": "https://www.petrovAK4us.org"
+   "volunteer": "https://www.petrovAK4us.org",
+   "topics": [
+    "Education & Childcare",
+    "Climate & Environment",
+    "Immigration & ICE",
+    "Transit & Infrastructure",
+    "Impeach Trump"
+   ]
   },
   {
    "name": "Meleah Gretzmier",
@@ -127,7 +150,11 @@
    "district": "I am located in Northwest Arkansas! My district is just outside of Bentonville, AR. It is compromised of Cave Springs, Highfill, Gentry, Siloam Springs, and surrounding rural spaces.",
    "stances": "1. Criminal Justice Reform; rehabilitate, not incarcerate\n2. Infrastructure; responsible and transparent growth without growing pains \n3. Affordability; people should have access to affordable housing",
    "info": "MelForArkansas.com",
-   "volunteer": "https://docs.google.com/forms/d/e/1FAIpQLSfTVZNJNnDf_-1iBB3jlJNX2xIg7Px4TcrJvOfmCIA6gn1yxg/viewform"
+   "volunteer": "https://docs.google.com/forms/d/e/1FAIpQLSfTVZNJNnDf_-1iBB3jlJNX2xIg7Px4TcrJvOfmCIA6gn1yxg/viewform",
+   "topics": [
+    "Housing",
+    "Transit & Infrastructure"
+   ]
   },
   {
    "name": "Kyle Clayton",
@@ -138,7 +165,12 @@
    "district": "South Peoria, Northwest Glendale, North Central Phoenix. Arrowhead Mall, Westgate, Downtown Peoria",
    "stances": "1. Protect PUBLIC Education  2. Lower housing, healthcare, & energy costs  3. Make Government spending accountable to the people to ensure it helps improve their lives",
    "info": "https://www.kyleforarizona.com/",
-   "volunteer": "https://www.kyleforarizona.com/join-us"
+   "volunteer": "https://www.kyleforarizona.com/join-us",
+   "topics": [
+    "Healthcare",
+    "Housing",
+    "Education & Childcare"
+   ]
   },
   {
    "name": "Ms Zoe Kaplan",
@@ -149,7 +181,12 @@
    "district": "Statewide race across Arizona, with major population centers in Phoenix, Tucson, and surrounding metro areas",
    "stances": "1- Utility regulation isn’t abstract rate hikes are outpacing wages; push for stricter oversight of monopolies and transparent pricing\n2- Accelerate grid modernization so extreme heat doesn’t translate into outages or price spikes\n3- Take on “regulatory capture” directly limit utility influence in elections and decision-making bodies",
    "info": "x.com/kaplan4az\nwww.kaplanAZ4us.org",
-   "volunteer": "x.com/kaplan4az"
+   "volunteer": "x.com/kaplan4az",
+   "topics": [
+    "Housing",
+    "Workers & Wages",
+    "Democracy & voting"
+   ]
   },
   {
    "name": "Marc Graham",
@@ -160,7 +197,11 @@
    "district": "Northwest Phoenix",
    "stances": "1. Enshrine our voting rights.\n2. Fair tax base\n3. End School Voucher abuse.",
    "info": "marc@marcgrahamforaz.com",
-   "volunteer": "Please email me at marc@marcgrahamforaz.com"
+   "volunteer": "Please email me at marc@marcgrahamforaz.com",
+   "topics": [
+    "Education & Childcare",
+    "Democracy & voting"
+   ]
   },
   {
    "name": "Marcus Delgado",
@@ -171,7 +212,14 @@
    "district": "Southeastern Arizona including parts of Tucson and surrounding communities in Pima County",
    "stances": "Secure water resources & drought solutions\nExpand access to affordable healthcare\nProtect voting rights, tax the rich",
    "info": "Secure water resources & drought solutions, expand access to affordable healthcare,\nhttps://www.delgadoforaz6.com",
-   "volunteer": "https://www.delgadoforaz6.com"
+   "volunteer": "https://www.delgadoforaz6.com",
+   "topics": [
+    "Healthcare",
+    "Housing",
+    "Climate & Environment",
+    "Tax the rich",
+    "Democracy & voting"
+   ]
   },
   {
    "name": "Sarah Bacon",
@@ -182,7 +230,10 @@
    "district": "Ventura to San Luis Obispo.",
    "stances": "1. Fight corruption & fix Congress\n2. Lower costs & invest in people\n3. Defend rights & human dignity",
    "info": "www.sarahbacon.com",
-   "volunteer": "www.sarahbacon.com/volunteer"
+   "volunteer": "www.sarahbacon.com/volunteer",
+   "topics": [
+    "Money out of politics"
+   ]
   },
   {
    "name": "Joel Lava",
@@ -193,7 +244,14 @@
    "district": "Hollywood/Burbank/Glendale/Silverlake/Los Feliz",
    "stances": "1. Impeach Trump\n2. Affordable Housing\n3. Universal Healthcare\n\nThis hurts bc i want to focus on bringing film back to LA, fight gun violence, and support publicly financed elections!",
    "info": "https://www.joellavaforcongress.com",
-   "volunteer": "https://www.joellavaforcongress.com/volunteer"
+   "volunteer": "https://www.joellavaforcongress.com/volunteer",
+   "topics": [
+    "Healthcare",
+    "Housing",
+    "Public safety & guns",
+    "Impeach Trump",
+    "Democracy & voting"
+   ]
   },
   {
    "name": "Marianne Shamma",
@@ -204,7 +262,15 @@
    "district": "Mainly West LA, And Most Beach LA Area Beach Cities From Santa Monica down to San Pedro",
    "stances": "Marianne's three top priorities:\n\n1) End the Genocide in Gaza:\nThe International Association of Genocide Scholars published a report in Sep 2025 declaring that Israel was committing a genocide. It continues to this day. Incumbent Ted Lieu and most US Reps are complicit by voting to spend taxpayer dollars on the weapons used to make this all possible. Marianne will speak out and vote against this.\n\n2) Abolish ICE:\nBillions of dollars spent to harass thousands of upstanding citizens. Our immigration system is broken and cruel by design. Marianne will speak out and vote against this.\n\n3) Healthcare for All:\nHealth care is a human right, not a privilege. Marianne will be a strong voice and another vote for Medicare-for-All and single-payer.\n\nThe billions/trillions of dollars we tax-payers pay for our elected officials to perpetuate cruelty, brutality, and mass-death needs to end. The money we taxpayers spend on these projects needs to be put to programs that promote our well-being, programs that we deserve: healthcare for all, climate justice, housing security. These programs will bring transformational change to every human being in the country. Better health, decreased stress, increased happiness.",
    "info": "https://mariannehumanityfirst.com",
-   "volunteer": "https://www.mariannehumanityfirst.com/contact"
+   "volunteer": "https://www.mariannehumanityfirst.com/contact",
+   "topics": [
+    "Healthcare",
+    "Housing",
+    "Climate & Environment",
+    "Immigration & ICE",
+    "Palestine / Israel",
+    "Democracy & voting"
+   ]
   },
   {
    "name": "Esther Kim-Varet",
@@ -215,7 +281,12 @@
    "district": "Orange County and Riverside",
    "stances": "1) Fight authoritarianism 2) Fight corruption 3) term limits",
    "info": "Estherforcongress.org",
-   "volunteer": "Estherforcongress.org/volunteer"
+   "volunteer": "Estherforcongress.org/volunteer",
+   "topics": [
+    "Money out of politics",
+    "Impeach Trump",
+    "Term limits"
+   ]
   },
   {
    "name": "Jaron Brandon",
@@ -226,7 +297,13 @@
    "district": "It covers thirteen counties which includes half of the Sierra Nevadas, like Yosemite, the east side like Death Valley,  and parts of the Central Valley.",
    "stances": "1. Protect forests from wildfire\n2. Build affordable housing\n3. Save and improve healthcare and schools",
    "info": "Www.votejaron.com",
-   "volunteer": "https://votejaron.com/volunteer/"
+   "volunteer": "https://votejaron.com/volunteer/",
+   "topics": [
+    "Healthcare",
+    "Housing",
+    "Education & Childcare",
+    "Climate & Environment"
+   ]
   },
   {
    "name": "Michael Masuda",
@@ -237,7 +314,11 @@
    "district": "Central Valley California / Stanislaus county / Tuolumne County/ Amador County / Madera and Mariposa County",
    "stances": "Protecting immigrant families. Lowering costs & addressing the housing crisis. Investing in local communities.",
    "info": "https://www.votemasuda.com/",
-   "volunteer": "https://actionnetwork.org/forms/volunteer-for-masuda-for-congress?source=direct_link&"
+   "volunteer": "https://actionnetwork.org/forms/volunteer-for-masuda-for-congress?source=direct_link&",
+   "topics": [
+    "Housing",
+    "Immigration & ICE"
+   ]
   },
   {
    "name": "Sofia Alvarez",
@@ -248,7 +329,13 @@
    "district": "Southern SF",
    "stances": "Expand community health clinics in underserved areas instead of relying on ER care\nInvest in water reuse + drought-resistant infrastructure as long-term policy, not emergency response\nCreate apprenticeship pipelines tied directly to local employers (construction, solar, healthcare)",
    "info": "Instagram alvarez4nm12",
-   "volunteer": "https://www.alvarezNM4us.org/volunteer"
+   "volunteer": "https://www.alvarezNM4us.org/volunteer",
+   "topics": [
+    "Healthcare",
+    "Housing",
+    "Climate & Environment",
+    "Transit & Infrastructure"
+   ]
   },
   {
    "name": "Javier Soto",
@@ -259,7 +346,13 @@
    "district": "NE Los Angeles, including Boyle Heights, El Sereno, and parts of Downtown LA",
    "stances": "fire prevention/ raking forest, the city keeps approving luxury units while calling it “housing progress” so we need binding affordability requirements, not suggestions\nWe need to end the practice of sweeping encampments without offering real, permanent housing solutions. If Washington won’t act, cities should still push for aggressive climate standards—LA can lead on zero-emission transit. fuck ICE",
    "info": "insta https://www.instagram.com/soto4la14 and https://www.sotoCA4us.org",
-   "volunteer": "insta https://www.instagram.com/soto4la14 and https://www.sotoCA4us.org"
+   "volunteer": "insta https://www.instagram.com/soto4la14 and https://www.sotoCA4us.org",
+   "topics": [
+    "Housing",
+    "Climate & Environment",
+    "Immigration & ICE",
+    "Transit & Infrastructure"
+   ]
   },
   {
    "name": "Nicolas Carjuzaa",
@@ -270,7 +363,12 @@
    "district": "Richmond, Fairfield, Vallejo, Vacaville",
    "stances": "1. Fight government corruption. 2. Affordable Housing for All. 3. Universal Healthcare.",
    "info": "Carjuzaaforcongress.org",
-   "volunteer": "Email: info@carjuzaaforcongress.org"
+   "volunteer": "Email: info@carjuzaaforcongress.org",
+   "topics": [
+    "Healthcare",
+    "Housing",
+    "Money out of politics"
+   ]
   },
   {
    "name": "Faizah Malik",
@@ -281,7 +379,10 @@
    "district": "Westside of Los Angeles",
    "stances": "1. Get people housed, keep people housed \n2. Fund our Neighborhoods \n3. Honest leaderships that follows through \n4. Meet the moment on civil rights",
    "info": "www.Faizahforla.com",
-   "volunteer": "Email info@faizahforla.com, or signup on https://luma.com/faizahforla"
+   "volunteer": "Email info@faizahforla.com, or signup on https://luma.com/faizahforla",
+   "topics": [
+    "Housing"
+   ]
   },
   {
    "name": "Jessica LaGosh",
@@ -292,7 +393,11 @@
    "district": "Not Applicable for Governor (the whole state of California)",
    "stances": "1. Free Healthcare\n2. Statewide Rent Control and End to Homelessness\n3. Hold the Justice System Accountable",
    "info": "www.jessicalagoshforgovernor.com",
-   "volunteer": "https://www.jessicalagoshforgovernor.com/#Join%20the%20Movement"
+   "volunteer": "https://www.jessicalagoshforgovernor.com/#Join%20the%20Movement",
+   "topics": [
+    "Healthcare",
+    "Housing"
+   ]
   },
   {
    "name": "Jason Byors",
@@ -303,7 +408,11 @@
    "district": "Inland Empire, Coachella Valley",
    "stances": "1) affordability and access to healthcare\n2) human rights and civil rights\n3) economy that works for all",
    "info": "jasonbyors.com",
-   "volunteer": "jasonbyors.com/volunteer"
+   "volunteer": "jasonbyors.com/volunteer",
+   "topics": [
+    "Healthcare",
+    "Housing"
+   ]
   },
   {
    "name": "Randy Villegas & Jasmeet Bains",
@@ -314,7 +423,10 @@
    "district": "Bakersfield",
    "stances": "End corruption-benefits for the people-more subsidies to the peopel (instead of more cuts)",
    "info": "https://www.villegasforcongress.com/  https://www.drjasmeetbains.com/",
-   "volunteer": "https://www.drjasmeetbains.com/"
+   "volunteer": "https://www.drjasmeetbains.com/",
+   "topics": [
+    "Money out of politics"
+   ]
   },
   {
    "name": "Randy Villegas & Jasmeet Bains",
@@ -325,7 +437,10 @@
    "district": "Bakersfield",
    "stances": "End corruption-benefits for the people-more subsidies to the peopel (instead of more cuts)",
    "info": "https://www.villegasforcongress.com/  https://www.drjasmeetbains.com/",
-   "volunteer": "https://www.drjasmeetbains.com/"
+   "volunteer": "https://www.drjasmeetbains.com/",
+   "topics": [
+    "Money out of politics"
+   ]
   },
   {
    "name": "Hunter Garcia Miranda",
@@ -336,7 +451,11 @@
    "district": "Southern California in Orange County",
    "stances": "1. Money out of politics\n2. Break up monopolies\n3. End forever wars and stop funding genocide",
    "info": "huntermiranda2026.com",
-   "volunteer": "https://huntermiranda2026.com/Volunteer/"
+   "volunteer": "https://huntermiranda2026.com/Volunteer/",
+   "topics": [
+    "Money out of politics",
+    "Palestine / Israel"
+   ]
   },
   {
    "name": "Vic Meyers",
@@ -347,7 +466,11 @@
    "district": "Baca, Bent, Crowley, Huerfano, Kiowa, Otero, Prowers, Las Animas counties and Pueblo West in Pueblo County",
    "stances": "Protect Democracy, Stronger Public Schools, Fight Surveillance State",
    "info": "Vic4hd47.com",
-   "volunteer": "On website is best place"
+   "volunteer": "On website is best place",
+   "topics": [
+    "Education & Childcare",
+    "Democracy & voting"
+   ]
   },
   {
    "name": "Noah Klein",
@@ -358,7 +481,14 @@
    "district": "Northern Denver metro",
    "stances": "Universal pre-K expansion\nLower healthcare costs\nClean energy transition jobs, limit ai data centers",
    "info": "Instagram: https://www.instagram.com/klein4co19\nTwitter (X): https://x.com/klein4co19",
-   "volunteer": "Dm me on X"
+   "volunteer": "Dm me on X",
+   "topics": [
+    "Healthcare",
+    "Education & Childcare",
+    "Climate & Environment",
+    "Workers & Wages",
+    "Transit & Infrastructure"
+   ]
   },
   {
    "name": "Santiago Velasquez",
@@ -369,7 +499,10 @@
    "district": "North and northeast Denver including Five Points, Globeville, and Elyria-Swansea",
    "stances": "No data centers, Development deals should come with community ownership stakes, not just promises that never materialize. Why are we still ticketing people into debt for minor infractions, overhaul municipal fines system. Expand bus rapid transit corridors now, not in another 10 year plan",
    "info": "https://x.com/velasquez4den9",
-   "volunteer": "https://x.com/velasquez4den9"
+   "volunteer": "https://x.com/velasquez4den9",
+   "topics": [
+    "Transit & Infrastructure"
+   ]
   },
   {
    "name": "Isaac Romero",
@@ -380,7 +513,12 @@
    "district": "North Denver suburbs, Thornton, Northglenn, Commerce City, and surrounding Adams/Weld County areas",
    "stances": "ICE OUT     1. The cost of living keeps rising faster than wages in the Front Range, so I’m pushing for federal policies that directly tie wage growth to inflation and productivity instead of leaving workers behind. We also need to confront how fragmented our healthcare system is expand a public option that actually competes on price and coverage.",
    "info": "https://www.romeroCO4us.org",
-   "volunteer": "https://www.romeroCO4us.org/volunteer"
+   "volunteer": "https://www.romeroCO4us.org/volunteer",
+   "topics": [
+    "Healthcare",
+    "Workers & Wages",
+    "Immigration & ICE"
+   ]
   },
   {
    "name": "Andrew Rice",
@@ -391,7 +529,12 @@
    "district": "Greater New Haven Area",
    "stances": "Medicare for All. Abolish ICE. Free Palestine",
    "info": "Www.riceforct.com",
-   "volunteer": "Volunteers@riceforct.com"
+   "volunteer": "Volunteers@riceforct.com",
+   "topics": [
+    "Healthcare",
+    "Immigration & ICE",
+    "Palestine / Israel"
+   ]
   },
   {
    "name": "Ruth Fortune",
@@ -402,7 +545,11 @@
    "district": "Greater Hartford area",
    "stances": "$25/minimum wage tied to inflation, formerly undocumented Black woman fighting to protect immigrants and for immigration reform,",
    "info": "www.ruthfortuneforcongress.com",
-   "volunteer": "https://www.ruthfortuneforcongress.com/#volunteer"
+   "volunteer": "https://www.ruthfortuneforcongress.com/#volunteer",
+   "topics": [
+    "Workers & Wages",
+    "Immigration & ICE"
+   ]
   },
   {
    "name": "Joseph Perez-Caputo",
@@ -413,7 +560,15 @@
    "district": "Connecticut, lower left (tail)",
    "stances": "Affordability, accountability, anti-establishment action\nUniversal healthcare\nImpeaching/treason charges \nAnti-ice free Palestine",
    "info": "https://allmylinks.com/joseph-perez-caputo",
-   "volunteer": "JPCforCT04@gmail.com"
+   "volunteer": "JPCforCT04@gmail.com",
+   "topics": [
+    "Healthcare",
+    "Housing",
+    "Money out of politics",
+    "Immigration & ICE",
+    "Palestine / Israel",
+    "Impeach Trump"
+   ]
   },
   {
    "name": "Kira Alejandro",
@@ -424,7 +579,10 @@
    "district": "Pike Creek, Hockessin, Yorklyn, North Star & Some of Newark",
    "stances": "1. Responsible Land Use & Development 2. Strong Community Engagement 3. Affordability",
    "info": "Kiraforcouncil.com",
-   "volunteer": "https://www.kiraforcouncil.com/get-involved"
+   "volunteer": "https://www.kiraforcouncil.com/get-involved",
+   "topics": [
+    "Housing"
+   ]
   },
   {
    "name": "Dylana Galery",
@@ -435,7 +593,11 @@
    "district": "Palm Coast",
    "stances": "•\tSmart, well-planned growth\n\t•\tTransparent leadership & accountability\n\t•\tAffordable utilities & stronger infrastructure",
    "info": "dylanagalery.com",
-   "volunteer": "https://form.jotform.com/260633207767056"
+   "volunteer": "https://form.jotform.com/260633207767056",
+   "topics": [
+    "Housing",
+    "Transit & Infrastructure"
+   ]
   },
   {
    "name": "Yen Bailey",
@@ -446,7 +608,12 @@
    "district": "Central part of the Florida Panhandle including Tallahassee",
    "stances": "1. Universal healthcare and affordable housing,  2. Money and corruption out of politics,  3. Accessible constituent services",
    "info": "Www.YenBaileyforCongress.com",
-   "volunteer": "https://yenbaileyforcongress.com/get-involved/"
+   "volunteer": "https://yenbaileyforcongress.com/get-involved/",
+   "topics": [
+    "Healthcare",
+    "Housing",
+    "Money out of politics"
+   ]
   },
   {
    "name": "Veronica Powell-Faison",
@@ -457,7 +624,11 @@
    "district": "Green Cove Springs, Lake Asbury, Middleburg",
    "stances": "1. Safe and focused learning environments \n2. Support/retain quality teachers\n3. Responsible use of taxpayer dollars",
    "info": "V4CCSB.ORG",
-   "volunteer": "https://www.v4ccsb.org/contact"
+   "volunteer": "https://www.v4ccsb.org/contact",
+   "topics": [
+    "Education & Childcare",
+    "Climate & Environment"
+   ]
   },
   {
    "name": "Phil Ehr",
@@ -468,7 +639,13 @@
    "district": "Southwest Miami, all the way down to Key West",
    "stances": "• Fix the insurance and affordability crises\n• Crack down on corruption\n• Protect the Everglades/environment and stop reckless overdevelopment",
    "info": "EhrforCongress.us",
-   "volunteer": "https://ehrforcongress.us/ volunteer form is right at the top of the page or for a direct human interaction, Velma Hernandez at velma@ehrforcongress.us"
+   "volunteer": "https://ehrforcongress.us/ volunteer form is right at the top of the page or for a direct human interaction, Velma Hernandez at velma@ehrforcongress.us",
+   "topics": [
+    "Healthcare",
+    "Housing",
+    "Climate & Environment",
+    "Money out of politics"
+   ]
   },
   {
    "name": "Marialana Kinter",
@@ -479,7 +656,12 @@
    "district": "Seminole County, Southern Half of Volusia (Port Orange, New Smyrna, Deltona, Lake Helen, Orange City)",
    "stances": "Money out of Politics, Veterans Benefits / No wars, Cost of Living & Workers rights",
    "info": "KinterForCongress.com",
-   "volunteer": "https://www.kinterforcongress.com/volunteer"
+   "volunteer": "https://www.kinterforcongress.com/volunteer",
+   "topics": [
+    "Money out of politics",
+    "Workers & Wages",
+    "Veterans"
+   ]
   },
   {
    "name": "Malik Johnson",
@@ -490,7 +672,12 @@
    "district": "East Atlanta including Edgewood, Kirkwood",
    "stances": "Generational leadership Change in the democrat party, Georgia and beyond, but policy wise- Rent stabilization & tenant protections, community-based public safety (no more police city, or ever again), expanding public transit access",
    "info": "x.com/johnsonThaDon5",
-   "volunteer": "x.com/johnsonThaDon5"
+   "volunteer": "x.com/johnsonThaDon5",
+   "topics": [
+    "Housing",
+    "Public safety & guns",
+    "Transit & Infrastructure"
+   ]
   },
   {
    "name": "Elfreda Desvignes",
@@ -501,7 +688,10 @@
    "district": "Cobb and South Fulton",
    "stances": "Housing Affordability & StabilitySenior Homeownership ProtectionLocal Control over Gold Dome\" Mandates.",
    "info": "Www.elfredadesvignes.com",
-   "volunteer": "contact us@elfredadesvignes.com"
+   "volunteer": "contact us@elfredadesvignes.com",
+   "topics": [
+    "Housing"
+   ]
   },
   {
    "name": "Imani Okafor",
@@ -512,7 +702,11 @@
    "district": "Statewide district covering much of metro Atlanta and central Georgia, including Fulton, DeKalb,",
    "stances": "1- Georgia families are paying for utility decisions they didn’t make rate structures should reward conservation, not punish it. \n2- I’m pushing for binding timelines on transitioning to renewables so it’s not just long-term promises with no enforcement. \n3- And I’m focused on transparency  if regulators meet with utility executives, the public should know when, why, and what was discussed.",
    "info": "https://www.okaforGA4us.org",
-   "volunteer": "https://www.okaforGA4us.org/volunteer"
+   "volunteer": "https://www.okaforGA4us.org/volunteer",
+   "topics": [
+    "Climate & Environment",
+    "Transit & Infrastructure"
+   ]
   },
   {
    "name": "Phedra PT Thomas",
@@ -523,7 +717,8 @@
    "district": "District 4 ( Henry County)",
    "stances": "Community over chaos. I want residents to be heard, accountability",
    "info": "Www.vote4phedra.com",
-   "volunteer": "Mrsphedra@gmail.com"
+   "volunteer": "Mrsphedra@gmail.com",
+   "topics": []
   },
   {
    "name": "Evan Castillo",
@@ -534,7 +729,14 @@
    "district": "Boise area, including West Boise and parts of Ada County",
    "stances": "1- Idaho’s growth is outpacing planning lock in impact fees so new development actually pays for roads, schools, and utilities\n2- Protect access to reproductive healthcare at the state level instead of outsourcing decisions entirely to shifting federal policy\n3- Build out water conservation standards now (tiered pricing, reuse incentives) before shortages force reactive restrictions",
    "info": "https://www.instagram.com/castillo4id16",
-   "volunteer": "dm me https://www.instagram.com/castillo4id16"
+   "volunteer": "dm me https://www.instagram.com/castillo4id16",
+   "topics": [
+    "Healthcare",
+    "Education & Childcare",
+    "Climate & Environment",
+    "Reproductive rights",
+    "Transit & Infrastructure"
+   ]
   },
   {
    "name": "Valerie Wade",
@@ -545,7 +747,11 @@
    "district": "The eastern side of Coeur d’Alene Lake, olive Shoshone County all of Baniwa County top part of Clearwater County northern part of spirit Lake in Bonner County and Lakeview nearPend Oreille Lake.",
    "stances": "My top priorities are to protect public lands, fund education, and support Medicaid expansion.",
    "info": "ValerieWadeforIdaho.com",
-   "volunteer": "Please send us an e-mail: ValerieWadeforIdaho@gmail.com"
+   "volunteer": "Please send us an e-mail: ValerieWadeforIdaho@gmail.com",
+   "topics": [
+    "Healthcare",
+    "Education & Childcare"
+   ]
   },
   {
    "name": "Andreel Patel",
@@ -556,7 +762,11 @@
    "district": "Northwest Chicago neighborhoods including Logan Square, Avondale, and parts of Bucktown",
    "stances": "like rubber-stamping luxury developments—require real affordability or deny permits\nChicago can’t claim fiscal responsibility while handing out unchecked corporate subsidies; enforce strict ROI and clawbacks\nLocal government should not stay silent on national issues like support federal ethics reform and accountability, including scrutiny of figures like sicko Trump and his enablers",
    "info": "https://www.patelIL4us.org",
-   "volunteer": "https://www.patelIL4us.org"
+   "volunteer": "https://www.patelIL4us.org",
+   "topics": [
+    "Housing",
+    "Impeach Trump"
+   ]
   },
   {
    "name": "Lindsay Gramlich",
@@ -567,7 +777,12 @@
    "district": "Carmel and Westfield- Indiana",
    "stances": "Fully funded public schools \nAffordable and accessible childcare \nWomen and girls healthcare access (and fundamental human rights)\nLowering utility, healthcare, and housing costs",
    "info": "Www.lindsaygramlich.com",
-   "volunteer": "https://www.lindsaygramlich.com/get-involved"
+   "volunteer": "https://www.lindsaygramlich.com/get-involved",
+   "topics": [
+    "Healthcare",
+    "Housing",
+    "Education & Childcare"
+   ]
   },
   {
    "name": "Tabitha Zeigler",
@@ -578,7 +793,12 @@
    "district": "District 8 - Terre Haute, Vincennes, Evansville",
    "stances": "Anti-corruption.  Integrity.  Domestic Violence.  Human Trafficking.  Child Exploitation.  Autism/Neurodiversity/Disability.  LGBTQIA+2S.  Environment.  Farming.  No Data Centers.",
    "info": "https://tabithazeiglerforcongress.com/",
-   "volunteer": "info@tabithazeiglerforcongress.com"
+   "volunteer": "info@tabithazeiglerforcongress.com",
+   "topics": [
+    "Climate & Environment",
+    "Money out of politics",
+    "Public safety & guns"
+   ]
   },
   {
    "name": "Racheal Bleicher",
@@ -589,7 +809,10 @@
    "district": "Westfield/Sheridan/West Carmel/East Zionsville",
    "stances": "1. Use tax dollars effectively to invest in Indiana\n2. Protect public schools\n3. Listen, engage and be a voice for our community",
    "info": "www.rachealforindiana.com",
-   "volunteer": "https://www.rachealforindiana.com/#Volunteer"
+   "volunteer": "https://www.rachealforindiana.com/#Volunteer",
+   "topics": [
+    "Education & Childcare"
+   ]
   },
   {
    "name": "Nate for 38 (Nate Stout)",
@@ -600,7 +823,13 @@
    "district": "All of Tipton and Carroll County, most of Clinton County, and some of Cass, Tippecanoe, and Western Howard Counties.",
    "stances": "1 Fully restoring public education 2 accessible and affordable rural health care 3 money out of politics",
    "info": "https://hoosierstoelectnatestout.com/",
-   "volunteer": "https://forms.gle/fLZL9uko4a3VSfZt8"
+   "volunteer": "https://forms.gle/fLZL9uko4a3VSfZt8",
+   "topics": [
+    "Healthcare",
+    "Housing",
+    "Education & Childcare",
+    "Money out of politics"
+   ]
   },
   {
    "name": "Stephanie Jo Yocum",
@@ -611,7 +840,10 @@
    "district": "Geist area of Marion County and Hamilton County, McCordsville, Fortville, Buck Creek, Mt Comfort area of Hancock County, Ingalls and surrounding area of Madison County",
    "stances": "Protect your money, Protect your schools, Protect your voice and freedoms. People over politics!",
    "info": "Stephaniejoyocum.com",
-   "volunteer": "Stephaniejoyocum.com/volunteer"
+   "volunteer": "Stephaniejoyocum.com/volunteer",
+   "topics": [
+    "Education & Childcare"
+   ]
   },
   {
    "name": "Victoria Martz",
@@ -622,7 +854,12 @@
    "district": "Southeastern Indiana (Brookville, Metamora, Connersville, Batesville, Liberty, Greensburg, Rush)",
    "stances": "1. Fully Fund Public Schools 2. Affordable Childcare 3. Raise the Wage",
    "info": "votevictoriamartz.org",
-   "volunteer": "https://votevictoriamartz.org/contact-2/"
+   "volunteer": "https://votevictoriamartz.org/contact-2/",
+   "topics": [
+    "Housing",
+    "Education & Childcare",
+    "Workers & Wages"
+   ]
   },
   {
    "name": "Julie McGill",
@@ -633,7 +870,10 @@
    "district": "**Fort Wayne** (46805, 46815, east-side 46818, 46825, 46835, 46845), **Huntertown**, **Leo-Cedarville**, and a small piece of **NW New Haven**, all located inside of Allen County.",
    "stances": "1. Healthcare \n2. Accountability/Transparency in Government\n3. Better Economical choices - programs with fed match vs corporate giveaways",
    "info": "www.mcgillforindiana.com \nFacebook.com/mcgillforindiana",
-   "volunteer": "https://mcgillforindiana.com/volunteer"
+   "volunteer": "https://mcgillforindiana.com/volunteer",
+   "topics": [
+    "Healthcare"
+   ]
   },
   {
    "name": "Leila Staton",
@@ -644,7 +884,11 @@
    "district": "Hardin County, Grundy County, Western Black Hawk County",
    "stances": "•Clean Water \n•Fund Public Education/Repeal Private School Vouchers\n•Protect local farms>Corporate Agribusiness",
    "info": "leilaforiowa.com",
-   "volunteer": "leilaforiowa.com/volunteer  OR email team@leilaforiowa.com"
+   "volunteer": "leilaforiowa.com/volunteer  OR email team@leilaforiowa.com",
+   "topics": [
+    "Education & Childcare",
+    "Climate & Environment"
+   ]
   },
   {
    "name": "Leila Staton",
@@ -655,7 +899,11 @@
    "district": "Hardin County, Grundy County, Western Black Hawk County",
    "stances": "•Clean water\n•Fund Public Education & repeal private school vouchers\n•Protect local farms>corporate agribusiness",
    "info": "leilaforiowa.com",
-   "volunteer": "https://docs.google.com/forms/d/e/1FAIpQLSebBzricpl5rFScrXZblVaXLg9Iqjaim5nnfpZRvhGH1SG0-Q/viewform\n\nOR email team@leilaforiowa.com"
+   "volunteer": "https://docs.google.com/forms/d/e/1FAIpQLSebBzricpl5rFScrXZblVaXLg9Iqjaim5nnfpZRvhGH1SG0-Q/viewform\n\nOR email team@leilaforiowa.com",
+   "topics": [
+    "Education & Childcare",
+    "Climate & Environment"
+   ]
   },
   {
    "name": "Sarah Prdu",
@@ -666,7 +914,12 @@
    "district": "Johnson county, KS; Miami County, KS; Anderson County, KS; Franklin County, KS; Southern Wyandotte County, KS",
    "stances": "1. Universal healthcare 2. End ICE. 3.Arms embargo to Israel",
    "info": "SarahPreu2026.com",
-   "volunteer": "https://www.sarahpreu2026.com/#volunteer"
+   "volunteer": "https://www.sarahpreu2026.com/#volunteer",
+   "topics": [
+    "Healthcare",
+    "Immigration & ICE",
+    "Palestine / Israel"
+   ]
   },
   {
    "name": "Anne Parelkar",
@@ -677,7 +930,11 @@
    "district": "Statewide",
    "stances": "1. Medicare for All 2. Overturn Citizens United 3. Break up monopolies & stop Big Tech oligarchs",
    "info": "https://www.anneforkansas.com/",
-   "volunteer": "https://anneforkansas.nationbuilder.com/volunteer"
+   "volunteer": "https://anneforkansas.nationbuilder.com/volunteer",
+   "topics": [
+    "Healthcare",
+    "Money out of politics"
+   ]
   },
   {
    "name": "Brandon Pierce",
@@ -688,7 +945,13 @@
    "district": "Northeast Kansas, including Kansas City (KS side), Bonner Springs, and surrounding Wyandotte County communities",
    "stances": "I strongly support continued scrutiny and investigations involving figures like Donald Trump.. We keep calling workforce shortages a mystery while underfunding schools and pushing people out of the state reverse that trend by actually investing in education and wages. Medicaid expansion isn’t theoretical here; it’s the difference between open and closed hospitals.",
    "info": "https://www.pierceKS4us.info X: https://x.com/pierce4ks6",
-   "volunteer": "https://www.pierceKS4us.info X: https://x.com/pierce4ks6"
+   "volunteer": "https://www.pierceKS4us.info X: https://x.com/pierce4ks6",
+   "topics": [
+    "Healthcare",
+    "Education & Childcare",
+    "Workers & Wages",
+    "Impeach Trump"
+   ]
   },
   {
    "name": "William Compton",
@@ -699,7 +962,12 @@
    "district": "Middle of Kentucky. It starts in Bowling Green and travels up I-65 towards eastern Jefferson county (Eastern side of Louisville), then on the left is a straight diagonal to Owensboro with the 2 counties below it included.",
    "stances": "1. Progressive policies like Medicare for all. 2. Get money out of politics. 3. Fully fund our public schools",
    "info": "Www.williamcompton.com",
-   "volunteer": "You can email the campaign at williamcompton4ky@gmail.com or scroll to the bottom of home page on website and fill the information out."
+   "volunteer": "You can email the campaign at williamcompton4ky@gmail.com or scroll to the bottom of home page on website and fill the information out.",
+   "topics": [
+    "Healthcare",
+    "Education & Childcare",
+    "Money out of politics"
+   ]
   },
   {
    "name": "Caleb Whitaker",
@@ -710,7 +978,11 @@
    "district": "Louisville area",
    "stances": "1- The state keeps underfunding pensions and then acting surprised when systems strain. Fix the math and commit to it long term\n2- Public safety should include violence interruption programs, not just more patrols\n3- Also, legalize sports betting revenue for schools… wait we already did that, so where is the money actually going",
    "info": "https://www.whitakerky4us.org/",
-   "volunteer": "https://www.whitakerky4us.org/volunteer"
+   "volunteer": "https://www.whitakerky4us.org/volunteer",
+   "topics": [
+    "Education & Childcare",
+    "Public safety & guns"
+   ]
   },
   {
    "name": "Darius Fields",
@@ -721,7 +993,12 @@
    "district": "Uptown New Orleans, including neighborhoods along the Mississippi River and parts of Central City",
    "stances": "The city keeps talking about resilience while entire neighborhoods still flood during routine storms, so I’m focused on aggressive drainage upgrades and accountability for where infrastructure money actually goes. At the same time, we need to stop approving short-term rentals that hollow out communities and drive up rent for longtime residents. And yes, even at the local level, I support investigations into Trump and his cabinet.",
    "info": "Twitter (X): https://x.com/fields4nolaB\nWebsite: https://www.fieldsLA4us.info",
-   "volunteer": "Twitter (X): https://x.com/fields4nolaB\nWebsite: https://www.fieldsLA4us.info"
+   "volunteer": "Twitter (X): https://x.com/fields4nolaB\nWebsite: https://www.fieldsLA4us.info",
+   "topics": [
+    "Housing",
+    "Transit & Infrastructure",
+    "Impeach Trump"
+   ]
   },
   {
    "name": "Paige Loud",
@@ -732,7 +1009,12 @@
    "district": "95% of the land mass in Maine (Jared Golden's seat)",
    "stances": "1. Money out of politics 2. Universal healthcare 3. Housing first solutions",
    "info": "loudforcongress.com",
-   "volunteer": "https://docs.google.com/forms/d/e/1FAIpQLScVykkX0VEjXT8-xCepWFLbYVcqMShtPFnyXCB3zDf-K13z3A/viewform"
+   "volunteer": "https://docs.google.com/forms/d/e/1FAIpQLScVykkX0VEjXT8-xCepWFLbYVcqMShtPFnyXCB3zDf-K13z3A/viewform",
+   "topics": [
+    "Healthcare",
+    "Housing",
+    "Money out of politics"
+   ]
   },
   {
    "name": "Evan McLeod",
@@ -743,7 +1025,11 @@
    "district": "Northern Maine including Presque Isle, Caribou, and surrounding Aroostook County communities",
    "stances": "Rural economies are being treated like afterthoughts. Invest in local agriculture processing and keep jobs in-state. Let’s expand  telehealth infrastructure because long drives for basic care are not sustainable up here also fix the damn roads every winter its the same thing",
    "info": "https://www.mcleodme4us.info/",
-   "volunteer": "https://www.mcleodme4us.info/join"
+   "volunteer": "https://www.mcleodme4us.info/join",
+   "topics": [
+    "Workers & Wages",
+    "Transit & Infrastructure"
+   ]
   },
   {
    "name": "Imani Okafor",
@@ -754,7 +1040,11 @@
    "district": "Prince George’s County including parts of Hyattsville, Landover, and surrounding communities",
    "stances": "1 School construction keeps getting delayed while costs go up, we need a dedicated funding stream that cannot be raided 2 Ban medical debt from being reported on credit reports statewide and 3 expand childcare subsidies so people can actually go back to work",
    "info": "https://www.okaformd4us.org/",
-   "volunteer": "https://www.okaformd4us.org/volunteer"
+   "volunteer": "https://www.okaformd4us.org/volunteer",
+   "topics": [
+    "Healthcare",
+    "Education & Childcare"
+   ]
   },
   {
    "name": "Harry Jarin",
@@ -765,7 +1055,15 @@
    "district": "Southern Maryland: Prince George's County, Anne Arundel County, Charles County, Calvert County, and St. Mary's County",
    "stances": "1. No corporate PAC money / anti-corruption reform; 2. Universal healthcare + childcare; 3. Build more: transit, housing, clean energy",
    "info": "harrymd5.com",
-   "volunteer": "https://www.harrymd5.com/contact"
+   "volunteer": "https://www.harrymd5.com/contact",
+   "topics": [
+    "Healthcare",
+    "Housing",
+    "Education & Childcare",
+    "Climate & Environment",
+    "Money out of politics",
+    "Transit & Infrastructure"
+   ]
   },
   {
    "name": "Aaliyah Rahman",
@@ -776,7 +1074,12 @@
    "district": "Central Prince George’s County, including Capitol Heights, Seat Pleasant just east of Washington, D.C!",
    "stances": "County budgets keep growing, but residents aren’t seeing proportional improvements in services 1 that wealth gap is where I’m focused. 2 We need to align development approvals with school capacity and infrastructure so growth doesn’t overwhelm existing communities. And I’m not separating local leadership from national responsibility. Last 3 lets make sure we impeach Trump.",
    "info": "https://www.rahmanMD4us.org",
-   "volunteer": "https://www.rahmanMD4us.org/volunteer"
+   "volunteer": "https://www.rahmanMD4us.org/volunteer",
+   "topics": [
+    "Education & Childcare",
+    "Transit & Infrastructure",
+    "Impeach Trump"
+   ]
   },
   {
    "name": "Leigha Messick",
@@ -787,7 +1090,16 @@
    "district": "Charles, Prince George’s, Calvert, Saint Mary’s, Anne Arundel.",
    "stances": "Abolish ICE, Healthcare for all, mental healthcare infrastructure, no PAC money, Term Limits, Ranked Choice Voting, Money out of politics.",
    "info": "LeighaForCongress.com",
-   "volunteer": "https://leighaforcongress.com/volunteer"
+   "volunteer": "https://leighaforcongress.com/volunteer",
+   "topics": [
+    "Healthcare",
+    "Money out of politics",
+    "Immigration & ICE",
+    "Transit & Infrastructure",
+    "Democracy & voting",
+    "Term limits",
+    "Mental health"
+   ]
   },
   {
    "name": "Randi White",
@@ -798,7 +1110,13 @@
    "district": "Maryland’s Eastern Shore plus Harford County & the Northeast sliver of Baltimore County",
    "stances": "The big  3 issues in our district, after listening are healthcare access, education, and the cost of living (working on access to better jobs, better wages, and attainable housing).",
    "info": "Randiformd.com",
-   "volunteer": "https://randiformd.com/volunteer"
+   "volunteer": "https://randiformd.com/volunteer",
+   "topics": [
+    "Healthcare",
+    "Housing",
+    "Education & Childcare",
+    "Workers & Wages"
+   ]
   },
   {
    "name": "Bobby LaPin",
@@ -809,7 +1127,8 @@
    "district": "Baltimore",
    "stances": "Unseat Bill - for me",
    "info": "Bobbyforbaltimore.com",
-   "volunteer": "I’m not Bobby, but hes critical to unseat our “Schumer” Bill Ferguson"
+   "volunteer": "I’m not Bobby, but hes critical to unseat our “Schumer” Bill Ferguson",
+   "topics": []
   },
   {
    "name": "Jakeya Johnson",
@@ -820,7 +1139,10 @@
    "district": "The vast majority of Prince George's County plus parts of Silver Spring,  Burtonsville, and Spencerville",
    "stances": "- money & corporate influence out of politics \n-policies the materially improve the lives of everyday people \n-ending government corruption",
    "info": "Jakeyajohnson.com",
-   "volunteer": "https://actionnetwork.org/forms/ready-to-get-your-hands-dirty?source=direct_link&"
+   "volunteer": "https://actionnetwork.org/forms/ready-to-get-your-hands-dirty?source=direct_link&",
+   "topics": [
+    "Money out of politics"
+   ]
   },
   {
    "name": "Dr. Mariah Lancaster",
@@ -831,7 +1153,13 @@
    "district": "Northeast MA, north of Boston",
    "stances": "1. Universal Healthcare & Childcare\n2. Countercorruption/anti-trust\n3. Clean energy revolution",
    "info": "www.MariahLancaster.com",
-   "volunteer": "Email Volunteer@MariahLancaster.com"
+   "volunteer": "Email Volunteer@MariahLancaster.com",
+   "topics": [
+    "Healthcare",
+    "Education & Childcare",
+    "Climate & Environment",
+    "Money out of politics"
+   ]
   },
   {
    "name": "Craig Swallow",
@@ -842,7 +1170,12 @@
    "district": "MA-09",
    "stances": "1.) Medicare for All 2.) Ban Congressional Stock Trading & Overturn Citizens United 3.) Term Limits for Congress and Supreme Court",
    "info": "www.craigswallowforcongreess.com",
-   "volunteer": "Volunteer@craigswallowforcongress.com & https://survey123.arcgis.com/share/a26469f7d02548df82e6d3f4e3ea484a?portalUrl=https://jkvilhaug.maps.arcgis.com"
+   "volunteer": "Volunteer@craigswallowforcongress.com & https://survey123.arcgis.com/share/a26469f7d02548df82e6d3f4e3ea484a?portalUrl=https://jkvilhaug.maps.arcgis.com",
+   "topics": [
+    "Healthcare",
+    "Money out of politics",
+    "Term limits"
+   ]
   },
   {
    "name": "Andrew Fitch",
@@ -853,7 +1186,11 @@
    "district": "Adams\nCheshire\nClarksburg\nFlorida\nHancock\nHinsdale\nLanesborough\nNew Ashford\nNorth Adams\nPeru\nSavoy\nWilliamstown\nWindsor",
    "stances": "Economic Opportunity, Affordability, Regional Collaboration",
    "info": "www.andrewfitch.org",
-   "volunteer": "https://www.andrewfitch.org/volunteer"
+   "volunteer": "https://www.andrewfitch.org/volunteer",
+   "topics": [
+    "Housing",
+    "Workers & Wages"
+   ]
   },
   {
    "name": "Kofi Mensah Esq.",
@@ -864,7 +1201,12 @@
    "district": "Boston area, including Roxbury, Dorchester, and nearby neighborhoods in Suffolk County",
    "stances": "Fix the transit system so it actually runs on time and people can rely on it for work and school and cap the insane  rent increases annually and create a right to counsel for tenants facing eviction, stop the importation of wolves into ASPEN!!!!",
    "info": "https://x.com/mensah4ma7",
-   "volunteer": "https://www.mensahma4us.org/volunteer"
+   "volunteer": "https://www.mensahma4us.org/volunteer",
+   "topics": [
+    "Housing",
+    "Education & Childcare",
+    "Transit & Infrastructure"
+   ]
   },
   {
    "name": "Samantha O’Neill",
@@ -875,7 +1217,11 @@
    "district": "Greater Boston area, parts of Cambridge, Somerville, and nearby communities just north of Boston",
    "stances": "1 We keep calling it a “shortage” but it’s also speculation—tax vacant luxury units and reinvest into public housing\n2 Expand commuter rail frequency to true regional transit (every 15–20 minutes), not just peak-hour service\n3 Codify data privacy protections so companies can’t quietly sell or misuse personal information without consent",
    "info": "https://www.oneillMA4us.org",
-   "volunteer": "https://www.oneillMA4us.org/get-involved"
+   "volunteer": "https://www.oneillMA4us.org/get-involved",
+   "topics": [
+    "Housing",
+    "Transit & Infrastructure"
+   ]
   },
   {
    "name": "Jordan Korgood",
@@ -886,7 +1232,12 @@
    "district": "Boston + South Shore",
    "stances": "Improving judicial equity to steer MA away from mass incarceration. Emphasis of progressive values (racial equity, antirecidivism, rehabilitation, trans/immigrant/abortion/labor rights) in the courts. Appointing diverse judges from a wide range of backgrounds (particularly from underrepresented groups).",
    "info": "Jordanforgood.com",
-   "volunteer": "https://www.jordanforgood.com/get-involved"
+   "volunteer": "https://www.jordanforgood.com/get-involved",
+   "topics": [
+    "Workers & Wages",
+    "Immigration & ICE",
+    "Reproductive rights"
+   ]
   },
   {
    "name": "Avery Thompson",
@@ -897,7 +1248,12 @@
    "district": "Suburban Detroit area including Rochester Hills, Troy, and nearby communities in Oakland County",
    "stances": "Lower prescription drug costs\nStrengthen public schools funding\nExpand clean energy jobs",
    "info": "https://www.averythompson45.com",
-   "volunteer": "https://www.averythompson45.com/volunteer"
+   "volunteer": "https://www.averythompson45.com/volunteer",
+   "topics": [
+    "Education & Childcare",
+    "Climate & Environment",
+    "Workers & Wages"
+   ]
   },
   {
    "name": "Tariq Mahmoud",
@@ -908,7 +1264,10 @@
    "district": "West Detroit, including neighborhoods like Brightmoor, Rosedale Park, and surrounding areas",
    "stances": "1. END IRAN WAR 2. Detroit doesn’t have a lack of plans—it has a follow-through problem, so I’m focused on enforcing timelines and transparency for city-funded projects. 3. We also need to rethink property tax assessments that overvalue homes in certain neighborhoods while others go under-assessed.",
    "info": "https://www.mahmoudMI4us.info",
-   "volunteer": "https://www.mahmoudMI4us.info/get-involved"
+   "volunteer": "https://www.mahmoudMI4us.info/get-involved",
+   "topics": [
+    "Veterans"
+   ]
   },
   {
    "name": "Katrina Manetta",
@@ -919,7 +1278,15 @@
    "district": "Shelby Township, Sterling Heights, Utica, and Warren",
    "stances": "1. Get money out of politics, take on corporate/billionaire power, lower everyday costs\n2. Strong unions, good-paying jobs, affordable college and skills training\n3. Protect rights and democracy, stand up to extremism, defend the people at home and abroad",
    "info": "https://katrinamanetta.com/",
-   "volunteer": "https://www.mobilize.us/katrinamanetta/event/892052/"
+   "volunteer": "https://www.mobilize.us/katrinamanetta/event/892052/",
+   "topics": [
+    "Housing",
+    "Education & Childcare",
+    "Money out of politics",
+    "Workers & Wages",
+    "Tax the rich",
+    "Democracy & voting"
+   ]
   },
   {
    "name": "Joanna Whaley",
@@ -930,7 +1297,10 @@
    "district": "South of Detroit",
    "stances": "Fighting utility monopolies, single-payer healthcare and civil rights.",
    "info": "www.joannawhaley.com",
-   "volunteer": "www.joannawhaley.com/volunteer"
+   "volunteer": "www.joannawhaley.com/volunteer",
+   "topics": [
+    "Healthcare"
+   ]
   },
   {
    "name": "Chris Gilmer-Hill",
@@ -941,7 +1311,16 @@
    "district": "North Detroit and the inner ring suburbs of Pleasant Ridge and Ferndale",
    "stances": "1. Money out of politics! Chris is not taking any corporate money, and fights against data centers and our corporate power monopoly for a living; 2. Invest in Communities, not corporations: Tax the rich and corporations to fund the goods and services we need to thrive like transit, education, and affordable housing; 3. True Affordability: that means fighting against rate hikes for our energy,  and fighting for affordable and clean water, universal healthcare and childcare, etc.",
    "info": "chrisgilmerhill.com",
-   "volunteer": "chrisgilmerhill.com/volunteer"
+   "volunteer": "chrisgilmerhill.com/volunteer",
+   "topics": [
+    "Healthcare",
+    "Housing",
+    "Education & Childcare",
+    "Climate & Environment",
+    "Money out of politics",
+    "Transit & Infrastructure",
+    "Tax the rich"
+   ]
   },
   {
    "name": "Doug Chapin",
@@ -952,7 +1331,12 @@
    "district": "Blaine, Otsego (Outside of Minneapolis)",
    "stances": "1. He will replace Tom Emmer (Minority whip in the house) \n2. Advocate for election reform\n3. He doesn't take AIPAC money",
    "info": "Home | Doug Chapin for Congress https://share.google/ucyNKzF0ewg2uiKBb",
-   "volunteer": "Home | Doug Chapin for Congress https://share.google/ucyNKzF0ewg2uiKBb"
+   "volunteer": "Home | Doug Chapin for Congress https://share.google/ucyNKzF0ewg2uiKBb",
+   "topics": [
+    "Money out of politics",
+    "Palestine / Israel",
+    "Democracy & voting"
+   ]
   },
   {
    "name": "Hannah Goldstein",
@@ -963,7 +1347,13 @@
    "district": "Minneapolis area, including downtown and nearby neighborhoods along the Mississippi River",
    "stances": "1)Rework zoning laws to actually allow missing-middle housing (duplexes/triplexes) in high-demand areas\n2)Stop cost-shifting in healthcare—cap out-of-pocket insulin and expand state bargaining power\n3)Invest in climate-resilient infrastructure (flood mitigation, heat response) instead of reactive spending",
    "info": "instagram.com/goldstein61b",
-   "volunteer": "instagram.com/goldstein61b"
+   "volunteer": "instagram.com/goldstein61b",
+   "topics": [
+    "Healthcare",
+    "Housing",
+    "Climate & Environment",
+    "Transit & Infrastructure"
+   ]
   },
   {
    "name": "Jeffrey Hulum III for Congress",
@@ -974,7 +1364,12 @@
    "district": "South Mississippi",
    "stances": "- A better quality of life for working families \n- Honest and transparent government\n- Standing up for veterans and national guard families",
    "info": "Jeffreyhulumiiiforcongress.com",
-   "volunteer": "https://www.jeffreyhulumiiiforcongress.com/join/#volunteer"
+   "volunteer": "https://www.jeffreyhulumiiiforcongress.com/join/#volunteer",
+   "topics": [
+    "Housing",
+    "Workers & Wages",
+    "Veterans"
+   ]
   },
   {
    "name": "Tyrell Boone",
@@ -985,7 +1380,10 @@
    "district": "North St. Louis neighborhoods including Walnut Park, Baden",
    "stances": "end the republican majority, land bank reform so vacant properties actually get redeveloped, not speculated on... tie city tax incentives to local hiring + enforce clawbacks when promises aren’t met and most importantly treat gun violence as a public health issue w data tracking, intervention programs, hospital partnerships!",
    "info": "none yet",
-   "volunteer": "txt me"
+   "volunteer": "txt me",
+   "topics": [
+    "Public safety & guns"
+   ]
   },
   {
    "name": "Jordan Herrera",
@@ -996,7 +1394,13 @@
    "district": "Kansas City through mid Missouri",
    "stances": "1. Economic stability – that each American can afford a home, healthcare education, and groceries on one job.\n2. A strong, smart military - we need a smarter and stronger military, not a more expensive one.\n3. Freedom and privacy – it is my belief that the government should not be involved in the decision decisions between a patient and provider, who you say I love you too, who you marry, and it’s time we fight for digital privacy and biometric rights.\n4. Smart investments in our future - putting investment into American jobs first and focusing on fixing broken systems.",
    "info": "Jordanjherrera.com",
-   "volunteer": "Go to my campaign website and click on the volunteer icon."
+   "volunteer": "Go to my campaign website and click on the volunteer icon.",
+   "topics": [
+    "Healthcare",
+    "Education & Childcare",
+    "Workers & Wages",
+    "Veterans"
+   ]
   },
   {
    "name": "Alani Bankhead",
@@ -1007,7 +1411,10 @@
    "district": "State wide",
    "stances": "1. Hold govt accountable 2. Make America affordable 3. Protect the vulnerable",
    "info": "www.alaniformt.com",
-   "volunteer": "Info@alanibankheadforsenate.com"
+   "volunteer": "Info@alanibankheadforsenate.com",
+   "topics": [
+    "Housing"
+   ]
   },
   {
    "name": "Elijah Patrick Winters",
@@ -1018,7 +1425,12 @@
    "district": "Missoula area, including the city and nearby rural communities in western MT ( I need help door knocking in the rural parts!! )",
    "stances": "Housing isn’t “tight,” it’s artificially constrained—legalize multifamily statewide and tax vacant second homes. I  support federal accountability measures, including backing efforts to impeach Donald Trump for abuses of power and rural healthcare is collapsing; we need state-backed clinics + incentives that actually keep doctors in Montana (hello JD Vance?)",
    "info": "https://www.wintersMT4us.org",
-   "volunteer": "https://www.wintersMT4us.org/volunteer"
+   "volunteer": "https://www.wintersMT4us.org/volunteer",
+   "topics": [
+    "Healthcare",
+    "Housing",
+    "Impeach Trump"
+   ]
   },
   {
    "name": "Melissa Smith",
@@ -1029,7 +1441,13 @@
    "district": "Billings, Heights area east of Main",
    "stances": "1 affordable healthcare and mental healthcare 2 public education funding 3 fair taxes",
    "info": "Smithformontana.com",
-   "volunteer": "Smithfirmontana.com/get-involved"
+   "volunteer": "Smithfirmontana.com/get-involved",
+   "topics": [
+    "Healthcare",
+    "Housing",
+    "Education & Childcare",
+    "Mental health"
+   ]
   },
   {
    "name": "Luis Ortega",
@@ -1040,7 +1458,11 @@
    "district": "Southern Nevada suburbs including Henderson, Boulder City, and parts of the Las Vegas metro area",
    "stances": "1 Cap credit card interest rates nationally and enforce it\n2 Water policy in the Southwest is broken.                      3 Renegotiate allocations and invest in reuse tech now honestly the airport situation here is a mess too",
    "info": "https://www.instagram.com/ortega4nv3",
-   "volunteer": "https://www.orteganv4us.org/volunteer"
+   "volunteer": "https://www.orteganv4us.org/volunteer",
+   "topics": [
+    "Climate & Environment",
+    "Transit & Infrastructure"
+   ]
   },
   {
    "name": "Luis Ortega",
@@ -1051,7 +1473,12 @@
    "district": "Southern Nevada suburbs including Henderson, Boulder City, and parts of the Las Vegas metro area",
    "stances": "1 2 3 All ICE OUT ICE OUT ICE OUT.     1- Cap credit card interest rates nationally and enforce it\n2- Water policy in the Southwest is broken. 3- Renegotiate allocations and invest in reuse tech now honestly the airport situation here is a mess too",
    "info": "Facebook: https://www.facebook.com/ortega4nv3\nWebsite: https://www.ortegaNV4us.org",
-   "volunteer": "https://www.orteganv4us.org/volunteer"
+   "volunteer": "https://www.orteganv4us.org/volunteer",
+   "topics": [
+    "Climate & Environment",
+    "Immigration & ICE",
+    "Transit & Infrastructure"
+   ]
   },
   {
    "name": "Victor Salgado",
@@ -1062,7 +1489,11 @@
    "district": "Central Reno, including Midtown, Wells Avenue corridor, and surrounding neighborhoods in Washoe County",
    "stances": "Everyone agrees housing is expensive, but the city keeps approving projects that don’t include actual affordability requirements; that has to change. I’m also focused on water policy growth without long-term water planning is reckless in Nevada. And while this is a local race, I’m not pretending national politics dont matter.... I support stronger federal ethics laws and continued accountability efforts into this REGIME thats what it is a regime",
    "info": "Website: https://www.salgadoNV4us.info\nTwitter (X): https://x.com/salgado4reno",
-   "volunteer": "https://www.salgadoNV4us.info/volunteer"
+   "volunteer": "https://www.salgadoNV4us.info/volunteer",
+   "topics": [
+    "Housing",
+    "Climate & Environment"
+   ]
   },
   {
    "name": "Joy Hoover",
@@ -1073,7 +1504,13 @@
    "district": "Nevada’s First District: East Las Vegas, Downtown Las Vegas, Paradise, Henderson, Boulder City and beyond!",
    "stances": "1.) Wealth tax to increase economic stability for the working class.  2.) Healthcare as a right. 3.) Impeaching Donald Trump on Day 1.",
    "info": "JoyForNV.com",
-   "volunteer": "https://www.joyfornv.com/volunteer"
+   "volunteer": "https://www.joyfornv.com/volunteer",
+   "topics": [
+    "Healthcare",
+    "Workers & Wages",
+    "Tax the rich",
+    "Impeach Trump"
+   ]
   },
   {
    "name": "Camila Reyes",
@@ -1084,7 +1521,11 @@
    "district": "Las Vegas area, primarily in the eastern valley including Sunrise Manor",
    "stances": "main: Increase teacher pay & retention\n2 Smaller class sizes\n3 More mental health resources for students",
    "info": "no website yet",
-   "volunteer": "n/a"
+   "volunteer": "n/a",
+   "topics": [
+    "Education & Childcare",
+    "Mental health"
+   ]
   },
   {
    "name": "Heath Howard",
@@ -1095,7 +1536,11 @@
    "district": "Southeastern New Hampshire",
    "stances": "1) I’m a Democratic Socialist (my policies align with Bernie Sanders, AOC, Zohran Mamdani, etc.) 2) Get money out of politics 3) Free Palestine",
    "info": "heathhowardnh.com",
-   "volunteer": "heathhowardnh.com/volunteer"
+   "volunteer": "heathhowardnh.com/volunteer",
+   "topics": [
+    "Money out of politics",
+    "Palestine / Israel"
+   ]
   },
   {
    "name": "Hope Moran",
@@ -1106,7 +1551,12 @@
    "district": "Rahway, New Jersey",
    "stances": "To stop the sale of our water utility to a corporation, to embed mental health in our police department, stop all pilot programs",
    "info": "HopeForRahway.com",
-   "volunteer": "https://hopeforrahway.com/#contact"
+   "volunteer": "https://hopeforrahway.com/#contact",
+   "topics": [
+    "Climate & Environment",
+    "Public safety & guns",
+    "Mental health"
+   ]
   },
   {
    "name": "Rachel Peace",
@@ -1117,7 +1567,11 @@
    "district": "Jersey Shore (Monmouth & Ocean County)",
    "stances": "1.Healthcare !!!!  \n2. Families & Women \n3. Expose & Eliminate Corruption",
    "info": "Peace4shore.com",
-   "volunteer": "https://www.peace4shore.com/volunteer"
+   "volunteer": "https://www.peace4shore.com/volunteer",
+   "topics": [
+    "Healthcare",
+    "Money out of politics"
+   ]
   },
   {
    "name": "John Hsu",
@@ -1128,7 +1582,13 @@
    "district": "Middlesex and Monmouth Counties (New Brunswick, Edison, Hazlet, Asbury Park, Neptune, Union Beach, Rumson)",
    "stances": "1.  Healthcare Not Bombs or Ice \n2. Ban Congressional Stock Trading and Citizens United\n2.  Regulate AI and protect unions and working class",
    "info": "Www.johnshsuforcongress.com",
-   "volunteer": "https://docs.google.com/forms/d/e/1FAIpQLScOJibwE883T6XB6C2mbwxiaPusWRLGc_UfX7dmK83k1fBA-w/viewform"
+   "volunteer": "https://docs.google.com/forms/d/e/1FAIpQLScOJibwE883T6XB6C2mbwxiaPusWRLGc_UfX7dmK83k1fBA-w/viewform",
+   "topics": [
+    "Healthcare",
+    "Money out of politics",
+    "Workers & Wages",
+    "Immigration & ICE"
+   ]
   },
   {
    "name": "John Hsu",
@@ -1139,7 +1599,13 @@
    "district": "Middlesex and Monmouth Counties (New Brunswick, Edison, Hazlet, Union Beach, Rumson, Asbury Park, Neptune, Woodbridge, Middletown, Perth Amboy)",
    "stances": "1.  Healthcare not Bombs and ICE\n2.  Regulate AI and protect the working class\n4.  Ban Congressional Stock Trading and Citizens United",
    "info": "https://www.johnhsuforcongress.com/",
-   "volunteer": "https://www.mobilize.us/johnhsuforcongress/event/925914/?fbclid=PAVERFWARkul1leHRuA2FlbQIxMABzcnRjBmFwcF9pZA8xMjQwMjQ1NzQyODc0MTQAAafd54Zt0kwHKPf8FQGPkVGeArH9isV5RCPEB0SiGDQU5Tvor1x3EZiMJcN9_g_aem_dIvAgHv0ti0xwjYd56JudQ"
+   "volunteer": "https://www.mobilize.us/johnhsuforcongress/event/925914/?fbclid=PAVERFWARkul1leHRuA2FlbQIxMABzcnRjBmFwcF9pZA8xMjQwMjQ1NzQyODc0MTQAAafd54Zt0kwHKPf8FQGPkVGeArH9isV5RCPEB0SiGDQU5Tvor1x3EZiMJcN9_g_aem_dIvAgHv0ti0xwjYd56JudQ",
+   "topics": [
+    "Healthcare",
+    "Money out of politics",
+    "Workers & Wages",
+    "Immigration & ICE"
+   ]
   },
   {
    "name": "Dr Rachel Kim",
@@ -1150,7 +1616,12 @@
    "district": "North Jersey suburbs including Montclair, Livingston, Essex/Morris County communities",
    "stances": "1  Property taxes keep rising because we refuse to modernize school funding—fix the formula instead of shifting burdens town to town\n2 Codify reproductive rights at the state level regardless of federal backsliding\n3 Ban algorithmic rent-setting software that’s quietly driving up housing costs across the region",
    "info": "https://www.kimNJ27.info\nI love your videos btw",
-   "volunteer": "https://www.kimNJ27.info"
+   "volunteer": "https://www.kimNJ27.info",
+   "topics": [
+    "Housing",
+    "Education & Childcare",
+    "Reproductive rights"
+   ]
   },
   {
    "name": "Queen Johnson",
@@ -1161,7 +1632,11 @@
    "district": "Queens NY",
    "stances": "1) Fighting for Affordability 2) Affordable Housing 3)Funding Public School",
    "info": "https://queenforqueens.com",
-   "volunteer": "contact@queenforqueens.com"
+   "volunteer": "contact@queenforqueens.com",
+   "topics": [
+    "Housing",
+    "Education & Childcare"
+   ]
   },
   {
    "name": "Lukas Ventouras",
@@ -1172,7 +1647,11 @@
    "district": "Western and Eastern Long Island - Huntington, Smithtown, Brookhaven, North and South Forks",
    "stances": "1. Banning private equity firms  from owning housing stock. \n2. Universal Healthcare\n3. Restoration of International Law",
    "info": "https://lukasforcongress.com/",
-   "volunteer": "https://lukasforcongress.com/volunteer-form/"
+   "volunteer": "https://lukasforcongress.com/volunteer-form/",
+   "topics": [
+    "Healthcare",
+    "Housing"
+   ]
   },
   {
    "name": "Gladys Flores Garcia",
@@ -1183,7 +1662,13 @@
    "district": "The district is in upstate NY.  It is mostly rural, and it includes the counties of: Livingston and parts of the County of Ontario, Wyoming, Steuben, and 1 town of Monroe County",
    "stances": "Women's reproductive rights, fully funded, equitable education, Economic relief for working parents, solutions for our farmers, clean water, clean soil and clean produce",
    "info": "gladysfloresfornewyork.com",
-   "volunteer": "email:  gladysfloresassembly133@gmail.com  \nFacebook:   https://www.facebook.com/profile.php?id=61570724732343"
+   "volunteer": "email:  gladysfloresassembly133@gmail.com  \nFacebook:   https://www.facebook.com/profile.php?id=61570724732343",
+   "topics": [
+    "Housing",
+    "Education & Childcare",
+    "Climate & Environment",
+    "Reproductive rights"
+   ]
   },
   {
    "name": "Grace Liu",
@@ -1194,7 +1679,10 @@
    "district": "Queens, Flushing, Murray Hill, and such",
    "stances": "1) Albany passes housing frameworks but lets localities stall them out; enforce statewide compliance with real penalties\n2) Expand language access across all state services if you can’t understand the system, you can’t access it\n3) Invest in small business corridors with direct grants, not just tax incentives that larger firms capture",
    "info": "https://www.liuNY4us.org",
-   "volunteer": "https://www.liuNY4us.org/volunteer"
+   "volunteer": "https://www.liuNY4us.org/volunteer",
+   "topics": [
+    "Housing"
+   ]
   },
   {
    "name": "Joshua Bristol",
@@ -1205,7 +1693,11 @@
    "district": "Brooklyn, crown heights, Flatbush, Midwood",
    "stances": "Four day work week, workplace unionization, rent freeze.",
    "info": "JoshuaBristol.com",
-   "volunteer": "https://joshuabristol.com/#volunteer"
+   "volunteer": "https://joshuabristol.com/#volunteer",
+   "topics": [
+    "Housing",
+    "Workers & Wages"
+   ]
   },
   {
    "name": "Ashley Bell",
@@ -1216,7 +1708,13 @@
    "district": "Mid NC. Forsyth, Yadkin, Iredell, Catawba, Lincoln counties",
    "stances": "1. Medicare for all 2. Accountability for current admin and ICE 3. Money out of politics",
    "info": "Ashleybellforcongress.com",
-   "volunteer": "Volunteer4AB.com"
+   "volunteer": "Volunteer4AB.com",
+   "topics": [
+    "Healthcare",
+    "Housing",
+    "Money out of politics",
+    "Immigration & ICE"
+   ]
   },
   {
    "name": "Priya Desai",
@@ -1227,7 +1725,11 @@
    "district": "Fayetteville area and parts of Cumberland County",
    "stances": "1 Raise teacher pay & invest in public schools\n2 Expand Medicaid & rural healthcare access\n3 Criminal justice reform & reentry support",
    "info": "https://www.priyadesaiNC21.com",
-   "volunteer": "https://www.priyadesaiNC21.com"
+   "volunteer": "https://www.priyadesaiNC21.com",
+   "topics": [
+    "Healthcare",
+    "Education & Childcare"
+   ]
   },
   {
    "name": "Dr. Kimberly Hardy",
@@ -1238,7 +1740,13 @@
    "district": "Fayetteville to Wilmington to Southport (8 counties total)",
    "stances": "1. Protecting the right to vote\n2. Better jobs, schools, and healthcare\n3. Tax the rich",
    "info": "kimberlyhardyforcongress.com",
-   "volunteer": "https://www.kimberlyhardyforcongress.com/getinvolved"
+   "volunteer": "https://www.kimberlyhardyforcongress.com/getinvolved",
+   "topics": [
+    "Healthcare",
+    "Education & Childcare",
+    "Workers & Wages",
+    "Tax the rich"
+   ]
   },
   {
    "name": "Park Inglefield",
@@ -1249,7 +1757,12 @@
    "district": "Northwestern part of Catawba County, including Hickory, Conover, & Mountain View",
    "stances": "1. Livability 2. Fund what matters (schools, roads, water) 3. Do the work of the people, not special interests",
    "info": "Voteparknc.com",
-   "volunteer": "Email votepark.nc@gmail.com"
+   "volunteer": "Email votepark.nc@gmail.com",
+   "topics": [
+    "Education & Childcare",
+    "Climate & Environment",
+    "Transit & Infrastructure"
+   ]
   },
   {
    "name": "Omar Haddad",
@@ -1260,7 +1773,13 @@
    "district": "Cleveland area, including the city and inner-ring suburbs in Cuyahoga County",
    "stances": "IMPEACH TRUMP!!!!, Break up regional monopolies in healthcare systems driving up costs in Northeast Ohio, federal jobs guarantee pilot focused on post-industrial cities, ban congressional stock trading + enforce real-time financial disclosures",
    "info": "Website: https://www.haddadOH11.info",
-   "volunteer": "https://www.haddadOH11.info/actblue"
+   "volunteer": "https://www.haddadOH11.info/actblue",
+   "topics": [
+    "Healthcare",
+    "Money out of politics",
+    "Workers & Wages",
+    "Impeach Trump"
+   ]
   },
   {
    "name": "Don Leonard",
@@ -1271,7 +1790,13 @@
    "district": "Western Columbus",
    "stances": "Make the economy affordable, strengthen our safety nets, end MAGA chaos and corruption",
    "info": "donforohio.com",
-   "volunteer": "https://donforohio.com/volunteer"
+   "volunteer": "https://donforohio.com/volunteer",
+   "topics": [
+    "Housing",
+    "Money out of politics",
+    "Public safety & guns",
+    "Impeach Trump"
+   ]
   },
   {
    "name": "N’Kiyla ‘Jasmine’ Thomas",
@@ -1282,7 +1807,11 @@
    "district": "Oklahoma City, Tulsa, Shawnee, Ardmore, Stillwater, Guthrie, Broken Bow, Durant, Lawton, Elk City, Lawton, Altus, Paul’s Valley, Bartlesville, Ponca City, Enid, Fairview, Woodward",
    "stances": "Expanding healthcare coverage, education and disability services reform, people over party and profits",
    "info": "https://www.jasmineforok.com/",
-   "volunteer": "https://docs.google.com/forms/d/e/1FAIpQLSdjVzQbl9cRB1fNsO061PtfJW9aU2FQTDbn6Sdl1GaIpIbM7g/viewform?pli=1"
+   "volunteer": "https://docs.google.com/forms/d/e/1FAIpQLSdjVzQbl9cRB1fNsO061PtfJW9aU2FQTDbn6Sdl1GaIpIbM7g/viewform?pli=1",
+   "topics": [
+    "Healthcare",
+    "Education & Childcare"
+   ]
   },
   {
    "name": "Jeff Pixley",
@@ -1293,7 +1822,11 @@
    "district": "South OKC, Moore, Norman, Del City, Midwest City, Lawton, Ada, and Ardmore",
    "stances": "1. Restore Congressional oversight and accountability over the President 2. Universal Healthcare. 3. Tax wealth. 4. Dignity and respect for every person.",
    "info": "Pixleyforcongress.com",
-   "volunteer": "Info@pixleyforcongress.com"
+   "volunteer": "Info@pixleyforcongress.com",
+   "topics": [
+    "Healthcare",
+    "Tax the rich"
+   ]
   },
   {
    "name": "Jessica Salas",
@@ -1304,7 +1837,11 @@
    "district": "East Portland, Gresham, Troutdale, Hood River, Mt. Hood Village, Estacada, Damascus, Happy Valley...",
    "stances": "America can't afford billionaires, Working class protections, Civil service reform.",
    "info": "jsalfororegon.com",
-   "volunteer": "email: tellmemore@jsalfororegon.com"
+   "volunteer": "email: tellmemore@jsalfororegon.com",
+   "topics": [
+    "Workers & Wages",
+    "Tax the rich"
+   ]
   },
   {
    "name": "Virginia Stapleton",
@@ -1315,7 +1852,12 @@
    "district": "Salem Keizer Woodburn Gervais",
    "stances": "Housing, universal Healthcare, Public education",
    "info": "Electvirginiastapleton.com",
-   "volunteer": "vik@electvirginiastapleton.com or https://docs.google.com/forms/d/e/1FAIpQLSedhprqCFXXVbXD8qkmHS1tvh0UBI9FV46mZ4N81KzUD4RwIw/viewform?pli=1&authuser=0"
+   "volunteer": "vik@electvirginiastapleton.com or https://docs.google.com/forms/d/e/1FAIpQLSedhprqCFXXVbXD8qkmHS1tvh0UBI9FV46mZ4N81KzUD4RwIw/viewform?pli=1&authuser=0",
+   "topics": [
+    "Healthcare",
+    "Housing",
+    "Education & Childcare"
+   ]
   },
   {
    "name": "Brittany Jones",
@@ -1326,7 +1868,13 @@
    "district": "Statewide",
    "stances": "1. Holding ICE accountable 2. Establishing my housing first plan 3. Auditing and reallocating money to healthcare, education, and housing.",
    "info": "https://bjfororegon.wixsite.com/bjfororegon",
-   "volunteer": "Email jones4oregon@gmail.com to be connected with the volunteer coordinator or sign up through the volunteer link in my linktree https://linktr.ee/JonesForOregon"
+   "volunteer": "Email jones4oregon@gmail.com to be connected with the volunteer coordinator or sign up through the volunteer link in my linktree https://linktr.ee/JonesForOregon",
+   "topics": [
+    "Healthcare",
+    "Housing",
+    "Education & Childcare",
+    "Immigration & ICE"
+   ]
   },
   {
    "name": "Maya Chen",
@@ -1337,7 +1885,12 @@
    "district": "Portland area,  northeast neighborhoods and parts of Multnomah County",
    "stances": "We keep declaring housing emergencies but still block infill—legalize fourplexes statewide and streamline permits\nInvest in wildfire prevention upfront (forest management + community buffers) instead of reactive disaster spending\nPublic safety reform should include both accountability and capacity rainy day fund behavioral health response teams alongside policing",
    "info": "https://www.chenOR4us.org",
-   "volunteer": "https://www.chenOR4us.org/volunteer"
+   "volunteer": "https://www.chenOR4us.org/volunteer",
+   "topics": [
+    "Housing",
+    "Climate & Environment",
+    "Public safety & guns"
+   ]
   },
   {
    "name": "Maya Chen",
@@ -1348,7 +1901,12 @@
    "district": "Portland area, including inner northeast neighborhoods and parts of Multnomah County",
    "stances": "We keep declaring housing emergencies but still block infill—legalize fourplexes statewide and streamline permits\n* Invest in wildfire prevention upfront (forest management + community buffers) instead of reactive disaster spending\n* Public safety reform should include both accountability and capacity fund behavioral health response teams alongside policing",
    "info": "https://www.chenor4us.org/",
-   "volunteer": "https://www.chenor4us.org/volunteer"
+   "volunteer": "https://www.chenor4us.org/volunteer",
+   "topics": [
+    "Housing",
+    "Climate & Environment",
+    "Public safety & guns"
+   ]
   },
   {
    "name": "DeShawn Carter II",
@@ -1359,7 +1917,11 @@
    "district": "Citywide race across Philadelphia, including Center City, West Philly, and North Philadelphia neighborhoods",
    "stances": "1- Safer communities without over-policing 2- affordable housing & tenant protections 3 invest in youth programs & job access",
    "info": "https://www.carter4phl.com",
-   "volunteer": "https://www.carter4phl.com/join-us"
+   "volunteer": "https://www.carter4phl.com/join-us",
+   "topics": [
+    "Housing",
+    "Workers & Wages"
+   ]
   },
   {
    "name": "Jess Branas",
@@ -1370,7 +1932,13 @@
    "district": "Lancaster County - Manheim Twp, East Lampeter, West Lampeter, Penn Manor, Conestoga Twp, Pequea Twp",
    "stances": "Fully Funded Public Schools\nAffordable and Reliable Healthcare\nRaise the minimum wage and tie it to cost of living",
    "info": "jess4pa.com",
-   "volunteer": "Info@jess4pa.com"
+   "volunteer": "Info@jess4pa.com",
+   "topics": [
+    "Healthcare",
+    "Housing",
+    "Education & Childcare",
+    "Workers & Wages"
+   ]
   },
   {
    "name": "Beth Farnham",
@@ -1381,7 +1949,12 @@
    "district": "South Central PA counties of Adams, Franklin, Fulton, Bedford, Cambria, Blair, Huntingdon, Mifflin, Juniata, Perry, and pieces of Cumberland & Somerset counties",
    "stances": "1. Our precious Democracy, 2. Reproductive Freedom, 3. Affordability",
    "info": "www.bethfarnhamforcongress.com",
-   "volunteer": "https://bethfarnhamforcongress.com/welcome-volunteers/"
+   "volunteer": "https://bethfarnhamforcongress.com/welcome-volunteers/",
+   "topics": [
+    "Housing",
+    "Reproductive rights",
+    "Democracy & voting"
+   ]
   },
   {
    "name": "Dante Russo",
@@ -1392,7 +1965,11 @@
    "district": "Providence’s East Side and nearby neighborhoods, including College Hill and Fox Point",
    "stances": "1) Providence keeps approving development without aligning it to infrastructure capacity, so congestion and cost follow planning has to catch up to growth. 2) The city also leans too heavily on regressive fees instead of progressive revenue sources, and that needs to shift. 3) And I’m not interested in pretending local government exists in a vacuum when the GESTAPO IS IN OUR STREETS TERRORIZING US",
    "info": "https://www.russoRI4us.info",
-   "volunteer": "https://www.russoRI4us.info/get-involved"
+   "volunteer": "https://www.russoRI4us.info/get-involved",
+   "topics": [
+    "Transit & Infrastructure",
+    "Impeach Trump"
+   ]
   },
   {
    "name": "Virginia McLean",
@@ -1403,7 +1980,11 @@
    "district": "Lyman, Wellford, Duncan, Startex, Reidville, and Greer",
    "stances": "1. Public funds for public schools\n2. Infrastructure for sustainable growth \n3. Equality for all SC",
    "info": "Www.vaforsc.com",
-   "volunteer": "Email Virginia at mcleanforsc@gmail.com or sign up for newsletter at the bottom of website homepage"
+   "volunteer": "Email Virginia at mcleanforsc@gmail.com or sign up for newsletter at the bottom of website homepage",
+   "topics": [
+    "Education & Childcare",
+    "Transit & Infrastructure"
+   ]
   },
   {
    "name": "Matt Fulmer",
@@ -1414,7 +1995,12 @@
    "district": "SC01 is basically the southern Half of SC’s coastline. We have all of Berkeley County and all of Beaufort County, with a strip of coastline that connects them. We also have some of the Summerville area of Dorchester. Our Charleston County area’s include: Mt. Pleasant. Isle of Palms. Sullivan’s Island. James Island. Johns Island. McClellanville. Awendaw. Seabrook. Kiawah. Edisto.",
    "stances": "1. Universal Healthcare 2. Fair-Share Tax Reform 3. Campaign Finance Reform",
    "info": "https://www.fulmerforcongress.com/",
-   "volunteer": "https://www.fulmerforcongress.com/volunteer"
+   "volunteer": "https://www.fulmerforcongress.com/volunteer",
+   "topics": [
+    "Healthcare",
+    "Money out of politics",
+    "Tax the rich"
+   ]
   },
   {
    "name": "Matt Fulmer",
@@ -1425,7 +2011,12 @@
    "district": "SC01 is basically the southern Half of SC’s coastline. We have all of Berkeley County and all of Beaufort County, with a strip of coastline that connects them. We also have some of the Summerville area of Dorchester. Our Charleston County area’s include: Mt. Pleasant. Isle of Palms. Sullivan’s Island. James Island. Johns Island. McClellanville. Awendaw. Seabrook. Kiawah. Edisto.",
    "stances": "1. Universal Healthcare 2. Fair-Share Tax Reform 3. Campaign Finance Reform",
    "info": "https://www.fulmerforcongress.com/",
-   "volunteer": "https://www.fulmerforcongress.com/volunteer"
+   "volunteer": "https://www.fulmerforcongress.com/volunteer",
+   "topics": [
+    "Healthcare",
+    "Money out of politics",
+    "Tax the rich"
+   ]
   },
   {
    "name": "Frankland Watts",
@@ -1436,7 +2027,8 @@
    "district": "Spartanburg, South Carolina. District 6- Wellford, Lyman, Moore, East Spartanburg, Roebuck, Woodruff",
    "stances": "Limitations on AI, Expanding Minority Protections, and Protecting Small Businesses",
    "info": "franklandwatts.org",
-   "volunteer": "https://franklandwatts.org/get-involved"
+   "volunteer": "https://franklandwatts.org/get-involved",
+   "topics": []
   },
   {
    "name": "Candace Schutt",
@@ -1447,7 +2039,13 @@
    "district": "Upstate SC, oconee county (Seneca, FairPlay)",
    "stances": "Increase housing and healthcare affordability and access, infrastructure upgrades, protect women’s rights",
    "info": "Candaceforall.com",
-   "volunteer": "Candaceforall.com or email womengetschuttdone@gmail.com"
+   "volunteer": "Candaceforall.com or email womengetschuttdone@gmail.com",
+   "topics": [
+    "Healthcare",
+    "Housing",
+    "Reproductive rights",
+    "Transit & Infrastructure"
+   ]
   },
   {
    "name": "Juni Lynch",
@@ -1458,7 +2056,10 @@
    "district": "Oconee and Pickens County (Westminster, long creek, mountain rest, Walhalla, Salem, six mile, newry, tamasse, Keowee key, holly springs, Albert Lewis, Mountain View)",
    "stances": "Rural community revival \nGovernment that works for the people\nWorking families first",
    "info": "Junilynch.com\n\nfacebook.com/juniforSCstatehousedistrict1",
-   "volunteer": "Email our campaign team at junidistrict1@gmail.con"
+   "volunteer": "Email our campaign team at junidistrict1@gmail.con",
+   "topics": [
+    "Workers & Wages"
+   ]
   },
   {
    "name": "Keisha Bryant",
@@ -1469,7 +2070,11 @@
    "district": "Columbia area, northeast Columbia and surrounding parts of Richland County",
    "stances": "1- Stop underfunding public schools in fast-growing districts—update funding formulas to match real enrollment and need\n2- Expand broadband access like it’s basic infrastructure, not a luxury (rural + urban gaps both matter here)\n3- Maternal health outcomes in South Carolina are unacceptable—targeted funding, data transparency, and accountability",
    "info": "https://www.instagram.com/bryant4sc79\nWebsite: https://www.bryantSC4us.org",
-   "volunteer": "https://www.bryantSC4us.org/volunteer"
+   "volunteer": "https://www.bryantSC4us.org/volunteer",
+   "topics": [
+    "Education & Childcare",
+    "Transit & Infrastructure"
+   ]
   },
   {
    "name": "Mike Croley",
@@ -1480,7 +2085,11 @@
    "district": "19 counties in Tennessee, including part of Davidson County.",
    "stances": "1. Universal healthcare, 2. tax the rich. 3. Save the planet.",
    "info": "Croleyforcongress.com",
-   "volunteer": "https://croleyforcongress.com/sign-up-to-volunteer/"
+   "volunteer": "https://croleyforcongress.com/sign-up-to-volunteer/",
+   "topics": [
+    "Healthcare",
+    "Tax the rich"
+   ]
   },
   {
    "name": "Cadence Collins",
@@ -1491,7 +2100,10 @@
    "district": "My district covers Karns, Hardin Valley, Solway, and Pleasant Ridge- will happily accept the help of volunteers all across Knox County/Knoxville, TN though",
    "stances": "1. NO Vouchers; Fully Fund Public Schools 2. Support Educators with Better Pay & More Resources 3. Protect EVERY child’s right to a free, public education 4. No Book Bans- Freedom to Read",
    "info": "Cadenceforschoolboard.com",
-   "volunteer": "https://docs.google.com/forms/d/e/1FAIpQLSeOjBAgAxMbwDFMxDo5oyZ0Y5JDxNTYe1cQqckK566p_bjXjg/viewform"
+   "volunteer": "https://docs.google.com/forms/d/e/1FAIpQLSeOjBAgAxMbwDFMxDo5oyZ0Y5JDxNTYe1cQqckK566p_bjXjg/viewform",
+   "topics": [
+    "Education & Childcare"
+   ]
   },
   {
    "name": "Mike Croley",
@@ -1502,7 +2114,12 @@
    "district": "TN6, downtown Nashville all the way to Scott County, heavily gerrymandered by state GOP",
    "stances": "Affordability Accessibility and Accountability, also to hell with AIPAC",
    "info": "CroleyforCongress.com",
-   "volunteer": "https://croleyforcongress.com/sign-up-to-volunteer/"
+   "volunteer": "https://croleyforcongress.com/sign-up-to-volunteer/",
+   "topics": [
+    "Housing",
+    "Money out of politics",
+    "Palestine / Israel"
+   ]
   },
   {
    "name": "Marquita Bradshaw",
@@ -1513,7 +2130,15 @@
    "district": "The whole state of Tennessee all 95 counties.",
    "stances": "Economy that works for working people not billionaires and not dependent on fossil fuels  justly transitioning to a zero waste circular economy where workers get paid a living wage. \n\nEnvironment everyone deserves healthy and safe communities where they live , learn, work, worship, and recreate no matter your zip code everyone deserves a sustainable environment of clean air, water, and soil.\n\nEducation should be funded like our military high quality public education that is expanded to include technical colleges, and universities",
    "info": "www.MarquitaBradshaw.com",
-   "volunteer": "https://www.marquitabradshaw.com/volunteer"
+   "volunteer": "https://www.marquitabradshaw.com/volunteer",
+   "topics": [
+    "Education & Childcare",
+    "Climate & Environment",
+    "Workers & Wages",
+    "Transit & Infrastructure",
+    "Tax the rich",
+    "Veterans"
+   ]
   },
   {
    "name": "Chelsey Hockett",
@@ -1524,7 +2149,12 @@
    "district": "East Dallas to East Texas",
    "stances": "Tax the rich and corporations, protect workers rights, money out of politics",
    "info": "Chelseyhockettforcongress.com",
-   "volunteer": "Chelseyhockettforcongress@gmail.com or https://docs.google.com/forms/d/e/1FAIpQLSepmSSbpuBdaZiziESAonC79guBaFW56PRS3_kx5YI6ekPeTw/viewform"
+   "volunteer": "Chelseyhockettforcongress@gmail.com or https://docs.google.com/forms/d/e/1FAIpQLSepmSSbpuBdaZiziESAonC79guBaFW56PRS3_kx5YI6ekPeTw/viewform",
+   "topics": [
+    "Money out of politics",
+    "Workers & Wages",
+    "Tax the rich"
+   ]
   },
   {
    "name": "Lena Morales",
@@ -1535,7 +2165,12 @@
    "district": "East Austin and surrounding neighborhoods, including parts of Travis County",
    "stances": "Rent control & tenant unions\nPublic power & green infrastructure\nWorker protections & $20 minimum wage (Im the Texas Mamdani)",
    "info": "www.moralesTX4.com",
-   "volunteer": "www.moralesTX4.com"
+   "volunteer": "www.moralesTX4.com",
+   "topics": [
+    "Housing",
+    "Workers & Wages",
+    "Transit & Infrastructure"
+   ]
   },
   {
    "name": "Olivia Hart",
@@ -1546,7 +2181,13 @@
    "district": "Northwest Salt Lake City including Rose Park, Fairpark",
    "stances": "Transit that actually connects working-class neighborhoods to job centers, not just downtown loops. Air quality is a policy failure, not geography. Also, yes, I support free school meals statewide even if that’s “not local.”",
    "info": "https://www.hartut2.info/",
-   "volunteer": "see above"
+   "volunteer": "see above",
+   "topics": [
+    "Education & Childcare",
+    "Climate & Environment",
+    "Workers & Wages",
+    "Transit & Infrastructure"
+   ]
   },
   {
    "name": "Luis Mendoza",
@@ -1557,7 +2198,12 @@
    "district": "West Salt Lake City, including Glendale, Poplar Grove, and surrounding neighborhoods",
    "stances": "1- Air quality isn’t a seasonal issue here it’s a policy failure, and I’m pushing for stricter local emissions standards and transit expansion to actually reduce it. 2 We also need to stop approving developments without requiring water-efficient design in a drought-prone state. 3 And even at the city level, I support broader democratic accountability nationwide, including continued scrutiny of figures like Donald Trump.",
    "info": "https://www.mendozaUT4us.info",
-   "volunteer": "https://www.mendozaUT4us.info/get-involved"
+   "volunteer": "https://www.mendozaUT4us.info/get-involved",
+   "topics": [
+    "Climate & Environment",
+    "Transit & Infrastructure",
+    "Impeach Trump"
+   ]
   },
   {
    "name": "Salaam Bhatti",
@@ -1568,7 +2214,12 @@
    "district": "Western Henrico, Richmond (north side, museum district, Scott’s addition), Midlothian, parts of chesterfield, west towards Lynchburg",
    "stances": "1. Medicare for all. 2. Tax billionaires 3. Campaign finance reform",
    "info": "Salaamforva.com",
-   "volunteer": "Salaamforva.com/act"
+   "volunteer": "Salaamforva.com/act",
+   "topics": [
+    "Healthcare",
+    "Money out of politics",
+    "Tax the rich"
+   ]
   },
   {
    "name": "Ericka Kopp",
@@ -1579,7 +2230,12 @@
    "district": "Based on current map: from the Northern Neck to King George, Tappahannock, Hanover west of Rockville, Williamsburg, New Kent, Northwest Henrico, Midlothian.",
    "stances": "Articles of Impeachment against Trump on day one; universal healthcare; tax the rich",
    "info": "ErickaKopp.com",
-   "volunteer": "Website volunteer tab"
+   "volunteer": "Website volunteer tab",
+   "topics": [
+    "Healthcare",
+    "Tax the rich",
+    "Impeach Trump"
+   ]
   },
   {
    "name": "Trevor Nguyen",
@@ -1590,7 +2246,12 @@
    "district": "Hampton Roads region + parts of Norfolk and Chesapeake",
    "stances": "* Stop using one-time budget surpluses to claim progress, build durable funding for schools and flood control\n* Legalize and regulate short-term rentals properly so neighborhoods are not hollowed out\n* also why is broadband still this bad in 2026 fix it",
    "info": "https://www.instagram.com/nguyen4va82",
-   "volunteer": "https://www.nguyenva4us.org/volunteer"
+   "volunteer": "https://www.nguyenva4us.org/volunteer",
+   "topics": [
+    "Housing",
+    "Education & Childcare",
+    "Transit & Infrastructure"
+   ]
   },
   {
    "name": "Trevor Nguyen",
@@ -1601,7 +2262,12 @@
    "district": "Richmond metro areas",
    "stances": "Richmond keeps growing but infrastructure planning lags years behind, so I’m prioritizing proactive transit and road investment before congestion becomes permanent. We also need to stop treating workforce housing as optional tie every major rezoning to clear affordability benchmarks. And at a broader level, lets get the masks off of the gestapo now",
    "info": "https://www.nguyenVA4us.info/get-involved",
-   "volunteer": "https://www.nguyenVA4us.info/get-involved"
+   "volunteer": "https://www.nguyenVA4us.info/get-involved",
+   "topics": [
+    "Housing",
+    "Transit & Infrastructure",
+    "Impeach Trump"
+   ]
   },
   {
    "name": "Jason Brown II",
@@ -1612,7 +2278,11 @@
    "district": "Richmond and south of Richmond (Colonial Heights, Petersburg, Sussex, Dinwiddie, Hopewell)",
    "stances": "Abolish ICE, Affordability For All, End Our Wars",
    "info": "jasonforcongress2026.com",
-   "volunteer": "Email: jasonforcongress26@gmail.com"
+   "volunteer": "Email: jasonforcongress26@gmail.com",
+   "topics": [
+    "Housing",
+    "Immigration & ICE"
+   ]
   },
   {
    "name": "Brent Hennrich",
@@ -1623,7 +2293,12 @@
    "district": "Entire SW Corner of Washington State. Just over 7600 mi sq.",
    "stances": "Universal Healthcare, Education, Tax the Rich",
    "info": "www.brenthennrich.com",
-   "volunteer": "volunteer@brenthennrich.com is our volunteer coordinators direct email. Can sign up at www.brenthennrich.com/volunteer"
+   "volunteer": "volunteer@brenthennrich.com is our volunteer coordinators direct email. Can sign up at www.brenthennrich.com/volunteer",
+   "topics": [
+    "Healthcare",
+    "Education & Childcare",
+    "Tax the rich"
+   ]
   },
   {
    "name": "Ethan Park",
@@ -1634,7 +2309,13 @@
    "district": "South Seattle",
    "stances": "Expand affordable housing options\nFund public transit & climate infrastructure\nSupport small businesses & workers",
    "info": "https://www.parkWA37.org\ninstagram @ethanpark43",
-   "volunteer": "https://www.parkWA37.org/get-involved"
+   "volunteer": "https://www.parkWA37.org/get-involved",
+   "topics": [
+    "Housing",
+    "Climate & Environment",
+    "Workers & Wages",
+    "Transit & Infrastructure"
+   ]
   },
   {
    "name": "Carmela Conroy",
@@ -1645,7 +2326,8 @@
    "district": "Washington's 5th congressional district encompasses the Eastern Washington counties of Ferry, Stevens, Pend Oreille, Lincoln, Spokane, Whitman, Walla Walla, Columbia, Garfield, and Asotin, along with parts of Adams and Franklin. It is centered on Spokane, the state's second largest city.",
    "stances": "1. More problem-solving, less political theater 2. Principled Leadership 3. Accountability",
    "info": "www.conroy4congress.com",
-   "volunteer": "https://conroy4congress.com/volunteer/"
+   "volunteer": "https://conroy4congress.com/volunteer/",
+   "topics": []
   },
   {
    "name": "Brianna O’Neal",
@@ -1656,7 +2338,10 @@
    "district": "Milwaukee area, including West Allis and nearby in Milwaukee County",
    "stances": "hold state gov fiscally accountable,   end cash bail for low-level offenses and expand pretrial services protect  abortion access in state law regardless of federal shifts",
    "info": "https://www.onealWI4us.org\nTwitter (X): https://x.com/oneal4wi16",
-   "volunteer": "https://www.onealwi4us.org/get-involved"
+   "volunteer": "https://www.onealwi4us.org/get-involved",
+   "topics": [
+    "Reproductive rights"
+   ]
   }
  ]
 }

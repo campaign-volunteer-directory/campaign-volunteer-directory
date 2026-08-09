@@ -58,9 +58,10 @@
                 esc(c.state),
                 esc(c.govt_level),
                 esc(c.position),
+                `<span class="stance-cell">${esc(c.stances)}</span>`,
+                (c.topics || []).join(', '),
                 esc(c.party),
                 `<span class="district-cell">${esc(c.district)}</span>`,
-                `<span class="stance-cell">${esc(c.stances)}</span>`,
                 linkCell(c.info, 'site'),
                 linkCell(c.volunteer, 'sign up')
             ]);
@@ -68,18 +69,36 @@
             table = $table.DataTable({
                 data: rows,
                 pageLength: 25,
-                responsive: true,
+                responsive: false,
+                scrollX: true,
                 columnDefs: [
-                    { orderable: false, targets: [5, 6, 7, 8] },
+                    { orderable: false, targets: [4, 7, 8, 9] },
                     { className: 'dt-body-left', targets: '_all' },
-                    { visible: false, targets: [1] }
+                    { visible: false, targets: [1] },
+                    {
+                        // Topics column: display as chips, but feed searchPanes
+                        // the comma-joined values so each topic is its own pane.
+                        targets: 5,
+                        searchPanes: { orthogonal: 'sp' },
+                        render: function (data, type) {
+                            if (type === 'sp') return data;
+                            if (!data) return '<span class="plain">—</span>';
+                            return data.split(', ')
+                                .map(t => `<span class="topic">${esc(t)}</span>`)
+                                .join(' ');
+                        }
+                    }
                 ],
+                language: {
+                    search: '',
+                    searchPlaceholder: 'Search names, stances, issues…'
+                },
                 layout: {
                     top1: {
                         searchPanes: {
                             cascadePanes: true,
-                            layout: 'columns-3',
-                            columns: [1, 2]
+                            layout: 'columns-4',
+                            columns: [1, 2, 5]
                         }
                     }
                 }

@@ -54,6 +54,47 @@ STATE_MAP = {
 
 LEVELS = {"Local", "State", "Federal"}
 
+# Issue topics auto-tagged from the stances text, in priority order.
+# Patterns are plain substrings (lowercase); prefix with "^" to use a regex.
+TOPICS = [
+    ("Healthcare", ["healthcare", "health care", "medicare", "medicaid", "single-payer", "single payer", "insulin", "medical", "insurance", "doctors", "hospitals"]),
+    ("Housing", ["housing", "housed", "rent", "tenant", "zoning", "homeless", "eviction", "affordab", "mortgage"]),
+    ("Education & Childcare", ["school", "education", "teacher", "student", "voucher", "childcare", "child care", "pre-k", "preschool", "college", "tuition"]),
+    ("Climate & Environment", ["climate", "environment", "clean energy", "renewab", "solar", "wildfire", "everglades", "water", "air quality", "carbon"]),
+    ("Money out of politics", ["money out of politics", "money in politics", "corruption", "pac money", "campaign finance", "citizens united", "stock trading", "aipac", "bribery", "corporate money", "anti-establishment"]),
+    ("Workers & Wages", ["worker", "labor", "labour", "union", "wage", "jobs", "employment", "working class", "gig", "paycheck", "^\\bjob\\b", "working families"]),
+    ("Immigration & ICE", ["immigration", "immigrant", "sanctuary", "deport", "^\\bice\\b"]),
+    ("Reproductive rights", ["reproductive", "abortion", "women's rights", "women\u2019s rights", "pro-choice", "pro choice", "pregnancy"]),
+    ("Public safety & guns", ["gun", "police", "public safety", "violence", "crime", "^\\bsafety\\b", "gun violence", "gun control", "gun safety"]),
+    ("Transit & Infrastructure", ["transit", "transportation", "broadband", "infrastructure", "roads", "rail", "^\\bbus\\b", "highway", "airport"]),
+    ("Tax the rich", ["tax the rich", "wealth tax", "billionaire", "tax wealth", "fair-share", "fair share tax", "tax billionaires"]),
+    ("Palestine / Israel", ["palestine", "gaza", "genocide", "israel", "aipac", "arms embargo", "occupied", "intifada"]),
+    ("Impeach Trump", ["impeach", "trump", "gestapo", "authoritarian", "maga"]),
+    ("Democracy & voting", ["voting rights", "democracy", "election", "voting", "gerrymander", "voter", "ranked choice", "democracy"]),
+    ("Veterans", ["veteran", "military", "armed forces", "national guard", "^\\bwar\\b", "war crimes"]),
+    ("Term limits", ["term limits", "term limit"]),
+    ("Mental health", ["mental health", "mental-health"]),
+]
+import re as _re
+
+
+def tag_topics(stances: str) -> list[str]:
+    """Return the topics whose keywords appear in the stances text."""
+    text = (stances or "").lower()
+    found: list[str] = []
+    for label, patterns in TOPICS:
+        if label in found:
+            continue
+        for pat in patterns:
+            if pat.startswith("^"):
+                if _re.search(pat.lstrip("^"), text, _re.IGNORECASE):
+                    found.append(label)
+                    break
+            elif pat in text:
+                found.append(label)
+                break
+    return found
+
 
 def normalize_state(raw: str) -> str:
     raw = raw.strip()
@@ -111,6 +152,7 @@ def parse_rows(raw: str):
             "volunteer": cells[8].strip(),
         }
         if rec["name"]:
+            rec["topics"] = tag_topics(rec["stances"])
             records.append(rec)
     return records
 
