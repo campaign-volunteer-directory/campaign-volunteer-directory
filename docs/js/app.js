@@ -39,7 +39,10 @@
 
     async function init() {
         try {
-            const resp = await fetch('data/candidates.json');
+            // Cache-bust once a minute so scheduled data updates show up
+            // without users being stuck on a stale index.
+            const unique = Math.floor(Date.now() / 60000);
+            const resp = await fetch('data/candidates.json?unique=' + unique);
             if (!resp.ok) throw new Error(`HTTP ${resp.status}`);
             const data = await resp.json();
 
