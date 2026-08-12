@@ -68,7 +68,7 @@ def main():
         out_path = out_dir / f"{channel['name']}.json"
         jobs.append((tab, channel, out_path))
 
-    results = {}
+    CHANNEL_TIMEOUT_S = 600  # wall-clock cap per attempt; stuck tabs get killed + retried
     procs = []
     queue = list(jobs)
     while queue or procs:
@@ -77,10 +77,15 @@ def main():
             p = subprocess.Popen(
                 [sys.executable, str(HERE / "scrape_channel.py"), str(tab), channel["id"], str(out_path)],
                 stdout=subprocess.PIPE, stderr=subprocess.STDOUT, text=True)
-            procs.append((p, channel, tab))
+            procs.append([p, channel, tab, time.time()])
+        for j in procs:
+            if j[0].poll() is None and time.time() - j[3] > CHANNEL_TIMEOUT_S:
+                j[0].kill()
+                j[0].wait()
         done = [j for j in procs if j[0].poll() is not None]
-        for p, channel, tab in done:
-            procs.remove((p, channel, tab))
+        for j in done:
+            p, channel, tab, _ = j
+            procs.remove(j)
             out, _ = p.communicate()
             out_path = out_dir / f"{channel['name']}.json"
             n = 0
