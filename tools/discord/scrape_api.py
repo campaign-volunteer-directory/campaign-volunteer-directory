@@ -34,9 +34,20 @@ def bridge(tab_id, cmd_type, payload=None, timeout=30):
 
 
 def get_token(tab_id):
-    """Read the Discord session token from the tab's localStorage."""
+    """Read the Discord session token from the tab's localStorage.
+
+    The multi-account `tokens` map holds the live session token; the plain
+    `token` key can be stale (kept after logout), so it is only a fallback."""
     result = bridge(tab_id, "STORAGE_GET", {"kind": "local"})
-    token = (result.get("items") or {}).get("token")
+    items = result.get("items") or {}
+    token = None
+    tokens = json.loads(items.get("tokens") or "{}")
+    for key, value in tokens.items():
+        if key != "__analytics__":
+            token = value
+            break
+    if not token:
+        token = items.get("token")
     if not token:
         raise RuntimeError("no token in tab localStorage — is this tab logged into Discord?")
     return token
