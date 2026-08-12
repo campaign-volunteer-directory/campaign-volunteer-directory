@@ -1,0 +1,26 @@
+{
+  "server_id": "1450359255386554502",
+  "server_name": "Lime Accordion and friends",
+  "channels": [
+    { "name": "rules", "id": "1450382356715143288" },
+    { "name": "welcome", "id": "1450359256510500967" },
+    { "name": "lurk-for-the-memes", "id": "1461758688984305674" },
+    { "name": "random-polls", "id": "1461756471443198046" },
+    { "name": "chat-about-the-random-polls", "id": "1465769010011308052" },
+    { "name": "dress-to-impress", "id": "1476687148710236314" },
+    { "name": "main-chat", "id": "1451455533503484085" },
+    { "name": "call-suggestions", "id": "1451455276896227419" },
+    { "name": "congressman-shit-talking", "id": "1451462029553696818" },
+    { "name": "resources", "id": "1466865190720245972" },
+    { "name": "discord-help", "id": "1456509695505334514" },
+    { "name": "i-voted-stickers", "id": "1461454327666446470" },
+    { "name": "trolling-members-of-congress", "id": "1461951632232419328" },
+    { "name": "upcoming-elections", "id": "1465794864254816439" },
+    { "name": "files-sleuthing", "id": "1469809053885665330" },
+    { "name": "meet-the-candidates", "id": "1451461285551145012" },
+    { "name": "ideas-for-candidates", "id": "1456502878398185472" },
+    { "name": "phone-banking", "id": "1456504954666618930" },
+    { "name": "us-news", "id": "1451466400643285085" },
+    { "name": "international-news", "id": "1451466893339918387" }
+  ]
+}
