@@ -117,9 +117,12 @@ def agentic_summary(new_total, report_path):
         "(channel JSON files with {id, author, ts, content, links, media}). "
         "Analyze ONLY messages with ts after the last report date, then: "
         "1) summarize notable conversations/patterns in 3-6 bullets, "
-        "2) update the candidate coverage gap list (candidate accounts vs "
-        "docs/data/candidates.json names), 3) append a dated section to the "
-        f"report file {report_path}. Be concise. Do not post anything anywhere."
+        "2) update the candidate coverage gap list: candidate accounts active "
+        "in the Discord but missing from docs/data/candidates.json (check "
+        "author names + meet-the-candidates channel), 3) run "
+        "'python3 scripts/check_new_candidates.py' and list any new sheet "
+        "submissions that still need a welcome, 4) append a dated section to "
+        f"the report file {report_path}. Be concise. Do not post anything anywhere."
     )
     attempts = [
         ["opencode", "run", "--command", prompt, str(report_path)],
@@ -137,6 +140,28 @@ def agentic_summary(new_total, report_path):
     print("agentic analysis skipped (no working headless agent)")
 
 
+def check_sheet_for_new_candidates():
+    """Diff the public spreadsheet against the committed index; alert on new
+    submissions (the form is otherwise checked by hand and candidates wait
+    weeks). Read-only."""
+    try:
+        result = subprocess.run(
+            [sys.executable, str(ROOT / "scripts" / "check_new_candidates.py")],
+            capture_output=True, text=True, timeout=180)
+        data = json.loads(result.stdout or "{}")
+    except Exception as e:
+        print(f"sheet check failed: {e}")
+        return
+    new = data.get("new_candidates") or []
+    if new:
+        lines = "\n".join(f"- {c['name']} ({c['state']}) — {c['position']}" for c in new[:10])
+        subprocess.run(["alert", "ntfy", "New candidates in the directory",
+                        f"{len(new)} new submission(s) just synced:\n{lines}"], timeout=60)
+        print(f"NEW CANDIDATES ALERTED: {len(new)}")
+    else:
+        print("sheet check: no new candidates")
+
+
 def main():
     ap = argparse.ArgumentParser()
     ap.add_argument("--agentic", action="store_true", help="run headless agent analysis after sync")
@@ -149,6 +174,7 @@ def main():
     start = utcnow()
     new_total = 0
     errors = []
+    check_sheet_for_new_candidates()
 
     try:
         tab_id, token = find_tab_and_token()

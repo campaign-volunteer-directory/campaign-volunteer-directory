@@ -94,7 +94,7 @@ def fetch_csv() -> bytes:
         return resp.read()
 
 
-def parse_rows(raw: str):
+def parse_rows(raw: str, with_topics: bool = True):
     reader = csv.reader(io.StringIO(raw))
     rows = [r for r in reader if any(c.strip() for c in r)]
     header_idx = None
@@ -133,7 +133,7 @@ def parse_rows(raw: str):
             if issue_col is not None:
                 rec["topics"] = split_issues(cells[issue_col])
             records.append(rec)
-    if issue_col is None:
+    if with_topics and issue_col is None:
         assign_from_vocabulary(records)
     return records
 
@@ -179,6 +179,26 @@ def validate(records, prev_count):
         else:
             seen[key] = i + 1
     return issues
+
+
+def candidate_key(rec):
+    return (rec["name"].lower(), rec["state"].lower(), rec["position"].lower())
+
+
+def find_new_candidates(records, prev_path):
+    """Names/positions present now but not in the previous sync — the intake
+    queue of candidates who just submitted the form."""
+    if not prev_path.exists():
+        return []
+    try:
+        prev = json.loads(prev_path.read_text())
+    except Exception:
+        return []
+    prev_keys = {candidate_key(c) for c in prev.get("candidates", [])}
+    return [
+        {"name": r["name"], "state": r["state"], "position": r["position"]}
+        for r in records if candidate_key(r) not in prev_keys
+    ]
 
 
 def main():
@@ -241,6 +261,7 @@ def main():
         "raw_sha256": raw_sha256,
         "raw_bytes": len(raw_bytes),
     }
+    payload["new_candidates"] = find_new_candidates(records, prev_path)
     if prev_updated_at is not None:
         new_payload = dict(payload)
         new_payload.pop("updated_at", None)
