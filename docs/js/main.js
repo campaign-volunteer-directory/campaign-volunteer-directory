@@ -1,7 +1,7 @@
-import { debounce } from './utils.js?v=17';
-import { parseQuery, splitQuery, buildSearchIndex, searchRanked } from './search.js?v=17';
-import { FilterState, matchesFacets } from './filters.js?v=17';
-import { stateAbbreviation } from './states.js?v=17';
+import { debounce } from './utils.js?v=18';
+import { parseQuery, splitQuery, buildSearchIndex, searchRanked } from './search.js?v=18';
+import { FilterState, matchesFacets } from './filters.js?v=18';
+import { stateAbbreviation } from './states.js?v=18';
 import {
     renderStats,
     renderSummary,
@@ -12,11 +12,12 @@ import {
     renderResultsLine,
     renderActiveFilters,
     renderCards,
+    renderHistory,
     buildCsv,
-} from './render.js?v=17';
+} from './render.js?v=18';
 
 const SEARCH_DEBOUNCE_MS = 120;
-const APP_VERSION = 17;
+const APP_VERSION = 18;
 const KIND_LABELS = { state: 'State', topic: 'Issue', candidate: 'Candidate' };
 
 let candidates = [];
@@ -516,6 +517,9 @@ async function boot() {
 
         renderStats(data);
         newCandidateNames = new Set((data.new_candidates || []).map((c) => c.name));
+        const whatsNew = document.getElementById('whats-new');
+        whatsNew.innerHTML = renderHistory(data.history);
+        whatsNew.classList.toggle('hidden', !whatsNew.innerHTML);
         document.getElementById('filter-topics').innerHTML = renderTopicChips(topicCounts);
 
         filters.readFromUrl();

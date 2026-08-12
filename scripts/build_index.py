@@ -201,6 +201,41 @@ def find_new_candidates(records, prev_path):
     ]
 
 
+def changelog_entry(records, prev_path, max_history=30):
+    """Append-only changelog: what changed since the previous sync.
+
+    Returns the new history list: [{date, added:[{name,state,position}],
+    updated:[names]}]. Only appends when something actually changed, so a
+    no-op sync leaves the history untouched (no commit churn)."""
+    if not prev_path.exists():
+        return []
+    try:
+        prev = json.loads(prev_path.read_text())
+    except Exception:
+        return []
+    prev_contents = {}
+    for c in prev.get("candidates", []):
+        prev_contents.setdefault(candidate_key(c), []).append(json.dumps(c, sort_keys=True))
+    added = []
+    updated = []
+    for r in records:
+        key = candidate_key(r)
+        contents = prev_contents.get(key)
+        if contents is None:
+            added.append({"name": r["name"], "state": r["state"], "position": r["position"]})
+        elif json.dumps(r, sort_keys=True) not in contents:
+            updated.append(r["name"])
+    if not added and not updated:
+        return prev.get("history", [])
+    history = list(prev.get("history", []))
+    history.append({
+        "date": datetime.now(timezone.utc).strftime("%Y-%m-%d"),
+        "added": added,
+        "updated": updated,
+    })
+    return history[-max_history:]
+
+
 def main():
     try:
         raw_bytes = fetch_csv()
@@ -262,6 +297,7 @@ def main():
         "raw_bytes": len(raw_bytes),
     }
     payload["new_candidates"] = find_new_candidates(records, prev_path)
+    payload["history"] = changelog_entry(records, prev_path)
     if prev_updated_at is not None:
         new_payload = dict(payload)
         new_payload.pop("updated_at", None)

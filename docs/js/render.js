@@ -8,6 +8,26 @@ import { stateAbbreviation } from './states.js?v=10';
  * testable and predictable.
  */
 
+/**
+ * "What's new" changelog: the last few syncs' added/updated candidates.
+ */
+export function renderHistory(history) {
+    const entries = history || [];
+    if (!entries.length) return '';
+    const items = entries.slice(-5).reverse().map((entry) => {
+        const added = (entry.added || []).map((c) => `${escapeHtml(c.name)} (${escapeHtml(c.state)})`).join(', ');
+        const updated = (entry.updated || []).map(escapeHtml).join(', ');
+        const parts = [];
+        if (added) parts.push(`added: ${added}`);
+        if (updated) parts.push(`updated: ${updated}`);
+        return `<div class="history-item">
+            <span class="history-date">${escapeHtml(entry.date)}</span>
+            <span class="history-detail">${parts.join(' · ')}</span>
+        </div>`;
+    }).join('');
+    return `<div class="whats-new-title">What's new</div>${items}`;
+}
+
 export function renderStats(data) {
     setText('collection-date', (data.updated_at || '').replace('T', ' ').slice(0, 16) || 'unknown');
     setText('about-meta',

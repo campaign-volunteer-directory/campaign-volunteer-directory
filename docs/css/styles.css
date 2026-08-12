@@ -482,6 +482,37 @@ a:hover { text-decoration: underline; }
 .breakdown-row .chip-overflow { display: none; }
 .breakdown-row.expanded .chip-overflow { display: inline-block; }
 
+/* ── What's new changelog ───────────────────────────────── */
+.whats-new {
+    background: var(--panel);
+    border: 1px solid var(--panel-border);
+    border-radius: 12px;
+    padding: 10px 14px;
+    margin-bottom: 10px;
+}
+
+.whats-new-title {
+    font-size: 11px;
+    text-transform: uppercase;
+    letter-spacing: 0.07em;
+    color: var(--accent);
+    margin-bottom: 6px;
+}
+
+.history-item {
+    font-size: 12.5px;
+    color: var(--muted);
+    display: flex;
+    gap: 10px;
+    padding: 2px 0;
+}
+
+.history-date {
+    color: var(--text);
+    font-weight: 600;
+    white-space: nowrap;
+}
+
 /* ── View summary + breakdown ──────────────────────────── */
 .view-summary {
     display: flex;

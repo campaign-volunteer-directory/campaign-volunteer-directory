@@ -2,7 +2,7 @@
  "source": "Public Campaign Volunteer Directory spreadsheet (independent project)",
  "source_url": "https://linktr.ee/limeaccordion",
  "sheet_url": "https://docs.google.com/spreadsheets/d/e/2PACX-1vQyQUWTOqZ6iqYMXd-GpkXivMRIgGCnkL58y-oLrX53e8M68zdQo5xO1P8LEMd06mpOVxshd0F9aC24/pubhtml",
- "updated_at": "2026-08-12T21:27:34Z",
+ "updated_at": "2026-08-12T21:36:27Z",
  "count": 145,
  "states": [
   "Alabama",
@@ -2274,5 +2274,6 @@
  "raw_csv": "source.csv",
  "raw_sha256": "a4eb5367d841db8774eae17263f9c8d5a967296da9be0beb0eac9138a4f76f2e",
  "raw_bytes": 62532,
- "new_candidates": []
+ "new_candidates": [],
+ "history": []
 }
