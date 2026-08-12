@@ -150,6 +150,33 @@ def collect_messages(tab_id, max_passes=4):
         print(f"  pass complete: {new_this_pass} new ({len(messages)} total)", file=sys.stderr)
         if new_this_pass == 0:
             break
+    return collect_bottom(tab_id, seen, messages, code)
+
+
+def collect_bottom(tab_id, seen, messages, code, rounds=4):
+    """Re-scan the newest messages at the very bottom.
+
+    Scrolling far into history makes Discord prune the newest messages behind
+    a "jump to latest" divider; they only re-render when the scroller is
+    pushed to (and past) the end. Walk the last few viewports and keep
+    scrolling past the end until nothing new appears.
+    """
+    for _ in range(rounds):
+        total = list_height(tab_id)
+        viewport = run_js(tab_id, f"return ({SCROLL_JS}).clientHeight")
+        for y in range(max(0, total - viewport * 3), total + viewport, max(viewport // 2, 100)):
+            run_js(tab_id, f"return ({SCROLL_JS}.scrollTop = {int(y)}, true)")
+            time.sleep(0.7)
+            try:
+                batch = json.loads(run_js(tab_id, code))
+            except Exception:
+                batch = []
+            for m in batch:
+                key = m["id"] or (m["author"] + m["ts"] + m["content"][:40])
+                if key not in seen:
+                    seen.add(key)
+                    messages.append(m)
+        time.sleep(1.0)
     return messages
 
 

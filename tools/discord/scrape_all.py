@@ -68,7 +68,7 @@ def main():
         out_path = out_dir / f"{channel['name']}.json"
         jobs.append((tab, channel, out_path))
 
-    CHANNEL_TIMEOUT_S = 300  # wall-clock cap per attempt; stuck tabs get killed
+    CHANNEL_TIMEOUT_S = 600  # wall-clock cap per attempt; stuck tabs get killed
     MAX_ATTEMPTS = 3
     # queue entries: [tab, channel, out_path, attempts_left]
     queue = [[tab, channel, out_path, MAX_ATTEMPTS] for tab, channel, out_path in jobs]
