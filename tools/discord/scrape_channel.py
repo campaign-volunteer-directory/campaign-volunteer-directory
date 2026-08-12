@@ -59,22 +59,29 @@ def list_height(tab_id):
     return run_js(tab_id, f"return ({SCROLL_JS}).scrollHeight")
 
 
-def scroll_to_top(tab_id, max_rounds=400):
-    """Keep scrolling to the top until the list stops growing.
+def scroll_to_top(tab_id, min_stable_rounds=10, max_rounds=600):
+    """Keep scrolling to the top until the list stops growing for a while.
 
-    Alternates scroll positions (0 / 80) so a scroll event always fires —
+    Alternates scroll positions (0 / 40) so a scroll event always fires —
     setting scrollTop to 0 when it's already 0 triggers no event, and Discord
-    only loads older history on real scroll events."""
+    only loads older history on real scroll events. "Done" requires several
+    consecutive no-growth rounds, since batches arrive asynchronously."""
     prev = 0
+    stable = 0
     for i in range(max_rounds):
+        pos = 0 if i % 2 else 40
         try:
-            h = run_js(tab_id, f"return ({SCROLL_JS}.scrollTop = {i % 2 and 0 or 80}, ({SCROLL_JS}).scrollHeight)")
+            h = run_js(tab_id, f"return ({SCROLL_JS}.scrollTop = {pos}, ({SCROLL_JS}).scrollHeight)")
         except Exception:
-            time.sleep(1.5)
+            time.sleep(2)
             continue
-        time.sleep(0.8)
+        time.sleep(1.2)
         if h == prev:
-            break
+            stable += 1
+            if stable >= min_stable_rounds:
+                break
+        else:
+            stable = 0
         prev = h
     return prev
 
