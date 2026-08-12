@@ -90,19 +90,40 @@ def to_record(m):
             "content": content, "links": list(dict.fromkeys(links)), "media": media}
 
 
-def scrape_channel(token, channel_id):
+def scrape_channel(token, channel_id, newest_known=None):
+    """Page newest-first. With newest_known (id of the newest message we
+    already have), stop at it and keep only what's above — incremental update."""
     records = []
     before = None
     for _ in range(MAX_PAGES):
         msgs = fetch_page(token, channel_id, before)
         if not msgs:
             break
-        records.extend(to_record(m) for m in msgs)
+        for m in msgs:
+            if newest_known and m["id"] == newest_known:
+                return records  # reached known territory; nothing older is new
+            records.append(to_record(m))
         if len(msgs) < 100:
             break
         before = msgs[-1]["id"]
         time.sleep(0.3)
     return records
+
+
+def list_threads(token, channel_id):
+    """All threads (active + archived public) in a channel."""
+    threads = []
+    for endpoint in ("threads/active", "threads/archived/public"):
+        url = f"https://discord.com/api/v10/channels/{channel_id}/{endpoint}?limit=100"
+        req = urllib.request.Request(url, headers={"Authorization": token, "User-Agent": "Mozilla/5.0"})
+        try:
+            with urllib.request.urlopen(req, timeout=30) as resp:
+                data = json.load(resp)
+        except Exception:
+            continue
+        for t in data.get("threads") or []:
+            threads.append({"id": t["id"], "name": t.get("name") or "", "ts": t.get("thread_metadata", {}).get("archive_timestamp") or ""})
+    return threads
 
 
 def main():

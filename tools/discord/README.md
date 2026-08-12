@@ -48,3 +48,23 @@ friends", server `1450359255386554502`).
 - Discord only loads older history on real scroll events, so the scraper
   alternates scroll positions; it can't run while the tab is being used.
 - `bridge_client.py` returns values only for `return ...` expressions.
+
+## Automatic daily sync
+
+`sync_discord.py` is the deterministic updater (launchd: `com.cvd.discord-sync`,
+daily 06:45):
+
+1. Finds a live bridge-enabled Discord tab, reads the session token from
+   localStorage (`tokens` map — the plain `token` key can be stale)
+2. Incremental pull per channel + thread (newest-first, stops at the stored
+   cursor in `sync-state.json`) — ~15s when nothing changed
+3. Downloads new media into the content-addressed store (dedupe)
+4. Merges into the channel JSONs; writes `status.json` +
+   `~/.cache/campaign-volunteer-directory/status.json`
+5. ntfy alert on new content or failure
+6. `--agentic`: escalates to a headless agent (opencode run → claude -p
+   fallback) to summarize new messages and append
+   `scratch/discord/reports/YYYY-MM-DD.md`
+
+Requirements: Chrome with the bridge extension enabled on a logged-in Discord
+tab (the cvd profile), bridge daemon running.
