@@ -10,6 +10,7 @@ import json
 import sys
 import time
 import urllib.request
+from pathlib import Path
 
 DAEMON = "http://127.0.0.1:8224"
 CHANNEL_URL = "https://discord.com/channels/1450359255386554502/{ch}"
@@ -35,7 +36,7 @@ def rpc(tab_id, cmd_type, payload=None, timeout=40):
     return result
 
 
-def run_js(tab_id, code, attempts=4):
+def run_js(tab_id, code, attempts=5):
     last = None
     for i in range(attempts):
         try:
@@ -45,7 +46,7 @@ def run_js(tab_id, code, attempts=4):
             last = f"no value: {json.dumps(result)[:150]}"
         except Exception as e:
             last = str(e)[:150]
-        time.sleep(1.2)
+        time.sleep(3)
     raise RuntimeError(f"run_js failed after {attempts}: {last}")
 
 
@@ -92,7 +93,25 @@ def collect_messages(tab_id):
             const contentEl = art.querySelector('[id^="message-content-"], [class*=messageContent]');
             const content = contentEl ? contentEl.innerText : '';
             const links = [...(art.querySelectorAll('a[href^="http"]'))].map(a => a.href);
-            if (content || author) out.push({id, author, ts, content, links});
+            const media = [];
+            const addMedia = (rawUrl, kind) => {
+                if (!rawUrl) return;
+                let url = rawUrl.replace(/^https:\\/\\/media\\.discordapp\\.net/, 'https://cdn.discordapp.com');
+                if (!media.some(m => m.url === url)) media.push({url, kind});
+            };
+            for (const a of art.querySelectorAll('a[href*="attachments"]')) {
+                const href = a.getAttribute('href') || '';
+                const ext = href.split('?')[0].split('.').pop().toLowerCase();
+                addMedia(href, ['png','jpg','jpeg','gif','webp'].includes(ext) ? 'image' :
+                                ['mp4','webm','mov'].includes(ext) ? 'video' : 'file');
+            }
+            for (const img of art.querySelectorAll('img[src*="discord"]')) {
+                addMedia(img.src, 'image');
+            }
+            for (const v of art.querySelectorAll('video[src*="discord"]')) {
+                addMedia(v.src, 'video');
+            }
+            if (content || author || media.length) out.push({id, author, ts, content, links, media});
         }
         return JSON.stringify(out);
     """
@@ -117,14 +136,49 @@ def collect_messages(tab_id):
 
 def main():
     tab_id, channel_id, out_path = sys.argv[1], sys.argv[2], sys.argv[3]
+    media_root = Path(out_path).parent / "media" / Path(out_path).stem
     rpc(tab_id, "NAVIGATE", {"url": CHANNEL_URL.format(ch=channel_id)})
     time.sleep(4)
     height = scroll_to_top(tab_id)
     print(f"loaded history: {height}px", file=sys.stderr)
     messages = collect_messages(tab_id)
+    downloaded = download_media(messages, media_root)
     with open(out_path, "w") as f:
         json.dump(messages, f, ensure_ascii=False, indent=1)
-    print(f"saved {len(messages)} messages -> {out_path}")
+    print(f"saved {len(messages)} messages ({downloaded} media files) -> {out_path}")
+
+
+def download_media(messages, media_root, max_bytes=50 * 1024 * 1024):
+    """Download attachment media to media/<channel>/<msgid>-<n>.<ext>.
+
+    Each message's media entries get a `local` path when downloaded. Skips
+    files that already exist (idempotent re-runs)."""
+    import mimetypes
+
+    media_root.mkdir(parents=True, exist_ok=True)
+    downloaded = 0
+    for msg in messages:
+        msg_id = msg.get("id") or "msg"
+        for i, item in enumerate(msg.get("media", [])):
+            url = item["url"]
+            ext = url.split("?")[0].rsplit(".", 1)[-1].split("/")[0][:6] or "bin"
+            local = media_root / f"{msg_id}-{i}.{ext}"
+            if local.exists():
+                item["local"] = str(local)
+                continue
+            try:
+                req = urllib.request.Request(url, headers={"User-Agent": "Mozilla/5.0"})
+                with urllib.request.urlopen(req, timeout=60) as resp:
+                    data = resp.read(max_bytes + 1)
+                if len(data) > max_bytes:
+                    print(f"  skip (too big) {url}", file=sys.stderr)
+                    continue
+                local.write_bytes(data)
+                item["local"] = str(local)
+                downloaded += 1
+            except Exception as e:
+                print(f"  media fail {url}: {e}", file=sys.stderr)
+    return downloaded
 
 
 if __name__ == "__main__":
