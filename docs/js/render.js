@@ -102,11 +102,11 @@ export function renderSuggestions(items) {
         .join('');
 }
 
-export function renderCards(entries, terms, emptyMessage) {
+export function renderCards(entries, terms, emptyMessage, newNames = new Set()) {
     if (!entries.length) {
         return `<div class="empty-state">${escapeHtml(emptyMessage)}</div>`;
     }
-    return entries.map((entry) => cardMarkup(entry, terms)).join('');
+    return entries.map((entry) => cardMarkup(entry, terms, newNames)).join('');
 }
 
 /**
@@ -174,9 +174,11 @@ function csvCell(value) {
     return /[",\n\r]/.test(text) ? `"${text.replace(/"/g, '""')}"` : text;
 }
 
-function cardMarkup({ candidate: c }, terms) {
+function cardMarkup({ candidate: c }, terms, newNames = new Set()) {
     const tags = (c.topics || []).map((t) => `<span class="topic">${escapeHtml(t)}</span>`).join('');
-    const badges = [
+    const newBadge = newNames.has(c.name)
+        ? '<span class="badge badge-new" title="Newly added to the directory">NEW</span>' : '';
+    const badges = [newBadge,
         badge(c.govt_level, `level-${escapeHtml(c.govt_level)}`),
         badge(c.state),
         c.party ? badge(c.party) : '',

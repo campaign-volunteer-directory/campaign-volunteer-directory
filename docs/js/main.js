@@ -1,7 +1,7 @@
-import { debounce } from './utils.js?v=16';
-import { parseQuery, splitQuery, buildSearchIndex, searchRanked } from './search.js?v=16';
-import { FilterState, matchesFacets } from './filters.js?v=16';
-import { stateAbbreviation } from './states.js?v=16';
+import { debounce } from './utils.js?v=17';
+import { parseQuery, splitQuery, buildSearchIndex, searchRanked } from './search.js?v=17';
+import { FilterState, matchesFacets } from './filters.js?v=17';
+import { stateAbbreviation } from './states.js?v=17';
 import {
     renderStats,
     renderSummary,
@@ -13,10 +13,10 @@ import {
     renderActiveFilters,
     renderCards,
     buildCsv,
-} from './render.js?v=16';
+} from './render.js?v=17';
 
 const SEARCH_DEBOUNCE_MS = 120;
-const APP_VERSION = 16;
+const APP_VERSION = 17;
 const KIND_LABELS = { state: 'State', topic: 'Issue', candidate: 'Candidate' };
 
 let candidates = [];
@@ -102,6 +102,8 @@ function apply() {
     filters.writeToUrl();
 }
 
+let newCandidateNames = new Set();
+
 function renderView(entries, query) {
     const levelCounts = { Federal: 0, State: 0, Local: 0 };
     const statesInView = {};
@@ -123,7 +125,7 @@ function renderView(entries, query) {
     document.getElementById('breakdown').innerHTML = renderBreakdown(
         sortedStates, sortedTopics, filters);
     document.getElementById('cards').innerHTML =
-        renderCards(entries, query.include.map((term) => term.text), emptyMessage());
+        renderCards(entries, query.include.map((term) => term.text), emptyMessage(), newCandidateNames);
 }
 
 // ── Suggestions (live autocomplete) ──────────────────────────────────────
@@ -513,6 +515,7 @@ async function boot() {
         stateCounts = stateCountsFrom(candidates);
 
         renderStats(data);
+        newCandidateNames = new Set((data.new_candidates || []).map((c) => c.name));
         document.getElementById('filter-topics').innerHTML = renderTopicChips(topicCounts);
 
         filters.readFromUrl();

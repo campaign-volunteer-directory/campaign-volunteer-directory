@@ -619,6 +619,13 @@ a:hover { text-decoration: underline; }
     white-space: nowrap;
 }
 
+.badge-new {
+    background: var(--accent);
+    color: #0d120b;
+    font-weight: 700;
+    border-color: var(--accent);
+}
+
 .badge.level-Federal { color: var(--link); border-color: rgba(127, 182, 242, 0.45); }
 .badge.level-State { color: var(--accent); border-color: rgba(126, 200, 80, 0.45); }
 .badge.level-Local { color: var(--warn); border-color: rgba(226, 185, 61, 0.45); }
