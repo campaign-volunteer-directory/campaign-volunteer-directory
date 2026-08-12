@@ -12,6 +12,8 @@ import time
 import urllib.request
 from pathlib import Path
 
+from media_store import MediaStore, fetch_bytes, sha256, ext_of, kind_of
+
 DAEMON = "http://127.0.0.1:8224"
 CHANNEL_URL = "https://discord.com/channels/1450359255386554502/{ch}"
 
@@ -136,49 +138,55 @@ def collect_messages(tab_id):
 
 def main():
     tab_id, channel_id, out_path = sys.argv[1], sys.argv[2], sys.argv[3]
-    media_root = Path(out_path).parent / "media" / Path(out_path).stem
+    out_dir = Path(out_path).parent
+    channel_name = Path(out_path).stem
+    store = MediaStore(out_dir / "media.db", out_dir / "media" / "blobs")
     rpc(tab_id, "NAVIGATE", {"url": CHANNEL_URL.format(ch=channel_id)})
     time.sleep(4)
     height = scroll_to_top(tab_id)
     print(f"loaded history: {height}px", file=sys.stderr)
     messages = collect_messages(tab_id)
-    downloaded = download_media(messages, media_root)
+    downloaded, skipped = download_media(messages, channel_name, store)
     with open(out_path, "w") as f:
         json.dump(messages, f, ensure_ascii=False, indent=1)
-    print(f"saved {len(messages)} messages ({downloaded} media files) -> {out_path}")
+    print(f"saved {len(messages)} messages ({downloaded} downloaded, {skipped} deduped) -> {out_path}")
 
 
-def download_media(messages, media_root, max_bytes=50 * 1024 * 1024):
-    """Download attachment media to media/<channel>/<msgid>-<n>.<ext>.
+def download_media(messages, channel, store):
+    """Content-addressed download: identical files stored once.
 
-    Each message's media entries get a `local` path when downloaded. Skips
-    files that already exist (idempotent re-runs)."""
-    import mimetypes
-
-    media_root.mkdir(parents=True, exist_ok=True)
+    Per media item: known URL -> reuse stored blob; otherwise download, hash,
+    dedupe against existing blobs, record reference. Sets item['local']."""
     downloaded = 0
+    deduped = 0
     for msg in messages:
         msg_id = msg.get("id") or "msg"
-        for i, item in enumerate(msg.get("media", [])):
+        for item in msg.get("media", []):
             url = item["url"]
-            ext = url.split("?")[0].rsplit(".", 1)[-1].split("/")[0][:6] or "bin"
-            local = media_root / f"{msg_id}-{i}.{ext}"
-            if local.exists():
-                item["local"] = str(local)
+            known = store.known_url(channel, msg_id, url)
+            if known:
+                item["local"] = known[1]
+                deduped += 1
                 continue
             try:
-                req = urllib.request.Request(url, headers={"User-Agent": "Mozilla/5.0"})
-                with urllib.request.urlopen(req, timeout=60) as resp:
-                    data = resp.read(max_bytes + 1)
-                if len(data) > max_bytes:
-                    print(f"  skip (too big) {url}", file=sys.stderr)
-                    continue
-                local.write_bytes(data)
-                item["local"] = str(local)
-                downloaded += 1
+                data = fetch_bytes(url)
             except Exception as e:
                 print(f"  media fail {url}: {e}", file=sys.stderr)
-    return downloaded
+                continue
+            digest = sha256(data)
+            existing = store.lookup_hash(digest)
+            if existing:
+                item["local"] = existing
+                deduped += 1
+            else:
+                ext = ext_of(url)
+                blob = store.blob_root / f"{digest}.{ext}"
+                blob.write_bytes(data)
+                item["local"] = str(blob)
+                downloaded += 1
+            store.add(channel, msg_id, url, digest, len(data),
+                      kind_of(url), ext_of(url), item["local"], msg.get("ts", ""))
+    return downloaded, deduped
 
 
 if __name__ == "__main__":
