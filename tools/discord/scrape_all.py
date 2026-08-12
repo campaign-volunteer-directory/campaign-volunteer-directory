@@ -60,7 +60,8 @@ def main():
                 f"({len(targets)} channels, {len(tabs)} tabs) ===\n")
 
     # Round-robin channel -> tab, then run one subprocess per channel with
-    # all tabs busy concurrently.
+    # all tabs busy concurrently. Each channel retries (up to 3x) rotating
+    # to the next tab, since tabs stall under sustained load.
     jobs = []
     for i, channel in enumerate(targets):
         tab = tabs[i % len(tabs)]
@@ -76,19 +77,32 @@ def main():
             p = subprocess.Popen(
                 [sys.executable, str(HERE / "scrape_channel.py"), str(tab), channel["id"], str(out_path)],
                 stdout=subprocess.PIPE, stderr=subprocess.STDOUT, text=True)
-            procs.append((p, channel))
+            procs.append((p, channel, tab))
         done = [j for j in procs if j[0].poll() is not None]
-        for p, channel in done:
-            procs.remove((p, channel))
+        for p, channel, tab in done:
+            procs.remove((p, channel, tab))
             out, _ = p.communicate()
-            n = 0
             out_path = out_dir / f"{channel['name']}.json"
+            n = 0
             if out_path.exists():
                 try:
                     n = len(json.loads(out_path.read_text()))
                 except Exception:
                     n = -1
-            line = f"{channel['name']}: rc={p.returncode} messages={n} {out.strip().splitlines()[-1:] if out.strip() else ''}"
+            attempts = 1
+            while p.returncode != 0 and attempts < 3 and n == 0:
+                # stall recovery: retry on the next tab after a pause
+                attempts += 1
+                time.sleep(20)
+                ntab = tabs[(tabs.index(tab) + 1) % len(tabs)]
+                rc2, _ = scrape_one(ntab, server_id, channel, out_path)
+                p = type("R", (), {"returncode": rc2})()
+                if out_path.exists():
+                    try:
+                        n = len(json.loads(out_path.read_text()))
+                    except Exception:
+                        n = -1
+            line = f"{channel['name']}: rc={p.returncode} attempts={attempts} messages={n} {out.strip().splitlines()[-1:] if out.strip() else ''}"
             print(line, flush=True)
             with open(log, "a") as f:
                 f.write(line + "\n")
