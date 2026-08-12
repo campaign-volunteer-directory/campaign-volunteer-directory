@@ -79,8 +79,14 @@ def scroll_to_top(tab_id, max_rounds=400):
     return prev
 
 
-def collect_messages(tab_id):
-    """Walk the whole list from top to bottom, collecting unique messages."""
+def collect_messages(tab_id, max_passes=4):
+    """Walk the list top->bottom, repeating until a full pass adds nothing new.
+
+    Discord renders lazily: scrolling fast skips windows (React hasn't painted
+    them yet). So we walk slowly, re-measuring the list height each step, and
+    converge: each full pass from top to bottom collects everything currently
+    in the DOM; when a pass adds zero new messages we're done.
+    """
     seen = set()
     messages = []
     code = """
@@ -117,22 +123,33 @@ def collect_messages(tab_id):
         }
         return JSON.stringify(out);
     """
-    total = list_height(tab_id)
-    viewport = run_js(tab_id, f"return ({SCROLL_JS}).clientHeight")
-    y = 0
-    while y < total:
-        run_js(tab_id, f"return ({SCROLL_JS}.scrollTop = {y}, true)")
-        time.sleep(0.25)
-        try:
-            batch = json.loads(run_js(tab_id, code))
-        except Exception:
-            batch = []
-        for m in batch:
-            key = m["id"] or (m["author"] + m["ts"] + m["content"][:40])
-            if key not in seen:
-                seen.add(key)
-                messages.append(m)
-        y += viewport
+    for _ in range(max_passes):
+        run_js(tab_id, f"return ({SCROLL_JS}.scrollTop = 0, true)")
+        time.sleep(1.0)
+        total = list_height(tab_id)
+        viewport = run_js(tab_id, f"return ({SCROLL_JS}).clientHeight")
+        step = max(viewport * 0.6, 100)
+        y = 0
+        new_this_pass = 0
+        while y < total:
+            run_js(tab_id, f"return ({SCROLL_JS}.scrollTop = {int(y)}, true)")
+            time.sleep(0.6)
+            try:
+                batch = json.loads(run_js(tab_id, code))
+            except Exception:
+                batch = []
+            for m in batch:
+                key = m["id"] or (m["author"] + m["ts"] + m["content"][:40])
+                if key not in seen:
+                    seen.add(key)
+                    messages.append(m)
+                    new_this_pass += 1
+            # the list grows while old history loads; extend the walk
+            total = max(total, list_height(tab_id))
+            y += step
+        print(f"  pass complete: {new_this_pass} new ({len(messages)} total)", file=sys.stderr)
+        if new_this_pass == 0:
+            break
     return messages
 
 
