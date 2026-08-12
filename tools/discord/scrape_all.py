@@ -68,12 +68,14 @@ def main():
         out_path = out_dir / f"{channel['name']}.json"
         jobs.append((tab, channel, out_path))
 
-    CHANNEL_TIMEOUT_S = 600  # wall-clock cap per attempt; stuck tabs get killed + retried
+    CHANNEL_TIMEOUT_S = 300  # wall-clock cap per attempt; stuck tabs get killed
+    MAX_ATTEMPTS = 3
+    # queue entries: [tab, channel, out_path, attempts_left]
+    queue = [[tab, channel, out_path, MAX_ATTEMPTS] for tab, channel, out_path in jobs]
     procs = []
-    queue = list(jobs)
     while queue or procs:
         while len(procs) < len(tabs) and queue:
-            tab, channel, out_path = queue.pop(0)
+            tab, channel, out_path, attempts = queue.pop(0)
             p = subprocess.Popen(
                 [sys.executable, str(HERE / "scrape_channel.py"), str(tab), channel["id"], str(out_path)],
                 stdout=subprocess.PIPE, stderr=subprocess.STDOUT, text=True)
@@ -94,20 +96,21 @@ def main():
                     n = len(json.loads(out_path.read_text()))
                 except Exception:
                     n = -1
-            attempts = 1
-            while p.returncode != 0 and attempts < 3 and n == 0:
-                # stall recovery: retry on the next tab after a pause
-                attempts += 1
-                time.sleep(20)
-                ntab = tabs[(tabs.index(tab) + 1) % len(tabs)]
-                rc2, _ = scrape_one(ntab, server_id, channel, out_path)
-                p = type("R", (), {"returncode": rc2})()
-                if out_path.exists():
-                    try:
-                        n = len(json.loads(out_path.read_text()))
-                    except Exception:
-                        n = -1
-            line = f"{channel['name']}: rc={p.returncode} attempts={attempts} messages={n} {out.strip().splitlines()[-1:] if out.strip() else ''}"
+            if p.returncode != 0 and n == 0 and len(tabs) > 1:
+                # requeue on the next tab, attempt budget permitting
+                entry = [e for e in queue if e[1]["name"] == channel["name"]]
+                attempts_left = MAX_ATTEMPTS
+                if entry:
+                    attempts_left = entry[0][3]
+                if attempts_left > 1:
+                    ntab = tabs[(tabs.index(tab) + 1) % len(tabs)]
+                    queue.append([ntab, channel, out_path, attempts_left - 1])
+                    line = f"{channel['name']}: retrying on tab {ntab} ({attempts_left - 1} left)"
+                    print(line, flush=True)
+                    with open(log, "a") as f:
+                        f.write(line + "\n")
+                    continue
+            line = f"{channel['name']}: rc={p.returncode} messages={n} {out.strip().splitlines()[-1:] if out.strip() else ''}"
             print(line, flush=True)
             with open(log, "a") as f:
                 f.write(line + "\n")
