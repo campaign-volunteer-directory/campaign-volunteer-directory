@@ -2,7 +2,7 @@
  "source": "Public Campaign Volunteer Directory spreadsheet (independent project)",
  "source_url": "https://linktr.ee/limeaccordion",
  "sheet_url": "https://docs.google.com/spreadsheets/d/e/2PACX-1vQyQUWTOqZ6iqYMXd-GpkXivMRIgGCnkL58y-oLrX53e8M68zdQo5xO1P8LEMd06mpOVxshd0F9aC24/pubhtml",
- "updated_at": "2026-08-31T03:26:59Z",
+ "updated_at": "2026-08-31T15:27:00Z",
  "count": 145,
  "states": [
   "Alabama",
@@ -135,8 +135,8 @@
    "info": "https://www.petrovAK4us.org",
    "volunteer": "https://www.petrovAK4us.org",
    "topics": [
-    "accountability",
     "infrastructure",
+    "accountability",
     "donald trump",
     "term limits",
     "national politics"
@@ -588,8 +588,8 @@
    "info": "dylanagalery.com",
    "volunteer": "https://form.jotform.com/260633207767056",
    "topics": [
-    "accountability",
     "infrastructure",
+    "accountability",
     "affordable housing",
     "rent control"
    ]
@@ -979,8 +979,8 @@
    "info": "Twitter (X): https://x.com/fields4nolaB\nWebsite: https://www.fieldsLA4us.info",
    "volunteer": "Twitter (X): https://x.com/fields4nolaB\nWebsite: https://www.fieldsLA4us.info",
    "topics": [
-    "accountability",
     "infrastructure",
+    "accountability",
     "donald trump",
     "term limits",
     "rent control"
@@ -2010,8 +2010,8 @@
    "info": "https://www.instagram.com/bryant4sc79\nWebsite: https://www.bryantSC4us.org",
    "volunteer": "https://www.bryantSC4us.org/volunteer",
    "topics": [
-    "accountability",
-    "infrastructure"
+    "infrastructure",
+    "accountability"
    ]
   },
   {
@@ -2448,6 +2448,16 @@
   },
   {
    "date": "2026-08-29",
+   "added": [],
+   "updated": [
+    "Nina Petrov",
+    "Dylana Galery",
+    "Darius Fields",
+    "Keisha Bryant"
+   ]
+  },
+  {
+   "date": "2026-08-31",
    "added": [],
    "updated": [
     "Nina Petrov",
